@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+}
+
+@layer base {
+  *,
+  html,
+  body {
+    @apply font-primary scroll-smooth;
+  }
+  .h {
+    @apply border border-red-500;
+  }
+  .flex_center {
+    @apply flex justify-center items-center;
+  }
+  .flex_wrap_center {
+    @apply flex justify-center items-center flex-wrap;
+  }
+  .flex_col_center {
+    @apply flex flex-col items-center justify-center;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
