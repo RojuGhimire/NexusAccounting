@@ -19,13 +19,10 @@ const About = () => {
   return (
     <>
       <SectionHeading
-        sectionTitle="About Us"
+        sectionTitle="Our Team"
         className="font-bold text-center md:text-left"
       />
-      <h1 className="text-[24px] md:text-[38px] italic text-center md:text-left">
-        We can help with your Accounting project
-      </h1>
-
+      
       <section ref={ref} id="about" className="w-full px-4 md:px-8 lg:px-16 pt-12 pb-20">
         <motion.div
           ref={animateRef1}

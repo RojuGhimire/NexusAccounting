@@ -8,16 +8,15 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="w-full relative overflow-hidden"
+      className="w-[1437px]  h-[463px]  relative overflow-hidden"
     >
-      <div className="flex  ">
-        <div className="w-full lg:w-[80%]">
+      <div className="flex  mt-5">
           <motion.div
-            className="mt-16  px-4 md:px-6 text-lg md:text-2xl lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
+            className="px-4 md:px-6 text-lg lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <div className="container p-[60px] gap-[84px] w-[1437px] h-[463px] top-[620px] flex flex-col lg:flex-row">
+            <div className="container p-[60px] gap-[84px] top-[620px] flex flex-col lg:flex-row">
               <div className=" w-[685px] h-[291px] gap-[45px] ">
                 <h1 className="text-4xl font-bold text-zinc-900 ">
                   NEXUS YOUR <br />
@@ -53,7 +52,7 @@ const HeroSection = () => {
               }}
             ></motion.ul>
           </motion.div>
-        </div>
+        
       </div>
     </section>
   );

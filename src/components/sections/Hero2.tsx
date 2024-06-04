@@ -13,7 +13,7 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col w-[1440px] h-[398px] md:flex-row items-center md:items-start p-4 md:p-8"
+      className="flex flex-col w-[1440px] h-[398px] md:flex-row items-center md:items-start px-56 md:p-8"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -29,11 +29,11 @@ export default function Hero2(): JSX.Element {
         <h1 className="text-2xl md:text-3xl font-extrabold text-teal-500 mb-4 w-[350px] h-[54px]">
           Welcome To Nexus
         </h1>
-        <div className="w-[853px]  h-[216px] leading-[27px] size-[18px] font-bold text-lg">
-          <p className="text-zinc-700  mb-4">
+        <div className="w-[853px]  h-[216px] leading-[27px] size-[18px] font-bold text-lg gap-[22px]">
+          <p className="text-zinc-700 ">
             Nexus Accounting Firm was founded with a mission to provide businesses with flexible and reliable bookkeeping solutions. Our team brings years of industry experience and expertise to every client partnership.
           </p>
-          <p className="text-zinc-700 ">
+          <p className="text-zinc-700 mt-6 ">
             With a team of seasoned professionals, we bring expertise across various industries, providing comprehensive support in accounting, bookkeeping, payroll, taxation, and financial advisory services. Whether you're a startup navigating rapid growth or an established enterprise seeking optimization, we offer scalable solutions to drive your success.
           </p>
         </div>
