@@ -42,10 +42,12 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <ul className="flex gap-[24px] justify-center items-center flex-grow">
+      <nav className="bg-white ">
+        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex justify-between items-center h-16 ">
+          <img src="logo.png" alt="" className="h-[131px] w-[164px] gap-[10px]"/>
+            <ul className="flex gap-[48px] justify-center items-center flex-grow">
               {NAVLINKS.map((link) => (
                 <motion.li
                   className="text-zinc-700 font-bold cursor-pointer hover:text-teal-500"
@@ -66,7 +68,7 @@ export default function Header() {
               ))}
             </ul>
             <div className="flex items-center">
-              <FaSearch className="text-white bg-teal-700 h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-teal-700 transition duration-300 shadow-md" />
+              <FaSearch className="text-white bg-teal-700 gap-[100px] h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-teal-700 transition duration-300 shadow-md" />
             </div>
           </div>
         </div>
