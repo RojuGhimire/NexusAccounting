@@ -7,10 +7,6 @@ export const NAVLINKS = [
     name: "About Us",
     path: "#about",
   },
-  {
-    name: "Our Team",
-    path: "#team",
-  },
 
   {
     name: "Services",
