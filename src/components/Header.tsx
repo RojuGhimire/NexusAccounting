@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="z-50 fixed top-0 left-0 w-full">
     
-      <div className="bg-teal-500 text-white flex justify-between items-center lg:px-32 px-10 py-2 text-sm flex-wrap">
+      <div className="bg-teal-500 text-white flex justify-between items-center lg:px-56 px-10 py-2 text-sm flex-wrap">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-1">
             <FaMapMarkerAlt />
@@ -43,7 +43,7 @@ export default function Header() {
       </div>
 
       <nav className="bg-white ">
-        <div className=" lg:px-32 mx-auto  px-4 sm:px-6 ">
+        <div className=" lg:px-56 mx-auto  px-4 sm:px-6 ">
           
           <div className="flex justify-between items-center h-16 ">
           <img src="logo.png" alt="" className="h-[131px] w-[164px] gap-[10px]"/>
