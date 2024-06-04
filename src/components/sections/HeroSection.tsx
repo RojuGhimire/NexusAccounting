@@ -24,7 +24,7 @@ const HeroSection = () => {
                   <span className="text-teal-500">TRUSTED PARTNER IN</span>{" "}
                   <br className="hidden lg:block" />
                   <span className=" font-bold text-5xl text-zinc-900  text-left">
-                    <br/>REMOTE BOOKKEEPING
+                    REMOTE BOOKKEEPING
                   </span>
                 </h1>
                 <p className="mt-4 text-lg text-yellow-500">
