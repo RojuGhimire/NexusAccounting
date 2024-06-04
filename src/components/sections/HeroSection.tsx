@@ -8,34 +8,34 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="pt-12 mr-56 w-full relative overflow-hidden"
+      className="w-full relative overflow-hidden"
     >
-      <div className="flex justify-center ">
+      <div className="flex  ">
         <div className="w-full lg:w-[80%]">
           <motion.div
-            className="mt-4  px-4 md:px-6 text-lg md:text-2xl lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
+            className="mt-16  px-4 md:px-6 text-lg md:text-2xl lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <div className="container gap-[85px] w-[1437px] h-[463px] top-[620px] px-4 flex flex-col lg:flex-row">
+            <div className="container p-[60px] gap-[84px] w-[1437px] h-[463px] top-[620px] flex flex-col lg:flex-row">
               <div className=" w-[685px] h-[291px] gap-[45px] ">
                 <h1 className="text-4xl font-bold text-zinc-900 ">
                   NEXUS YOUR <br />
                   <span className="text-teal-500">TRUSTED PARTNER IN</span>{" "}
                   <br className="hidden lg:block" />
                   <span className=" font-bold text-5xl text-zinc-900  text-left">
-                    REMOTE BOOKKEEPING
+                    <br/>REMOTE BOOKKEEPING
                   </span>
                 </h1>
                 <p className="mt-4 text-lg text-yellow-500">
                   Ready to streamline your bookkeeping? Book a consultation
                   today!
                 </p>
-                <button className="mt-6 bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">
+                <button className="mt-10 bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-300">
                   Book Now
                 </button>
               </div>
-              <div className="mt-8 lg:mt-0 lg:max-w-xl">
+              <div className="">
                 <img
                   src="/Hero.png"
                   alt="Illustration of remote bookkeeping"
