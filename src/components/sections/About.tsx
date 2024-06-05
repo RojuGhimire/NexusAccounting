@@ -77,6 +77,10 @@ export default function About() {
           variants={childVariants}
         ></motion.div>
         <motion.div
+          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-2"
+          variants={childVariants}
+        ></motion.div>
+        <motion.div
           className="flex justify-center items-center mt-8 gap-[267px]"
         >
           {teamMembers.map((member, index) => (
