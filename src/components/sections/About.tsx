@@ -1,66 +1,115 @@
-import { motion, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { useScroll } from "framer-motion";
-import SectionHeading from "@/components/SectionHeading";
-import { useLinkInView } from "@/hooks/useLinkInView";
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-const About = () => {
-  const { ref } = useLinkInView("About Us", 0.4);
-  const animateRef1 = useRef<HTMLDivElement | null>(null);
-
-  const { scrollYProgress: firstScrollY } = useScroll({
-    target: animateRef1,
-    offset: ["0 1", "1.33 1"],
-  });
-
-  const firstScaleProgress = useTransform(firstScrollY, [0, 1], [0.5, 1]);
-  const firstOpacityProgress = useTransform(firstScrollY, [0, 1], [0.4, 1]);
-
-  return (
-    <>
-      <SectionHeading
-        sectionTitle="Our Team"
-        className="font-bold text-center md:text-left"
-      />
-      
-      <section ref={ref} id="about" className="w-full px-4 md:px-8 lg:px-16 pt-12 pb-20">
-        <motion.div
-          ref={animateRef1}
-          style={{
-            scale: firstScaleProgress,
-            opacity: firstOpacityProgress,
-          }}
-          className="flex flex-col md:flex-row gap-10 md:gap-16 lg:gap-24 w-full"
-        >
-          <figure className="flex-shrink-0">
-            <img
-              src="/about1.jpg"
-              className="w-full md:w-[422px] h-auto md:h-[453px] rounded-[40px] md:rounded-[82px] mx-auto md:mx-0"
-              alt="About Us"
-            />
-          </figure>
-
-          <div className=" md:mt-0">
-            <p className="text-[20px] md:text-[24px] font-medium text-left mb-4">
-              Nexus Accounting Firm was founded with a mission to provide businesses with flexible and reliable bookkeeping solutions. Our team brings years of industry experience and expertise to every client partnership.
-            </p>
-            <p className="text-[20px] md:text-[24px] font-medium text-left mb-4">
-              With a team of seasoned professionals, we bring expertise across various industries, providing comprehensive support in <span className="text-text">accounting, bookkeeping, payroll, taxation, and financial advisory services.</span> Whether you're a startup navigating rapid growth or an established enterprise seeking optimization, we offer scalable solutions to drive your success.
-            </p>
-
-            <h1 className="text-[#23676C] font-semibold italic text-[22px] md:text-[26px] mt-5 leading-[32px] md:leading-[39.6px]">
-              Our Core Values
-            </h1>
-            <ul className="list-disc pl-5 mt-3 text-[20px] md:text-[24px] font-medium">
-              <li>Commitment to Accuracy</li>
-              <li>Client-Centric Approach</li>
-              <li>Embracing Technology</li>
-            </ul>
-          </div>
-        </motion.div>
-      </section>
-    </>
-  );
+const containerVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+      staggerChildren: 0.3,
+    },
+  },
 };
 
-export default About;
+const childVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { scale: 0.9 },
+  visible: { scale: 1 },
+};
+
+interface TeamMemberProps {
+  name: string;
+  role: string;
+  imageSrc: string;
+}
+
+const teamMembers: TeamMemberProps[] = [
+  { name: "Ramsharan Rijal", role: "CEO/ Founder", imageSrc: "/sital.png" },
+  { name: "Sital Rijal", role: "Operation Manager", imageSrc: "/sital.png" },
+  { name: "Nabin Budhathoki", role: "HR Manager", imageSrc: "/sital.png" },
+];
+
+export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <motion.div
+      className="py-16 mb-32 w-full max-w-[1440px]"
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+      variants={containerVariants}
+    >
+      <div className="container mx-auto text-center">
+        <motion.h2
+          className="text-3xl font-bold text-zinc-900"
+          variants={childVariants}
+        >
+          Our Team
+        </motion.h2>
+        <motion.p
+          className="text-zinc-600 dark:text-zinc-700 mt-2"
+          variants={childVariants}
+        >
+          Meet Our Professional Team
+        </motion.p>
+        <motion.div
+          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          variants={childVariants}
+        ></motion.div>
+        <motion.div
+          className="flex justify-center items-center mt-8 gap-[267px]"
+        >
+          {teamMembers.map((member, index) => (
+            <motion.div key={index} className="flex flex-col mt-28 items-center" variants={childVariants}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <div className="rounded-full overflow-hidden w-[189px]  h-[190px]">
+                  <motion.img
+                    src={member.imageSrc}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    variants={imageVariants}
+                  />
+                </div>
+              </motion.div>
+              <motion.h3
+                className="text-teal-500 mt-4 text-lg font-semibold"
+                variants={childVariants}
+              >
+                {member.name}
+              </motion.h3>
+              <motion.p
+                className="text-zinc-600 dark:text-zinc-400"
+                variants={childVariants}
+              >
+                {member.role}
+              </motion.p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
