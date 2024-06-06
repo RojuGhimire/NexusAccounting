@@ -18,12 +18,12 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col w-full max-w-[1440px] h-[398px] md:flex-row items-center md:items-start px-4 md:px-8 mx-auto"
+      className="flex flex-col w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-8 mx-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.div className="flex-shrink-0 mb-4 md:mb-0 md:mr-24" variants={childVariants}>
+      <motion.div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8" variants={childVariants}>
         <motion.img
           src="/Audit.png"
           alt="Audit Image"
@@ -33,9 +33,9 @@ export default function Hero2(): JSX.Element {
           transition={{ duration: 0.5 }}
         />
       </motion.div>
-      <motion.div className="w-full md:w-[834px] h-[348px] mt-4 md:mt-0 gap-[20px]" variants={childVariants}>
+      <motion.div className="w-full md:w-[834px] h-auto mt-4 md:mt-0 md:ml-8" variants={childVariants}>
         <motion.h1 
-          className="text-2xl md:text-3xl font-extrabold text-teal-500 mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-teal-500 mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ export default function Hero2(): JSX.Element {
           Welcome To Nexus
         </motion.h1>
         <motion.div
-          className="leading-[27px] text-lg font-bold text-zinc-700 space-y-6"
+          className="leading-7 text-lg lg:text-xl font-bold text-zinc-700 space-y-6"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
