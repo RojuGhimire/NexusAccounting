@@ -72,9 +72,10 @@ const ServicesComponent: React.FC = () => {
           Meet Our Professional Team
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2  border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
+        
         <div className="flex flex-row mt-20 justify-center items-center gap-[195px]">
           <div className="flex flex-row justify-center items-center">
             <img src="/ser.png" alt="" className="w-52 h-56 left-14" />

@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import { NAVLINKS } from "@/constants";
 import { useActiveLinkContext } from "@/context/active-link-context";
-import { 
-  FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, 
-  FaWhatsapp, FaLinkedinIn, FaInstagram, FaSearch 
-} from 'react-icons/fa';
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebookF,
+  FaWhatsapp,
+  FaLinkedinIn,
+  FaInstagram,
+  FaSearch,
+} from "react-icons/fa";
 
 export default function Header() {
-  const { setActiveLink, setTimeOfLastClick } =
-    useActiveLinkContext();
+  const { setActiveLink, setTimeOfLastClick } = useActiveLinkContext();
 
   return (
-    <header className="z-50 fixed top-0 left-0 w-full">
-    
-      <div className="bg-teal-500 text-white flex justify-between items-center lg:px-56 px-10 py-2 text-sm flex-wrap">
+    <header className="z-50  fixed top-0 left-0 w-full">
+      <div className="bg-teal-500  text-white flex justify-between items-center  px-20 py-2 text-sm flex-wrap">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-1">
             <FaMapMarkerAlt />
@@ -43,10 +47,13 @@ export default function Header() {
       </div>
 
       <nav className="bg-white ">
-        <div className=" lg:px-56 mx-auto  px-4 sm:px-6 ">
-          
+        <div className=" lg:px-20 mx-auto  px-20 sm:px-6 ">
           <div className="flex justify-between items-center h-16 ">
-          <img src="logo.png" alt="" className="h-[131px] w-[164px] gap-[10px]"/>
+            <img
+              src="logo.png"
+              alt=""
+              className="h-[131px] w-[164px] gap-[10px]"
+            />
             <ul className="flex gap-[48px] justify-center items-center flex-grow">
               {NAVLINKS.map((link) => (
                 <motion.li

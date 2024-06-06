@@ -6,17 +6,20 @@ import RootLayout from "@/layouts/RootLayout";
 import Hero2 from "../sections/Hero2";
 import Service from "../sections/Service";
 import Banner from "../sections/Banner";
+import Software from "../sections/Software";
+import Price from "../sections/Price";
 
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
-      <div className="flex flex-col space-y-20">
+      <div className="flex flex-col  space-y-25">
         <HeroSection />
         <Hero2 />
         <About />
-        {/* <Services /> */}
         <Service />
         <Banner />
+        <Software />
+        <Price />
         <Contact />
       </div>
     </RootLayout>
