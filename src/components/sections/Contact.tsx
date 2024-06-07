@@ -88,7 +88,7 @@ export default function Contact() {
   };
 
   return (
-    <section ref={ref} id="contact" className="w-full mt-12  pb-12">
+    <section ref={ref} id="contact" className="max-w-[1440px] w-full mx-auto mt-12  pb-12">
       <SectionHeading sectionTitle="Contact Us" />
       <div className="flex flex-col lg:flex-row justify-between mt-8 lg:mt-12">
         {/* left side */}
@@ -108,7 +108,7 @@ export default function Contact() {
             <motion.div className="mb-6" variants={variants}>
               <h2 className="text-xl text-gray-950 font-medium mb-2">Mail</h2>
               <div className="flex gap-1 items-center my-1">
-                <IoMail className="text-text" size={24} />
+                <IoMail className="text-teal-500" size={24} />
                 <span>nexus@gmail.com</span>
               </div>
             </motion.div>
@@ -117,14 +117,14 @@ export default function Contact() {
                 Address
               </h2>
               <div className="flex gap-1 items-center my-1">
-                <IoLocationSharp className="text-text" size={24} />
+                <IoLocationSharp className="text-teal-500" size={24} />
                 <span>Tinkune, Kathmandu</span>
               </div>
             </motion.div>
             <motion.div className="mb-6" variants={variants}>
               <h2 className="text-xl text-gray-950 font-medium mb-2">Phone</h2>
               <div className="flex gap-1 items-center my-1">
-                <MdOutlineLocalPhone className="text-text" size={24} />
+                <MdOutlineLocalPhone className="text-teal-500" size={24} />
                 <span>9766893385</span>
               </div>
             </motion.div>
@@ -179,7 +179,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex mt-7 w-[120px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#4CBB17,45%,#F6F5F2,48%,#4CBB17)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+              className="inline-flex mt-7 w-[120px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
             >
               {isLoading ? (
                 <BiLoaderCircle
