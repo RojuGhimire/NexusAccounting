@@ -10,7 +10,7 @@ const SectionHeading = ({
   return (
     <h1
       className={cn(
-        "text-4xl font-medium capitalize text-gray-950 text-center",
+        "text-3xl font-bold capitalize text-zinc-950 text-center",
         className
       )}
     >

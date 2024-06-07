@@ -75,7 +75,7 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <div className="flex items-center  mb-2 md:mb-0 md:mr-4">
-            <div className="w-[22px] h-[22px] bg-red-600 rounded-full mr-5"></div>
+            <div className="w-[22px] h-[14px] bg-red-600 rounded-full mr-5"></div>
             <h2 className="text-lg font-bold">Existing Client</h2>
           </div>
           <div className="flex-grow">
@@ -127,7 +127,7 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <div className="flex items-center mb-2 md:mb-0 md:mr-4">
-            <div className="w-[22px] h-[22px] bg-teal-500 rounded-full mr-5"></div>
+            <div className="w-[22px] h-[14px] bg-teal-500 rounded-full mr-5"></div>
             <h2 className="text-lg font-bold">New Client</h2>
           </div>
           <div className="flex-grow">

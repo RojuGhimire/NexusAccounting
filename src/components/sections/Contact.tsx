@@ -89,7 +89,7 @@ export default function Contact() {
 
   return (
     <section ref={ref} id="contact" className="max-w-[1440px] w-full mx-auto mt-12  pb-12">
-      <SectionHeading sectionTitle="Contact Us" />
+      <SectionHeading sectionTitle="Send Your Message" />
       <div className="flex flex-col lg:flex-row justify-between mt-8 lg:mt-12">
         {/* left side */}
         <motion.div
