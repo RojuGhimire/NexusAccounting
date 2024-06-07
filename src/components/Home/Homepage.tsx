@@ -8,6 +8,7 @@ import Service from "../sections/Service";
 import Banner from "../sections/Banner";
 import Software from "../sections/Software";
 import Price from "../sections/Price";
+import Meeting from "../sections/Meeting";
 
 const Homepage: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Homepage: React.FC = () => {
         <Banner />
         <Software />
         <Price />
+        <Meeting />
         <Contact />
       </div>
     </RootLayout>
