@@ -9,7 +9,7 @@ import Banner from "../sections/Banner";
 import Software from "../sections/Software";
 import Price from "../sections/Price";
 import Meeting from "../sections/Meeting";
-import { Banner2 } from "../sections/Banner2";
+import Banner2 from "../sections/Banner2";
 
 const Homepage: React.FC = () => {
   return (
