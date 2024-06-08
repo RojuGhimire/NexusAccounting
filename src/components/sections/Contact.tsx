@@ -5,7 +5,6 @@ import { IoIosSend } from "react-icons/io";
 import { motion } from "framer-motion";
 import { MdOutlineLocalPhone } from "react-icons/md";
 
-import SectionHeading from "@/components/SectionHeading";
 import { BiLoaderCircle } from "react-icons/bi";
 import { Input } from "@/components/ui/Input";
 import { useLinkInView } from "@/hooks/useLinkInView";
@@ -86,11 +85,40 @@ export default function Contact() {
       },
     },
   };
-
+  const childVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
   return (
     <section ref={ref} id="contact" className="max-w-[1440px] w-full mx-auto mt-12  pb-12">
-      <SectionHeading sectionTitle="Send Your Message" />
-      <div className="flex flex-col lg:flex-row justify-between mt-8 lg:mt-12">
+      <div className="text-center">
+      <motion.h2
+          className="text-3xl font-bold text-zinc-900"
+          variants={childVariants}
+        >
+          Send Your Message
+        </motion.h2>
+        <motion.div
+          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+          variants={childVariants}
+        ></motion.div>
+        <motion.div
+          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+          variants={childVariants}
+        ></motion.div>
+        <motion.p className="text-zinc-600  mt-2" variants={childVariants}>
+        Don’t hestiate to ask us something, Our customer support team <br /> always ready to help you, they will support you 24/7
+        </motion.p>
+        </div>
+      <div className="flex  flex-col lg:flex-row justify-between mt-8 lg:mt-12">
         {/* left side */}
         <motion.div
           className="w-full lg:w-2/5 mb-8 lg:mb-0 lg:mr-8"
