@@ -63,15 +63,15 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-400 mb-4">Information</h3>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <img src="https://placehold.co/20x20" alt="Location Icon" className="mr-2" />
+              <img src="/location.png" alt="Location Icon" className="mr-2" />
               Pepsicola<br />Kathmandu, Nepal
             </li>
             <li className="flex items-center">
-              <img src="https://placehold.co/20x20" alt="Phone Icon" className="mr-2" />
+              <img src="/call.png" alt="Phone Icon" className="mr-2" />
               01-4000000
             </li>
             <li className="flex items-center">
-              <img src="https://placehold.co/20x20" alt="Email Icon" className="mr-2" />
+              <img src="/mail.png" alt="Email Icon" className="mr-2" />
               nexus311@gmail.com
             </li>
           </ul>
