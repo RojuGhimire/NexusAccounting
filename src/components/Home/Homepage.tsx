@@ -9,6 +9,7 @@ import Software from "../sections/Software";
 import Price from "../sections/Price";
 import Meeting from "../sections/Meeting";
 import Banner2 from "../sections/Banner2";
+import Footer from "../sections/Footer";
 
 const Homepage: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Homepage: React.FC = () => {
         <Meeting />
         <Contact />
         <Banner2 />
+        <Footer />
       </div>
     </RootLayout>
   );
