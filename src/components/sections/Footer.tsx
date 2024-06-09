@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
     >
       <div className="max-w-[1440px]  mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 text-zinc-800 ">
         <motion.div className="col-span-1" variants={itemVariants}>
-          <img src="/logo.png" alt="Nexus Logo" className="top-[367px] h w-[185px] h-[83px] " />
+          <img src="/logo.png" alt="Nexus Logo" className="top-[367px] w-[185px] h-[83px] " />
           <p className="text-sm">
             In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
           </p>
