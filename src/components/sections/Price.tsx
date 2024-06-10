@@ -61,8 +61,12 @@ const Price: React.FC = () => {
           className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
-        <motion.p className="text-zinc-600 font-bold italic mt-2" variants={childVariants}>
-        Choose from our flexible packages designed to accommodate businesses of all scales.
+        <motion.p
+          className="text-zinc-600 font-bold italic mt-2"
+          variants={childVariants}
+        >
+          Choose from our flexible packages designed to accommodate businesses
+          of all scales.
         </motion.p>
       </div>
 
@@ -135,7 +139,10 @@ const Price: React.FC = () => {
                 {plan.title.includes("NEXUS") ? (
                   <>
                     {plan.title.split("NEXUS")[0]}
-                    <span className="text-teal-500 w-[70px] h-[26px] border-[2px] "><br />NEXUS <br /></span>
+                    <span className="text-teal-500 w-[70px] h-[26px] border-[2px] ">
+                      <br />
+                      NEXUS <br />
+                    </span>
                     {plan.title.split("NEXUS")[1]}
                   </>
                 ) : (

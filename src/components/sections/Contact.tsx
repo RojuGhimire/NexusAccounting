@@ -98,9 +98,13 @@ export default function Contact() {
     },
   };
   return (
-    <section ref={ref} id="contact" className="max-w-[1440px] w-full mx-auto mt-12  pb-12">
+    <section
+      ref={ref}
+      id="contact"
+      className="max-w-[1440px] w-full mx-auto mt-12  pb-12"
+    >
       <div className="text-center">
-      <motion.h2
+        <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
         >
@@ -115,9 +119,10 @@ export default function Contact() {
           variants={childVariants}
         ></motion.div>
         <motion.p className="text-zinc-600  mt-2" variants={childVariants}>
-        Don’t hestiate to ask us something, Our customer support team <br /> always ready to help you, they will support you 24/7
+          Don’t hestiate to ask us something, Our customer support team <br />{" "}
+          always ready to help you, they will support you 24/7
         </motion.p>
-        </div>
+      </div>
       <div className="flex  flex-col lg:flex-row justify-between mt-8 lg:mt-12">
         {/* left side */}
         <motion.div
@@ -170,7 +175,6 @@ export default function Contact() {
             <div className="flex flex-col gap-y-5">
               <Input
                 label="First Name"
-                
                 required
                 placeholder="Enter your first name"
                 value={contactForm.firstName}

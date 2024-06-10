@@ -56,7 +56,7 @@ const Meeting: React.FC = () => {
           Meeting
         </motion.h2>
         <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
-        Schedule a consultation with one of our experts
+          Schedule a consultation with one of our experts
         </motion.p>
         <motion.div
           className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
@@ -80,8 +80,8 @@ const Meeting: React.FC = () => {
           </div>
           <div className="flex-grow">
             <p className="text-zinc-700 font-bold">
-              We are doing all virtual meetings through Zoom. Please join with us
-              over Zoom.
+              We are doing all virtual meetings through Zoom. Please join with
+              us over Zoom.
             </p>
           </div>
           <div className="ml-2">
@@ -99,9 +99,7 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <h3 className="text-zinc-600 font-bold">Calendar</h3>
-          <h2 className="text-2xl font-extrabold text-teal-600 ">
-            May, 2024
-          </h2>
+          <h2 className="text-2xl font-extrabold text-teal-600 ">May, 2024</h2>
           <div className="flex justify-center items-center my-2">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
               <span className="text-zinc-700 mx-1" key={day}>
@@ -132,8 +130,8 @@ const Meeting: React.FC = () => {
           </div>
           <div className="flex-grow">
             <p className="text-zinc-700 font-bold">
-              We are doing all virtual meetings through Zoom. Please join with us
-              over Zoom.
+              We are doing all virtual meetings through Zoom. Please join with
+              us over Zoom.
             </p>
           </div>
           <div className="ml-5">
