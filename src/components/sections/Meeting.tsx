@@ -15,7 +15,6 @@ const Meeting: React.FC = () => {
       },
     },
   };
-
   const childVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -114,9 +113,15 @@ const Meeting: React.FC = () => {
               </span>
             ))}
           </div>
-          <button className="bg-teal-600 text-white py-2 mt-5 px-4 rounded">
-            Book Now
-          </button>
+          <button
+              type="submit"
+              className="inline-flex h mt-7 w-[130px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+            >
+
+                <div className="flex flex-col items-center justify-center ">
+                  <span>Book Now</span>
+                </div>
+            </button>
         </motion.div>
 
         <motion.div
