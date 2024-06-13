@@ -78,11 +78,11 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="bg-white shadow">
+      <nav className="bg-white shadow-lg">
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <img src="logo.png" alt="Logo" className="h-12 w-auto" />
+            <img src="logo.png" alt="Logo" className="h-12  w-auto" />
 
             {/* Navigation Links */}
             <ul className="hidden md:flex gap-8 items-center flex-grow justify-center">
@@ -113,7 +113,7 @@ export default function Header() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="text-teal-700 focus:outline-none"
+                className="text-black focus:outline-none"
               >
                 <FaBars className="h-6 w-6" />
               </button>
