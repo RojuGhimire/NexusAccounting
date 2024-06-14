@@ -5,7 +5,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Stagger the animation of children elements
+      staggerChildren: 0.3,
     },
   },
 };
@@ -18,7 +18,7 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-8 mx-auto"
+      className="flex  flex-col w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-4 lg:mx-auto py-8 md:py-16"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -27,7 +27,7 @@ export default function Hero2(): JSX.Element {
         <motion.img
           src="/Audit.png"
           alt="Audit Image"
-          className="w-full md:w-auto h-auto object-cover"
+          className="w-full md:w-auto h-auto object-cover rounded-lg shadow-lg"
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ export default function Hero2(): JSX.Element {
       </motion.div>
       <motion.div className="w-full md:w-[834px] h-auto mt-4 md:mt-0 md:ml-8" variants={childVariants}>
         <motion.h1 
-          className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-teal-500 mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-teal-500 mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ export default function Hero2(): JSX.Element {
           Welcome To Nexus
         </motion.h1>
         <motion.div
-          className="leading-7 text-lg lg:text-xl font-bold text-zinc-700 space-y-6"
+          className="leading-7 text-lg lg:text-xl font-semibold text-zinc-700 space-y-6"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -51,7 +51,7 @@ export default function Hero2(): JSX.Element {
           <motion.p variants={childVariants}>
             Nexus Accounting Firm was founded with a mission to provide businesses with flexible and reliable bookkeeping solutions. Our team brings years of industry experience and expertise to every client partnership.
           </motion.p>
-          <motion.p variants={childVariants}>
+          <motion.p variants={childVariants} className='hidden lg:flex'>
             With a team of seasoned professionals, we bring expertise across various industries, providing comprehensive support in accounting, bookkeeping, payroll, taxation, and financial advisory services. Whether you're a startup navigating rapid growth or an established enterprise seeking optimization, we offer scalable solutions to drive your success.
           </motion.p>
         </motion.div>

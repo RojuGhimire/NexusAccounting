@@ -14,12 +14,12 @@ import Footer from "../sections/Footer";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
-      <div className="flex flex-col  space-y-25">
+      <div className="flex flex-col  space-y-25 w-full max-w-[1440px]">
         <HeroSection />
         <Hero2 />
         <About />
         <Service />
-        <Banner />
+        <Banner /> 
         <Software />
         <Price />
         <Meeting />

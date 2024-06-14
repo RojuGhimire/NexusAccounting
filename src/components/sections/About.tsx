@@ -54,7 +54,7 @@ export default function About() {
 
   return (
     <motion.div
-      className="py-16  w-full max-w-[1440px] mx-auto"
+      className="py-16 w-full max-w-[1440px] mx-auto"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
@@ -77,7 +77,7 @@ export default function About() {
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="flex flex-wrap justify-center items-center mt-20 gap-[300px] w-full "
+          className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-16 lg:gap-[300px] w-full "
         >
           {teamMembers.map((member, index) => (
             <motion.div
@@ -89,7 +89,7 @@ export default function About() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <div className="rounded-full  overflow-hidden w-48  h-48 md:w-60 md:h-60">
+                <div className="rounded-full  overflow-hidden w-48   h-48 md:w-60 md:h-60">
                   <motion.img
                     src={member.imageSrc}
                     alt={member.name}
