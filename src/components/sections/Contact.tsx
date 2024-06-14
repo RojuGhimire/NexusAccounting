@@ -101,7 +101,7 @@ export default function Contact() {
     <section
       ref={ref}
       id="contact"
-      className="max-w-[1440px] w-full mx-auto mt-12  pb-12"
+      className="max-w-[1440px] py-7 px-12 w-full mx-auto mt-12  pb-12"
     >
       <div className="text-center">
         <motion.h2
