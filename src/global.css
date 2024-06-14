@@ -12,7 +12,7 @@
   body {
     @apply font-primary scroll-smooth;
   }
-  .h {
+  .h{
     @apply border border-red-500;
   }
   .flex_center {

@@ -14,7 +14,7 @@ import Footer from "../sections/Footer";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
-      <div className="flex flex-col  space-y-25 w-full max-w-[1440px]">
+      <div className="flex flex-col mx-auto w-full  space-y-25 ">
         <HeroSection />
         <Hero2 />
         <About />

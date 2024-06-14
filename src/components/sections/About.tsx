@@ -54,7 +54,7 @@ export default function About() {
 
   return (
     <motion.div
-      className="py-16 w-full max-w-[1440px] mx-auto overflow-hidden"
+      className="py-16 w-full  max-w-[1440px] mx-auto overflow-hidden"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
@@ -73,11 +73,11 @@ export default function About() {
           Meet Our Professional Team
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2  border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-16 lg:gap-[300px] w-full "
+          className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 md:gap-5 lg:gap-[300px] w-full "
         >
           {teamMembers.map((member, index) => (
             <motion.div

@@ -34,7 +34,7 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="w-full max-w-[1440px] h-auto overflow-hidden  relative overflow-hidden mx-auto  mt-16 px-12  sm:px-6 lg:px-8"
+      className="w-full max-w-[1440px] h-auto relative overflow-hidden mx-auto  mt-16 px-12  sm:px-6 lg:px-8"
     >
       <div className="flex flex-col lg:flex-row mt-5 items-center lg:items-start">
         <motion.div
