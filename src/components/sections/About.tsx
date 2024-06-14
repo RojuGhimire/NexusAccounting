@@ -54,7 +54,7 @@ export default function About() {
 
   return (
     <motion.div
-      className="py-16 w-full max-w-[1440px] mx-auto"
+      className="py-16 w-full max-w-[1440px] mx-auto overflow-hidden"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}

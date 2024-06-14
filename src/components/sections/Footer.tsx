@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="max-w-[1440px] h-[260px] items-center justify-center mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 text-zinc-800 ">
+      <div className="max-w-[1440px]  h-[260px] items-center justify-center mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 text-zinc-800 ">
         <motion.div className="col-span-1" variants={itemVariants}>
           <img src="/logo.png" alt="Nexus Logo" className="top-[367px] w-[185px] h-[83px] " />
           <p className="text-sm">

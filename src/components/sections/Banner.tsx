@@ -3,7 +3,7 @@ import React from "react";
 const Banner: React.FC = () => {
   return (
     <div className="bg-cover bg-center py-16 opacity-[75%]" style={{ backgroundImage: "url('/laptop.jpeg')" }}>
-      <div className="w-full max-w-[1440px] h-auto py-16 px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="w-full max-w-[1440px] overflow-hidden  h-auto py-16 px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="text-white md:w-1/2">
           <h1 className="text-4xl font-bold">
             <span className="text-teal-400">Helping</span> business <br /> reinvent itself

@@ -31,7 +31,7 @@ const Software: React.FC = () => {
 
   return (
     <motion.div
-      className="max-w-[1440px] h-auto  gap-8 w-full mx-auto px-12 py-16"
+      className="max-w-[1440px] overflow-hidden  h-auto  gap-8 w-full mx-auto px-12 py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

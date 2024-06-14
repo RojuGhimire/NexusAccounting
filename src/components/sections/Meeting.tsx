@@ -42,7 +42,7 @@ const Meeting: React.FC = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
+      className="flex flex-col overflow-hidden  justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

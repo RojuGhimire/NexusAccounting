@@ -19,29 +19,29 @@ const Banner2: React.FC = () => {
 
   return (
     <motion.div
-      className="bg-teal-500 h-[367px] mb-8 text-white flex flex-col md:flex-row items-center justify-between  p-8"
+      className="bg-teal-500 h-auto md:h-[367px] mb-8 text-white flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="flex gap-[450px] mx-60 items-center justify-center w-[1295px] text-center md:text-left mb-4 md:mb-0  md:mr-8">
-        <div className="w-full md:w-[503px] h-[114px] leading-[57px]">
-          <p className="text-2xl md:text-3xl font-extrabold mb-4">"Where Every Number</p>
-          <p className="text-2xl md:text-3xl font-extrabold">Tells A Story Of Growth."</p>
+      <div className="flex flex-col md:flex-row items-center justify-center w-full text-center md:text-left mb-4 md:mb-0 md:mr-8">
+        <div className="w-full md:w-[503px] leading-[1.25] md:leading-[57px] mb-4 md:mb-0">
+          <p className="text-xl md:text-3xl font-extrabold mb-2 md:mb-4">"Where Every Number</p>
+          <p className="text-xl md:text-3xl font-extrabold">Tells A Story Of Growth."</p>
         </div>
-      <motion.div
-        className="flex-shrink-0"
-        variants={itemVariants}
-        whileHover={{ scale: 1.1 }}
+        <motion.div
+          className="flex-shrink-0"
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
         >
-        <motion.img
-          src="/banner2.png"
-          alt="Image 1"
-          className="w-[429px] h-[269px] object-contain gap-[10px] "
-          transition={{ duration: 0.8 }}
+          <motion.img
+            src="/banner2.png"
+            alt="Image 1"
+            className="w-full md:w-[429px] h-auto md:h-[269px] object-contain"
+            transition={{ duration: 0.8 }}
           />
-      </motion.div>
-          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -53,7 +53,7 @@ const ServicesComponent: React.FC = () => {
 
   return (
     <motion.div
-      className="py-16 w-full max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
+      className="py-16 w-full overflow-hidden  max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
