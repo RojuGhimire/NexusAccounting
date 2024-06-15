@@ -59,7 +59,7 @@ export default function About() {
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto  text-center">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
@@ -77,7 +77,7 @@ export default function About() {
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 md:gap-5 lg:gap-[300px] w-full "
+          className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 md:gap-10 lg:gap-[300px] w-full "
         >
           {teamMembers.map((member, index) => (
             <motion.div

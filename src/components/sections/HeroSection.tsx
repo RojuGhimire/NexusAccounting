@@ -34,9 +34,14 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="w-full max-w-[1440px] h-auto relative overflow-hidden mx-auto  mt-16 px-12  sm:px-6 lg:px-8"
+      className="w-full h-auto relative overflow-hidden mx-auto  px-12 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: 'url("/Everest.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="flex flex-col lg:flex-row mt-5 items-center lg:items-start">
+      <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row  mt-28 items-center lg:items-start">
         <motion.div
           className="text-lg lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
           initial="hidden"
