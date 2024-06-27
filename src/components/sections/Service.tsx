@@ -66,12 +66,17 @@ const ServicesComponent: React.FC = () => {
           className="text-zinc-600 dark:text-zinc-700 mt-2"
           variants={childVariants}
         >
-          Meet Our Professional Team
+          See What We Provide.
         </motion.p>
         <motion.div
           className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
-        ></motion.div>
+        >
+          <motion.div
+          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          variants={childVariants}
+        > </motion.div>
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
           <div className="flex flex-row justify-center items-center">
