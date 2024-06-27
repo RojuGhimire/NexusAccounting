@@ -43,9 +43,9 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="py-16 w-full max-w-[1440px] mx-auto overflow-hidden px-16"
+      className="pb-16 w-full max-w-[1440px] mx-auto overflow-hidden px-16"
     >
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto  text-center">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -53,7 +53,7 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <motion.h2
-            className="text-3xl font-bold text-zinc-900"
+            className="text-3xl  font-bold text-zinc-900"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >

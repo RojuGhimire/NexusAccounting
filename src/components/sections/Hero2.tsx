@@ -18,7 +18,7 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col overflow-hidden justify-between w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-12 lg:mx-auto py-8 md:py-16"
+      className="flex flex-col overflow-hidden justify-between w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-12 lg:mx-auto mt-5 "
       variants={containerVariants}
       initial="hidden"
       animate="visible"
