@@ -146,7 +146,7 @@ const Meeting: React.FC = () => {
         </motion.div>
       </div>
       <PopupModal
-        url="https://calendly.com/chandsagar314"
+        url="https://calendly.com/ghimireroju"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.getElementById("root")!}
