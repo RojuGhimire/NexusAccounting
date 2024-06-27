@@ -140,7 +140,7 @@ const Price: React.FC = () => {
                 {plan.title.includes("NEXUS") ? (
                   <>
                     {plan.title.split("NEXUS")[0]}
-                    <span className="text-teal-500 w-[70px] h-[26px] border-[2px] ">
+                    <span className="text-primary w-[70px] h-[26px] border-[2px] ">
                       <br />
                       NEXUS <br />
                     </span>
@@ -155,7 +155,7 @@ const Price: React.FC = () => {
               )}
             </div>
             <div className="mt-4 p-4 bg-white shadow-sm rounded-lg">
-              <p className="text-teal-500 font-bold">
+              <p className="text-primary font-bold">
                 {plan.price === "Contact Us" ? "Contact Us" : "Including"}
               </p>
               <ul className="list-disc list-inside text-sm">

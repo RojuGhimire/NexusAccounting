@@ -59,10 +59,7 @@ export default function About() {
           >
             Our Team
           </motion.h2>
-          <motion.p
-            className="text-zinc-600 mt-2"
-            variants={itemVariants}
-          >
+          <motion.p className="text-zinc-600 mt-2" variants={itemVariants}>
             Meet Our Professional Team
           </motion.p>
           <motion.div
@@ -101,15 +98,12 @@ export default function About() {
                   </div>
                 </motion.div>
                 <motion.h3
-                  className="text-teal-500 mt-4 text-lg font-semibold"
+                  className="text-primary mt-4 text-lg font-semibold"
                   variants={itemVariants}
                 >
                   {member.name}
                 </motion.h3>
-                <motion.p
-                  className="text-zinc-600"
-                  variants={itemVariants}
-                >
+                <motion.p className="text-zinc-600" variants={itemVariants}>
                   {member.role}
                 </motion.p>
               </motion.div>

@@ -9,15 +9,23 @@ export default {
     extend: {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      fontWeight: {
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+        black: 900,
       },
       colors: {
         primary: {
-          DEFAULT: "#cadefc",
-          secondary: "#f8e5e6",
+          DEFAULT: "#16AF9D",
         },
+        secondary:"#FFB600",
         text: {
-          DEFAULT: "#4CBB17",
-          primary: "#6B7280",
+          DEFAULT: "#000000",
         },
         border: "#3A4D39",
       },

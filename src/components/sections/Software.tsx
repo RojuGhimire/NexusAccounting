@@ -44,10 +44,7 @@ const Software: React.FC = () => {
         >
           Software
         </motion.h2>
-        <motion.p
-          className="text-zinc-600 mt-2"
-          variants={childVariants}
-        >
+        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
           These are the software that we work with:
         </motion.p>
         <motion.div
@@ -71,7 +68,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
             QuickBooks Online
           </h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
@@ -87,7 +84,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">Xero</h3>
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">Xero</h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
             Our team is skilled in utilizing Xero for seamless financial
             management.
@@ -101,7 +98,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
             FreshBooks
           </h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">

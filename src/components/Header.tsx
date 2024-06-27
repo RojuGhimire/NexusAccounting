@@ -15,7 +15,8 @@ import {
 } from "react-icons/fa";
 
 export default function Header() {
-  const { setActiveLink, setTimeOfLastClick } = useActiveLinkContext();
+  const { setActiveLink, setTimeOfLastClick, activeLink } =
+    useActiveLinkContext();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuVariants = {
@@ -42,9 +43,11 @@ export default function Header() {
     visible: { y: 0, opacity: 1 },
   };
 
+  console.log(activeLink);
+
   return (
     <header className="z-50 fixed top-0 left-0  w-full ">
-      <div className="hidden  bg-teal-500 text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
+      <div className="hidden  bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
         {/* Contact Info */}
         <div className="flex  items-center space-x-4">
           <div className="flex items-center space-x-1">
@@ -93,7 +96,9 @@ export default function Header() {
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
-                  className="text-zinc-700 font-bold cursor-pointer hover:text-teal-500"
+                  className={`font-bold cursor-pointer hover:text-primary ${
+                    activeLink === link.name ? "text-primary" : "text-text"
+                  }`}
                   key={link.path}
                   initial="hidden"
                   animate="visible"
@@ -102,10 +107,11 @@ export default function Header() {
                 >
                   <a
                     href={link.path}
+                    className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
                     onClick={() => {
                       setActiveLink(link.name);
                       setTimeOfLastClick(Date.now());
-                      setMenuOpen(false); // Close menu on link click
+                      setMenuOpen(false);
                     }}
                   >
                     {link.name}
@@ -126,7 +132,7 @@ export default function Header() {
 
             {/* Search Icon */}
             <div className="hidden lg:flex items-center">
-              <FaSearch className="text-white bg-teal-700 h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-teal-700 transition duration-300 shadow-md" />
+              <FaSearch className="text-white bg-teal-700 h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
             </div>
           </div>
         </div>
@@ -144,7 +150,7 @@ export default function Header() {
               <ul className="flex flex-col gap-4 items-center py-4">
                 {NAVLINKS.map((link) => (
                   <motion.li
-                    className="text-zinc-700 font-bold cursor-pointer hover:text-teal-500"
+                    className="text-zinc-700 font-bold cursor-pointer hover:text-primary"
                     key={link.path}
                     initial="hidden"
                     animate="visible"
