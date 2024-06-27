@@ -31,6 +31,7 @@ const Software: React.FC = () => {
 
   return (
     <motion.div
+      id="software"
       className="max-w-[1440px] overflow-hidden  h-auto  gap-8 w-full mx-auto px-12 py-16"
       initial="hidden"
       animate="visible"
@@ -62,10 +63,7 @@ const Software: React.FC = () => {
         className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-20"
         variants={containerVariants}
       >
-        <motion.div
-          className="text-center"
-          variants={childVariants}
-        >
+        <motion.div className="text-center" variants={childVariants}>
           <motion.img
             className="mx-auto h-24 w-24"
             src="/quick.png"
@@ -81,10 +79,7 @@ const Software: React.FC = () => {
             efficient bookkeeping.
           </p>
         </motion.div>
-        <motion.div
-          className="text-center"
-          variants={childVariants}
-        >
+        <motion.div className="text-center" variants={childVariants}>
           <motion.img
             className="mx-auto h-24 w-24"
             src="/xero.png"
@@ -92,18 +87,13 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">
-            Xero
-          </h3>
+          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">Xero</h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
             Our team is skilled in utilizing Xero for seamless financial
             management.
           </p>
         </motion.div>
-        <motion.div
-          className="text-center"
-          variants={childVariants}
-        >
+        <motion.div className="text-center" variants={childVariants}>
           <motion.img
             className="mx-auto h-24 w-24"
             src="/fb.png"
