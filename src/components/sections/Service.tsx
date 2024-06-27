@@ -63,17 +63,17 @@ const ServicesComponent: React.FC = () => {
           Our Services
         </motion.h2>
         <motion.p
-          className="text-zinc-600 dark:text-zinc-700 mt-2"
+          className="text-zinc-600 mt-2"
           variants={childVariants}
         >
           See What We Provide.
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         >
           <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         > </motion.div>
         </motion.div>

@@ -45,17 +45,17 @@ const Software: React.FC = () => {
           Software
         </motion.h2>
         <motion.p
-          className="text-zinc-600 dark:text-zinc-400 mt-2"
+          className="text-zinc-600 mt-2"
           variants={childVariants}
         >
           These are the software that we work with:
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
       </div>

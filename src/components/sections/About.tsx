@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
+import { fadeInAnimationVariants } from "@/constants";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -53,33 +54,35 @@ export default function About() {
         >
           <motion.h2
             className="text-3xl font-bold text-zinc-900"
-            variants={itemVariants}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             Our Team
           </motion.h2>
           <motion.p
-            className="text-zinc-600 dark:text-zinc-700 mt-2"
+            className="text-zinc-600 mt-2"
             variants={itemVariants}
           >
             Meet Our Professional Team
           </motion.p>
           <motion.div
-            className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+            className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
             variants={itemVariants}
           >
-             <motion.div
-            className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
-            variants={itemVariants}
-          ></motion.div>
+            <motion.div
+              className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
+              variants={itemVariants}
+            ></motion.div>
           </motion.div>
-          <motion.div
-            className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-8 md:gap-10 lg:gap-[250px] w-full"
-          >
-            {teamMembers.map((member, index) => (
+          <motion.div className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-8 md:gap-10 lg:gap-[250px] w-full">
+            {teamMembers.map((member, id) => (
               <motion.div
-                key={index}
+                key={id}
                 className="flex flex-col items-center"
-                variants={itemVariants}
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={id}
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -104,7 +107,7 @@ export default function About() {
                   {member.name}
                 </motion.h3>
                 <motion.p
-                  className="text-zinc-600 dark:text-zinc-400"
+                  className="text-zinc-600"
                   variants={itemVariants}
                 >
                   {member.role}
