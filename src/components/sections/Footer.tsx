@@ -34,23 +34,23 @@ const Footer: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="max-w-[1440px]  h-auto overflow-hidden items-center justify-center mx-auto grid grid-cols-1 md:grid-cols-4 gap-1 text-zinc-800 ">
+      <div className="max-w-[1440px] h-auto overflow-hidden items-center justify-center mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-zinc-800">
         <motion.div className="col-span-1" variants={itemVariants}>
           <img
             src="/logo.png"
             alt="Nexus Logo"
-            className="top-[367px] w-[185px] h-[83px] "
+            className="w-[185px] h-[83px]"
           />
-          <p className="text-sm hidden md:flex mr-8">
+          <p className="text-sm hidden md:flex">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content. Lorem ipsum may be
             used as a placeholder before final copy is available.
           </p>
         </motion.div>
-        <motion.div className="col-span-1 h-full" variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-primary  mb-4">Company</h3>
-          <ul className="space-y-2 footer-animation">
+        <motion.div className="col-span-1" variants={itemVariants}>
+          <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
+          <ul className="space-y-2">
             <li>
               <a href="#about">About us</a>
             </li>
@@ -68,30 +68,28 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </motion.div>
-        <motion.div className="col-span-1 h-full" variants={itemVariants}>
+        <motion.div className="col-span-1" variants={itemVariants}>
           <h3 className="text-lg font-semibold text-primary mb-4">Support</h3>
-          <ul className="space-y-2 footer-animation">
+          <ul className="space-y-2">
             <li>
-              <a>Terms of service</a>
+              <a href="#terms">Terms of service</a>
             </li>
             <li>
-              <a>Legal</a>
+              <a href="#legal">Legal</a>
             </li>
             <li>
-              <a>Help center</a>
+              <a href="#help">Help center</a>
             </li>
             <li>
-              <a>Privacy policy</a>
+              <a href="#privacy">Privacy policy</a>
             </li>
             <li>
-              <a>Status</a>
+              <a href="#status">Status</a>
             </li>
           </ul>
         </motion.div>
-        <motion.div className="col-span-1 h-full" variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-primary mb-4">
-            Information
-          </h3>
+        <motion.div className="col-span-1" variants={itemVariants}>
+          <h3 className="text-lg font-semibold text-primary mb-4">Information</h3>
           <ul className="space-y-3">
             <li className="flex items-center gap-x-3">
               <IoLocationSharp size={20} />
@@ -104,8 +102,9 @@ const Footer: React.FC = () => {
             <li className="flex items-center gap-x-3">
               <IoMail size={20} />
               <a
-                href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
+                href="mailto:nexus@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 nexus@gmail.com
               </a>
