@@ -101,11 +101,16 @@ const Footer: React.FC = () => {
   </li>
   <li className="flex items-center">
     <img src="/call.png" alt="Phone Icon" className="mr-4" />
-    <span>01-4000000</span>
+    <a href="tel:+9779860000000">9860000000</a>
   </li>
   <li className="flex items-center">
     <img src="/mail.png" alt="Email Icon" className="mr-3" />
-    <span>nexus311@gmail.com</span>
+    <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
+              target="_blank"
+            >
+              nexus@gmail.com
+            </a>
   </li>
 </ul>
 
