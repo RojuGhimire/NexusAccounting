@@ -2,17 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const services = [
-  { icon: "/blue.png", text: "Remote Bookkeeping" },
-  { icon: "/green.png", text: "Financial Reporting" },
-  { icon: "/green.png", text: "Audit assistance" },
-  { icon: "/green.png", text: "Payroll Services" },
+  { icon: "/1.png" },
+  { icon: "/2.png" },
+  { icon: "/3.png" },
+  { icon: "/4.png" },
+
   {
-    icon: "/green.png",
-    text: "Tax Preparation and Filing",
-  },
-  {
-    icon: "/green.png",
-    text: "Accounts receivable/payable",
+    icon: "/5.png"
   },
 ];
 
@@ -92,10 +88,8 @@ const ServicesComponent: React.FC = () => {
                   >
                     <img
                       src={service.icon}
-                      alt={service.text}
                       className="w-full lg:w-[375px]"
                     />
-                    <span className="text-[15px] absolute">{service.text}</span>
                   </div>
                 ))}
               </div>
