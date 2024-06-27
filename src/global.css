@@ -12,7 +12,7 @@
   body {
     @apply font-primary scroll-smooth;
   }
-  .h{
+  .h {
     @apply border border-red-500;
   }
   .flex_center {
@@ -28,4 +28,23 @@
 
 body::-webkit-scrollbar {
   display: none;
+}
+.footer-animation li a {
+  text-decoration: none;
+  position: relative;
+  transition: 1s;
+  cursor: pointer;
+}
+.footer-animation li a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #05f2f6;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.5s;
+}
+.footer-animation li a:hover::after {
+  width: 100%;
 }
