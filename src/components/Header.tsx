@@ -54,7 +54,7 @@ export default function Header() {
         </div>
 
         {/* Phone and Email */}
-        <ul className="hidden md:flex justify-center items-center gap-8 flex-grow">
+        <ul className="hidden lg:flex justify-center items-center gap-8 flex-grow">
           <li className="flex items-center space-x-1 cursor-pointer">
             <FaPhone />
             <a href="tel:+977014000000">01-4000000</a>
@@ -83,14 +83,14 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="bg-white shadow-lg">
+      <nav className="bg-white shadow-lg ">
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <img src="logo.png" alt="Logo" className="w-auto object-contain" />
 
             {/* Navigation Links */}
-            <ul className="hidden md:flex gap-8 items-center flex-grow justify-center">
+            <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
                   className="text-zinc-700 font-bold cursor-pointer hover:text-teal-500"
@@ -115,7 +115,7 @@ export default function Header() {
             </ul>
 
             {/* Hamburger Menu Icon */}
-            <div className="md:hidden flex items-center">
+            <div className="lg:hidden flex  items-end justify-end md:justify-end">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="text-black focus:outline-none"
@@ -125,7 +125,7 @@ export default function Header() {
             </div>
 
             {/* Search Icon */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden lg:flex items-center">
               <FaSearch className="text-white bg-teal-700 h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-teal-700 transition duration-300 shadow-md" />
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function Header() {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="md:hidden bg-gray-200 overflow-hidden"
+              className="lg:hidden bg-gray-200 overflow-hidden"
             >
               <ul className="flex flex-col gap-4 items-center py-4">
                 {NAVLINKS.map((link) => (
