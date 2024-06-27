@@ -18,26 +18,62 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col overflow-hidden  w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-12 md:px-4 lg:mx-auto py-8 md:py-16"
+      className="flex flex-col overflow-hidden justify-between w-full max-w-[1440px] min-h-[398px] md:flex-row items-center md:items-start px-12 md:px-4 lg:mx-auto py-8 md:py-16"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <motion.div
-        className="flex-shrink-0 mb-4 md:mb-0 md:mr-8"
+        className="basis-[35%] min-h-[480px] mb-4 md:mb-0 md:mr-8 relative"
         variants={childVariants}
       >
+        <div>
+          <motion.img
+            src="/wel.png"
+            alt="Audit Image"
+            className="w-full md:w-[250px] object-cover"
+            initial={{ scale: 0.4 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.img
+            src="/nex1.png"
+            alt="Audit Image"
+            className="w-full md:w-[250px] object-cover"
+            initial={{ scale: 0.4 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
+        <div className="absolute top-[25%] right-[5%]">
+          <motion.img
+            src="/join.png"
+            alt="Audit Image"
+            className="w-full md:w-[250px] h-auto object-cover"
+            initial={{ scale: 0.4 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.img
+            src="/cal1.png"
+            alt="Audit Image"
+            className="w-full md:w-[300px] object-cover absolute right-[10%] -bottom-[6rem] z-20"
+            initial={{ scale: 0.4 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
         <motion.img
-          src="/Audit.png"
+          src="/ipad.png"
           alt="Audit Image"
-          className="w-full md:w-auto h-auto object-cover rounded-lg shadow-lg"
-          initial={{ scale: 0.8 }}
+          className="w-full md:w-[250px] object-cover absolute -right-[35%] bottom-[25%] z-40"
+          initial={{ scale: 0.4 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         />
       </motion.div>
       <motion.div
-        className="w-full md:w-[834px] h-auto mt-4 md:mt-0 md:ml-8"
+        className="w-full md:w-[834px] basis-[50%] h-auto mt-4 md:mt-0 md:ml-8"
         variants={childVariants}
       >
         <motion.h1
