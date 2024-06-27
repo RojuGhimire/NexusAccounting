@@ -54,20 +54,25 @@ export default function Header() {
         </div>
 
         {/* Phone and Email */}
-        <div className="hidden md:flex justify-center items-center gap-8 flex-grow">
-          <div className="flex items-center space-x-1">
+        <ul className="hidden md:flex justify-center items-center gap-8 flex-grow">
+          <li className="flex items-center space-x-1 cursor-pointer">
             <FaPhone />
-            <span>01-4000000</span>
-          </div>
-          <div className="flex items-center space-x-1">
+            <a href="tel:+977014000000">01-4000000</a>
+          </li>
+          <li className="flex items-center space-x-1 cursor-pointer">
             <FaPhone />
-            <span>9860000000</span>
-          </div>
-          <div className="flex items-center space-x-1">
+            <a href="tel:+9779860000000">9860000000</a>
+          </li>
+          <li className="flex items-center space-x-1 cursor-pointer">
             <FaEnvelope />
-            <span>nexus@gmail.com</span>
-          </div>
-        </div>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
+              target="_blank"
+            >
+              nexus@gmail.com
+            </a>
+          </li>
+        </ul>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4">
@@ -82,7 +87,7 @@ export default function Header() {
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <img src="logo.png" alt="Logo" className="h-12  w-auto" />
+            <img src="logo.png" alt="Logo" className="w-auto object-contain" />
 
             {/* Navigation Links */}
             <ul className="hidden md:flex gap-8 items-center flex-grow justify-center">
