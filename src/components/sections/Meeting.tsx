@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PopupModal } from "react-calendly";
+import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Meeting: React.FC = () => {
   const containerVariants = {
@@ -42,9 +43,11 @@ const Meeting: React.FC = () => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
+  const { ref } = useLinkInView("Appointment", 1);
 
   return (
     <motion.div
+      ref={ref}
       id="appointment"
       className="flex flex-col overflow-hidden  justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
@@ -98,7 +101,7 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <h3 className="text-zinc-600 font-bold">Calendar</h3>
-          <h2 className="text-2xl font-extrabold text-teal-600">May, 2024</h2>
+          <h2 className="text-2xl font-extrabold text-primary">May, 2024</h2>
           <div className="flex justify-center items-center my-2">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
               <span className="text-zinc-700 mx-1" key={day}>
@@ -128,7 +131,7 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <div className="flex items-center mb-2 md:mb-0 md:mr-4">
-            <div className="w-[22px] h-[14px] bg-teal-500 rounded-full mr-5"></div>
+            <div className="w-[22px] h-[14px] bg-primary rounded-full mr-5"></div>
             <h2 className="text-lg font-bold">New Client</h2>
           </div>
           <div className="flex-grow">

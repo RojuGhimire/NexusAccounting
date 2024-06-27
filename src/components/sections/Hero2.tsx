@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,7 +23,10 @@ export default function Hero2(): JSX.Element {
       initial="hidden"
       animate="visible"
     >
-      <motion.div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8" variants={childVariants}>
+      <motion.div
+        className="flex-shrink-0 mb-4 md:mb-0 md:mr-8"
+        variants={childVariants}
+      >
         <motion.img
           src="/Audit.png"
           alt="Audit Image"
@@ -33,9 +36,12 @@ export default function Hero2(): JSX.Element {
           transition={{ duration: 0.5 }}
         />
       </motion.div>
-      <motion.div className="w-full md:w-[834px] h-auto mt-4 md:mt-0 md:ml-8" variants={childVariants}>
-        <motion.h1 
-          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-teal-500 mb-6"
+      <motion.div
+        className="w-full md:w-[834px] h-auto mt-4 md:mt-0 md:ml-8"
+        variants={childVariants}
+      >
+        <motion.h1
+          className="text-3xl font-poppins font-bold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -48,11 +54,25 @@ export default function Hero2(): JSX.Element {
           animate="visible"
           variants={containerVariants}
         >
-          <motion.p variants={childVariants}>
-            Nexus Accounting Firm was founded with a mission to provide businesses with flexible and reliable bookkeeping solutions. Our team brings years of industry experience and expertise to every client partnership.
+          <motion.p
+            variants={childVariants}
+            className="font-poppins font-medium text-[18px] leading-[27px]"
+          >
+            Nexus Accounting Firm was founded with a mission to provide
+            businesses with flexible and reliable bookkeeping solutions. Our
+            team brings years of industry experience and expertise to every
+            client partnership.
           </motion.p>
-          <motion.p variants={childVariants} className='hidden lg:flex'>
-            With a team of seasoned professionals, we bring expertise across various industries, providing comprehensive support in accounting, bookkeeping, payroll, taxation, and financial advisory services. Whether you're a startup navigating rapid growth or an established enterprise seeking optimization, we offer scalable solutions to drive your success.
+          <motion.p
+            variants={childVariants}
+            className="hidden lg:block font-poppins font-medium text-[18px] leading-[27px]"
+          >
+            With a team of seasoned professionals, we bring expertise across
+            various industries, providing comprehensive support in accounting,
+            bookkeeping, payroll, taxation, and financial advisory services.
+            Whether you're a startup navigating rapid growth or an established
+            enterprise seeking optimization, we offer scalable solutions to
+            drive your success.
           </motion.p>
         </motion.div>
       </motion.div>

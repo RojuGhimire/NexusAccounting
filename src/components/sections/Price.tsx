@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLinkInView } from '@/hooks/useLinkInView';
 
 interface PlanProps {
   imgSrc: string;
@@ -16,9 +17,10 @@ const Plan: React.FC<PlanProps> = ({ imgSrc, buttonText, price, features, additi
       transition: { duration: 0.3 },
     },
   };
-
+  const { ref } = useLinkInView("Pricing", 0.7);
   return (
     <motion.div
+    ref={ref}
       className="bg-card text-card-foreground p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[300px] h-auto gap-8 bg-[#F0F9F8] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
@@ -37,9 +39,7 @@ const Plan: React.FC<PlanProps> = ({ imgSrc, buttonText, price, features, additi
         <p className="text-[#16AF9D] mb-2">{additionalInfo || 'Including'}</p>
         <ul className="mb-4">
           {features.map((feature, index) => (
-            <li key={index}className="flex items-center mb-2">
-            <img src="/Check.png" alt="Check" className="h-4 w-4 mr-2" />
-            {feature}</li>
+            <li key={index}>✔️ {feature}</li>
           ))}
         </ul>
         {buttonText === 'THE BIG NEXUS ADVISOR' ? (
@@ -88,7 +88,7 @@ const Price: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center mt-12">
+      <div className="text-center mt-10">
         <motion.h2 className="text-3xl font-bold text-zinc-900" variants={childVariants}>
           Pricing
         </motion.h2>

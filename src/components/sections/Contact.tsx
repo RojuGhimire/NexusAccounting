@@ -141,7 +141,7 @@ export default function Contact() {
             <motion.div className="mb-6" variants={variants}>
               <h2 className="text-xl text-gray-950 font-medium mb-2">Mail</h2>
               <div className="flex gap-1 items-center my-1">
-                <IoMail className="text-teal-500" size={24} />
+                <IoMail className="text-primary" size={24} />
                 <span>nexus@gmail.com</span>
               </div>
             </motion.div>
@@ -150,14 +150,14 @@ export default function Contact() {
                 Address
               </h2>
               <div className="flex gap-1 items-center my-1">
-                <IoLocationSharp className="text-teal-500" size={24} />
+                <IoLocationSharp className="text-primary" size={24} />
                 <span>Tinkune, Kathmandu</span>
               </div>
             </motion.div>
             <motion.div className="mb-6" variants={variants}>
               <h2 className="text-xl text-gray-950 font-medium mb-2">Phone</h2>
               <div className="flex gap-1 items-center my-1">
-                <MdOutlineLocalPhone className="text-teal-500" size={24} />
+                <MdOutlineLocalPhone className="text-primary" size={24} />
                 <span>9766893385</span>
               </div>
             </motion.div>

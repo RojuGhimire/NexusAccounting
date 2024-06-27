@@ -37,8 +37,8 @@ const HeroSection = () => {
       className="w-full h-auto relative overflow-hidden mx-auto  px-12 sm:px-6 lg:px-8"
       style={{
         backgroundImage: 'url("/Everest.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row mt-28 items-center lg:items-start">
@@ -49,20 +49,28 @@ const HeroSection = () => {
           variants={containerVariants}
         >
           <div className="container flex flex-col lg:flex-row items-center lg:items-start gap-12">
-            <motion.div className="w-full lg:w-1/2 space-y-6" variants={itemVariants}>
-              <h1 className="text-4xl font-bold text-zinc-900">
-                NEXUS YOUR <br />
-                <span className="text-teal-500">TRUSTED PARTNER IN</span>{" "}
+            <motion.div
+              className="w-full lg:w-1/2 space-y-6"
+              variants={itemVariants}
+            >
+              <div>
+                <span className="font-poppins font-bold text-2xl">
+                  NEXUS YOUR
+                </span>
+                <br />
+                <span className="text-primary font-poppins text-3xl">
+                  TRUSTED PARTNER IN
+                </span>{" "}
                 <br className="hidden lg:block" />
-                <span className="font-bold text-5xl text-zinc-900">
+                <span className="font-bold font-poppins text-5xl">
                   REMOTE BOOKKEEPING
                 </span>
-              </h1>
-              <p className="mt-4 text-lg text-yellow-500">
+              </div>
+              <p className="text-base text-secondary font-poppins">
                 Ready to streamline your bookkeeping? Book a consultation today!
               </p>
               <motion.button
-                className="mt-6 bg-teal-500 text-white py-1.5 px-6 rounded text-[18px] hover:bg-teal-600 transition duration-300"
+                className="mt-6 bg-primary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-teal-600 transition duration-500"
                 whileHover="hover"
                 variants={buttonVariants}
               >

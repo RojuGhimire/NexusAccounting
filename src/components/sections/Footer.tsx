@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </p>
         </motion.div>
         <motion.div className="col-span-1 h-full" variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-teal-600  mb-4">Company</h3>
+          <h3 className="text-lg font-semibold text-primary  mb-4">Company</h3>
           <ul className="space-y-2 footer-animation">
             <li>
               <a href="#about">About us</a>
@@ -69,9 +69,7 @@ const Footer: React.FC = () => {
           </ul>
         </motion.div>
         <motion.div className="col-span-1 h-full" variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-teal-600 mb-4">
-            Support
-          </h3>
+          <h3 className="text-lg font-semibold text-primary mb-4">Support</h3>
           <ul className="space-y-2 footer-animation">
             <li>
               <a>Terms of service</a>
@@ -91,7 +89,7 @@ const Footer: React.FC = () => {
           </ul>
         </motion.div>
         <motion.div className="col-span-1 h-full" variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-teal-600 mb-4">
+          <h3 className="text-lg font-semibold text-primary mb-4">
             Information
           </h3>
           <ul className="space-y-3">

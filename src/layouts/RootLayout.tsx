@@ -12,7 +12,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <ActiveLinkContextProvider>
           <Header />
           <Toaster position="top-right" />
-            <div className="w-full mx-auto pt-24">{children}</div>
+
+          <div className="w-full mx-auto pt-24">{children}</div>
         </ActiveLinkContextProvider>
       </ViewportProvider>
     </>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Software: React.FC = () => {
   const containerVariants = {
@@ -29,8 +30,11 @@ const Software: React.FC = () => {
     },
   };
 
+  const { ref } = useLinkInView("Software", 1);
+
   return (
     <motion.div
+      ref={ref}
       id="software"
       className="max-w-[1440px] overflow-hidden  h-auto  gap-8 w-full mx-auto px-12 py-16"
       initial="hidden"
@@ -44,18 +48,15 @@ const Software: React.FC = () => {
         >
           Software
         </motion.h2>
-        <motion.p
-          className="text-zinc-600 dark:text-zinc-400 mt-2"
-          variants={childVariants}
-        >
+        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
           These are the software that we work with:
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
       </div>
@@ -71,7 +72,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
             QuickBooks Online
           </h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
@@ -87,7 +88,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">Xero</h3>
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">Xero</h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
             Our team is skilled in utilizing Xero for seamless financial
             management.
@@ -101,7 +102,7 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-teal-500 ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
             FreshBooks
           </h3>
           <p className="mt-6 text-md font-semibold text-zinc-600 ">
