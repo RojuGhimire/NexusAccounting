@@ -93,7 +93,7 @@ export default function Header() {
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
-                  className="text-zinc-700 font-bold cursor-pointer hover:text-teal-500"
+                  className="text-zinc-700  cursor-pointer hover:text-teal-500"
                   key={link.path}
                   initial="hidden"
                   animate="visible"
