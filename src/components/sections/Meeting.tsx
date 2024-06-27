@@ -115,11 +115,9 @@ const Meeting: React.FC = () => {
           <button
             onClick={() => setIsOpen(true)}
             type="submit"
-            className="inline-flex mt-7 w-[130px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-2 font-extrabold text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-md"
+            className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
           >
-            <div className="flex flex-row">
-              <span>Book Now</span>
-            </div>
+            Book Now
           </button>
         </motion.div>
 

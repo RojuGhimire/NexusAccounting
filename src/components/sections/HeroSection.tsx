@@ -62,7 +62,7 @@ const HeroSection = () => {
                 Ready to streamline your bookkeeping? Book a consultation today!
               </p>
               <motion.button
-                className="mt-6 bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-300"
+                className="mt-6 bg-teal-500 text-white py-1.5 px-6 rounded text-[18px] hover:bg-teal-600 transition duration-300"
                 whileHover="hover"
                 variants={buttonVariants}
               >

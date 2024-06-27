@@ -75,29 +75,26 @@ const ServicesComponent: React.FC = () => {
           className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
-        
+
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
           <div className="flex flex-row justify-center items-center">
-            <img src="/ser.png" alt="" className="w-52 h-56" />
+            <img src="/ser.png" alt="" className="w-52 h-52" />
             <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
           </div>
           <div className="flex flex-col items-center space-y-4">
             <div className="space-y-4">
-              <div className="space-y-4 relative">
+              <div className="space-y-4">
                 {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    className="relative"
-                    variants={childVariants}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ delay: index * 0.7 }}
-                  >
-                    <img src={service.icon} alt="" className="w-full    lg:w-[375px]" />
-                    <span className="text-lg absolute top-1 md:top-10 items-center justify-center lg:top-4 md:left-48 left-20 lg:left-20 px-2 py-4">
+                  <div key={index} className="relative flex items-center justify-center">
+                    <img
+                      src={service.icon}
+                      alt={service.text}
+                      className="w-full lg:w-[375px]"
+                    />
+                    <span className="text-[15px] absolute">
                       {service.text}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -106,7 +103,7 @@ const ServicesComponent: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="flex items-center gap-4"
+                className="flex items-center gap-10 w-full"
                 variants={childVariants}
                 initial="hidden"
                 animate="visible"
@@ -115,7 +112,7 @@ const ServicesComponent: React.FC = () => {
                 <div className="text-4xl text-green-600 items-start justify-start">
                   {benefit.icon}
                 </div>
-                <span className="text-lg text-green-900">{benefit.text}</span>
+                <span className="w-full text-left text-green-900">{benefit.text}</span>
               </motion.div>
             ))}
           </div>
