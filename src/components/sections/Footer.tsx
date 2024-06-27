@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PiPhoneFill } from "react-icons/pi";
+import { IoLocationSharp, IoMail } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   const containerVariants = {
@@ -46,74 +48,71 @@ const Footer: React.FC = () => {
             used as a placeholder before final copy is available.
           </p>
         </motion.div>
-        <motion.div className="col-span-1 " variants={itemVariants}>
+        <motion.div className="col-span-1 h-full" variants={itemVariants}>
           <h3 className="text-lg font-semibold text-teal-600  mb-4">Company</h3>
-          <ul className="space-y-2 ">
+          <ul className="space-y-2 footer-animation">
             <li>
-              <a className="hover:underline">About us</a>
+              <a href="#about">About us</a>
             </li>
             <li>
-              <a className="hover:underline">Our team</a>
+              <a href="#about">Our team</a>
             </li>
             <li>
-              <a className="hover:underline">Services</a>
+              <a href="#services">Services</a>
             </li>
             <li>
-              <a className="hover:underline">Software</a>
+              <a href="#software">Software</a>
             </li>
             <li>
-              <a className="hover:underline">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </motion.div>
-        <motion.div className="col-span-1 " variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-400 mb-4">
+        <motion.div className="col-span-1 h-full" variants={itemVariants}>
+          <h3 className="text-lg font-semibold text-teal-600 mb-4">
             Support
           </h3>
-          <ul className="space-y-2 ">
+          <ul className="space-y-2 footer-animation">
             <li>
-              <a className="hover:underline">Terms of service</a>
+              <a>Terms of service</a>
             </li>
             <li>
-              <a className="hover:underline">Legal</a>
+              <a>Legal</a>
             </li>
             <li>
-              <a className="hover:underline">Help center</a>
+              <a>Help center</a>
             </li>
             <li>
-              <a className="hover:underline">Privacy policy</a>
+              <a>Privacy policy</a>
             </li>
             <li>
-              <a className="hover:underline">Status</a>
+              <a>Status</a>
             </li>
           </ul>
         </motion.div>
-        <motion.div className="col-span-1 " variants={itemVariants}>
-          <h3 className="text-lg font-semibold text-teal-600 dark:text-teal-400 mb-4">
+        <motion.div className="col-span-1 h-full" variants={itemVariants}>
+          <h3 className="text-lg font-semibold text-teal-600 mb-4">
             Information
           </h3>
-          <ul className="space-y-2">
-  <li className="flex items-start">
-    <img src="/location.png" alt="Location Icon" className="mr-2" />
-    <div>
-            Kathmandu, Nepal
-    </div>
-  </li>
-  <li className="flex items-center">
-    <img src="/call.png" alt="Phone Icon" className="mr-4" />
-    <a href="tel:+9779860000000">9860000000</a>
-  </li>
-  <li className="flex items-center">
-    <img src="/mail.png" alt="Email Icon" className="mr-3" />
-    <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
-              target="_blank"
-            >
-              nexus@gmail.com
-            </a>
-  </li>
-</ul>
-
+          <ul className="space-y-3">
+            <li className="flex items-center gap-x-3">
+              <IoLocationSharp size={20} />
+              <div>Kathmandu, Nepal</div>
+            </li>
+            <li className="flex items-center gap-x-3">
+              <PiPhoneFill size={20} />
+              <a href="tel:+9779860000000">9860000000</a>
+            </li>
+            <li className="flex items-center gap-x-3">
+              <IoMail size={20} />
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
+                target="_blank"
+              >
+                nexus@gmail.com
+              </a>
+            </li>
+          </ul>
         </motion.div>
       </div>
     </motion.div>
