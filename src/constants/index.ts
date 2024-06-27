@@ -5,7 +5,7 @@ export const NAVLINKS = [
   },
   {
     name: "About Us",
-    path: "#About",
+    path: "#about",
   },
 
   {

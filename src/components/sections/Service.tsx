@@ -53,6 +53,7 @@ const ServicesComponent: React.FC = () => {
 
   return (
     <motion.div
+      id="services"
       className="py-16 w-full overflow-hidden  max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
       animate="visible"
@@ -85,15 +86,16 @@ const ServicesComponent: React.FC = () => {
             <div className="space-y-4">
               <div className="space-y-4">
                 {services.map((service, index) => (
-                  <div key={index} className="relative flex items-center justify-center">
+                  <div
+                    key={index}
+                    className="relative flex items-center justify-center"
+                  >
                     <img
                       src={service.icon}
                       alt={service.text}
                       className="w-full lg:w-[375px]"
                     />
-                    <span className="text-[15px] absolute">
-                      {service.text}
-                    </span>
+                    <span className="text-[15px] absolute">{service.text}</span>
                   </div>
                 ))}
               </div>
@@ -112,7 +114,9 @@ const ServicesComponent: React.FC = () => {
                 <div className="text-4xl text-green-600 items-start justify-start">
                   {benefit.icon}
                 </div>
-                <span className="w-full text-left text-green-900">{benefit.text}</span>
+                <span className="w-full text-left text-green-900">
+                  {benefit.text}
+                </span>
               </motion.div>
             ))}
           </div>
