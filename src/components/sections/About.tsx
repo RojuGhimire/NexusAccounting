@@ -79,6 +79,7 @@ export default function About() {
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"
+                viewport={{ once: true }}
                 custom={id}
               >
                 <motion.div
