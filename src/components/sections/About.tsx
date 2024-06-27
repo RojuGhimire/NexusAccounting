@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
 
 const containerVariants = {
@@ -67,9 +67,7 @@ export default function About() {
             className="border-b-2 border-zinc-300 dark:border-zinc-600 w-16 mx-auto my-4"
             variants={itemVariants}
           ></motion.div>
-          <motion.div
-            className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-8 md:gap-10 lg:gap-[250px] w-full"
-          >
+          <motion.div className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-8 md:gap-10 lg:gap-[250px] w-full">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}

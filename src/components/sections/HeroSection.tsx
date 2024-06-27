@@ -41,7 +41,7 @@ const HeroSection = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row  mt-28 items-center lg:items-start">
+      <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row mt-28 items-center lg:items-start">
         <motion.div
           className="text-lg lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
           initial="hidden"
