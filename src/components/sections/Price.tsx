@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Price: React.FC = () => {
   const containerVariants = {
@@ -36,8 +37,11 @@ const Price: React.FC = () => {
     },
   };
 
+  const { ref } = useLinkInView("Pricing", 0.7);
+
   return (
     <motion.div
+      ref={ref}
       id="pricing"
       className="max-w-[1440px] h-auto overflow-hidden  gap-8 w-full mx-auto px-4 py-16"
       initial="hidden"

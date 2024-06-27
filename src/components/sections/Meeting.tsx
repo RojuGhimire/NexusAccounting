@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PopupModal } from "react-calendly";
+import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Meeting: React.FC = () => {
   const containerVariants = {
@@ -42,9 +43,11 @@ const Meeting: React.FC = () => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
+  const { ref } = useLinkInView("Appointment", 1);
 
   return (
     <motion.div
+      ref={ref}
       id="appointment"
       className="flex flex-col overflow-hidden  justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"

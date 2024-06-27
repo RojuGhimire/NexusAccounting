@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLinkInView } from "@/hooks/useLinkInView";
 
 const services = [
   { icon: "/1.png" },
@@ -8,7 +9,7 @@ const services = [
   { icon: "/4.png" },
 
   {
-    icon: "/5.png"
+    icon: "/5.png",
   },
 ];
 
@@ -47,8 +48,11 @@ const ServicesComponent: React.FC = () => {
     },
   };
 
+  const { ref } = useLinkInView("Services", 1);
+
   return (
     <motion.div
+      ref={ref}
       id="services"
       className="py-16 w-full overflow-hidden  max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
@@ -62,10 +66,7 @@ const ServicesComponent: React.FC = () => {
         >
           Our Services
         </motion.h2>
-        <motion.p
-          className="text-zinc-600 mt-2"
-          variants={childVariants}
-        >
+        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
           See What We Provide.
         </motion.p>
         <motion.div
@@ -73,9 +74,11 @@ const ServicesComponent: React.FC = () => {
           variants={childVariants}
         >
           <motion.div
-          className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
-          variants={childVariants}
-        > </motion.div>
+            className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
+            variants={childVariants}
+          >
+            {" "}
+          </motion.div>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
@@ -91,10 +94,7 @@ const ServicesComponent: React.FC = () => {
                     key={index}
                     className="relative flex items-center justify-center"
                   >
-                    <img
-                      src={service.icon}
-                      className="w-full lg:w-[375px]"
-                    />
+                    <img src={service.icon} className="w-full lg:w-[375px]" />
                   </div>
                 ))}
               </div>

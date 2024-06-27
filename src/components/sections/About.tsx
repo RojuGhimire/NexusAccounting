@@ -37,7 +37,7 @@ const teamMembers: TeamMemberProps[] = [
 ];
 
 export default function About() {
-  const { ref } = useLinkInView("About Us", 0.8);
+  const { ref } = useLinkInView("About Us", 0.95);
 
   return (
     <section
