@@ -21,7 +21,7 @@ const Plan: React.FC<PlanProps> = ({ imgSrc, buttonText, price, features, additi
   return (
     <motion.div
     ref={ref}
-      className="bg-card text-card-foreground p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[300px] h-auto gap-8 bg-[#F0F9F8] mx-2 my-4"
+      className="p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[300px] h-auto gap-8 bg-[#F0F9F8] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >
@@ -35,15 +35,15 @@ const Plan: React.FC<PlanProps> = ({ imgSrc, buttonText, price, features, additi
         {buttonText}
       </button>
       {price && <p className="text-[#E20000] text-center mt-4 font-extrabold">{price}</p>}
-      <div className="bg-white h-[257px] w-full mt-5 p-3 rounded-lg shadow-inner items-center justify-center">
+      <div className="bg-white h-[257px] w-full mt-5 p-3 rounded-lg shadow-inner flex flex-col justify-between">
         <p className="text-[#16AF9D] mb-2">{additionalInfo || 'Including'}</p>
-        <ul className="mb-4">
+        <ul className="mb-4 h-full">
           {features.map((feature, index) => (
             <li key={index}>✔️ {feature}</li>
           ))}
         </ul>
         {buttonText === 'THE BIG NEXUS ADVISOR' ? (
-          <p className="text-[#E20000] mt-16 text-xs font-bold leading-4 text-left">Contact us for a personalized quote.</p>
+          <p className="text-[#E20000] text-sm font-bold leading-4 text-left">Contact us for a personalized quote.</p>
         ) : (
           <button className="bg-black text-white py-2 px-4 rounded items-center justify-center w-full">Start</button>
         )}
