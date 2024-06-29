@@ -87,17 +87,17 @@ const ServicesComponent: React.FC = () => {
             <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
           </div>
           <div className="flex flex-col items-center space-y-4">
-            <div className="space-y-4">
-              <div className="space-y-4">
+            <div className="space-y-6 ">
                 {services.map((service, index) => (
                   <div
                     key={index}
                     className="relative flex items-center justify-center"
                   >
                     <img src={service.icon} className="w-full lg:w-[375px]" />
+                    
                   </div>
                 ))}
-              </div>
+              
             </div>
           </div>
           <div className="flex flex-col justify-center items-center p-4 bg-[#DFF0EE] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
