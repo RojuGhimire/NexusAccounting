@@ -26,7 +26,7 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <motion.div
       ref={ref}
-      className="bg-card text-card-foreground p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[300px] h-auto gap-8 bg-[#F0F9F8] mx-2 my-4"
+      className="bg-card h  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >
@@ -96,12 +96,12 @@ const Price: React.FC = () => {
   return (
     <motion.div
       id="pricing"
-      className="max-w-[1440px] h-auto overflow-hidden gap-8 w-full mx-auto px-4 py-16"
+      className="max-w-[1440px]  h-auto overflow-hidden  mx-auto px-4 py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center mt-10">
+      <div className="text-center  mt-10">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
@@ -116,12 +116,12 @@ const Price: React.FC = () => {
           variants={childVariants}
         ></motion.div>
         <motion.div
-          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2  border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 lg:gap-8 p-4">
+      <div className="flex flex-wrap h justify-center gap-4  lg:gap-8 p-4">
         {[
           {
             // imgSrc: '/rhinoo.png',
@@ -161,11 +161,11 @@ const Price: React.FC = () => {
         ].map((plan, index) => (
           <Plan
             key={index}
-            imgSrc={plan.imgSrc}
             buttonText={plan.buttonText}
             price={plan.price}
             features={plan.features}
             additionalInfo={plan.additionalInfo}
+            imgSrc={""}
           />
         ))}
       </div>
