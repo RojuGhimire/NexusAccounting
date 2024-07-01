@@ -26,7 +26,7 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <motion.div
       ref={ref}
-      className="bg-card h  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
+      className="bg-card   p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >
@@ -121,7 +121,7 @@ const Price: React.FC = () => {
         ></motion.div>
       </div>
 
-      <div className="flex flex-wrap h justify-center gap-4  lg:gap-8 p-4">
+      <div className="flex flex-wrap justify-center gap-4  lg:gap-8 p-4">
         {[
           {
             // imgSrc: '/rhinoo.png',
