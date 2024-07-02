@@ -46,7 +46,7 @@ const Plan: React.FC<PlanProps> = ({
       )}
       <div className="bg-white h-[257px] w-full mt-5 p-3 rounded-lg shadow-inner items-center justify-center">
         <p className="text-[#16AF9D] mb-2">{additionalInfo || "Including"}</p>
-        <ul className="mb-4">
+        <ul className="mb-4 h-[60%]">
           {features.map((feature, index) => (
             <li key={index}>✔️ {feature}</li>
           ))}

@@ -43,8 +43,6 @@ export default function Header() {
     visible: { y: 0, opacity: 1 },
   };
 
-  console.log(activeLink);
-
   return (
     <header className="z-50 fixed top-0 left-0  w-full ">
       <div className="hidden  bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
@@ -96,9 +94,9 @@ export default function Header() {
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
-                className={`font-bold cursor-pointer hover:text-primary ${
-                  activeLink === link.name ? "text-primary" : "text-text"
-                }`}
+                  className={`font-bold cursor-pointer hover:text-primary ${
+                    activeLink === link.name ? "text-primary" : "text-text"
+                  }`}
                   key={link.path}
                   initial="hidden"
                   animate="visible"

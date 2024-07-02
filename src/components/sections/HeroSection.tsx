@@ -74,7 +74,7 @@ const HeroSection = () => {
                 whileHover="hover"
                 variants={buttonVariants}
               >
-                Book Now
+                <a href="#appointment">Book Now</a>
               </motion.button>
             </motion.div>
             <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
