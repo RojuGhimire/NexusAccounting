@@ -48,7 +48,7 @@ const ServicesComponent: React.FC = () => {
     },
   };
 
-  const { ref } = useLinkInView("Services", 1);
+  const { ref } = useLinkInView("Our Services", 1);
 
   return (
     <motion.div

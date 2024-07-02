@@ -4,12 +4,12 @@ export const NAVLINKS = [
     path: "#home",
   },
   {
-    name: "About Us",
+    name: "Our Team",
     path: "#about",
   },
 
   {
-    name: "Services",
+    name: "Our Services",
     path: "#services",
   },
   {
@@ -21,7 +21,7 @@ export const NAVLINKS = [
     path: "#pricing",
   },
   {
-    name: "Appointment",
+    name: "Meeting",
     path: "#appointment",
   },
   {

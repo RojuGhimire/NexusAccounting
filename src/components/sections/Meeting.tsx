@@ -43,7 +43,7 @@ const Meeting: React.FC = () => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  const { ref } = useLinkInView("Appointment", 1);
+  const { ref } = useLinkInView("Meeting", 1);
 
   return (
     <motion.div
