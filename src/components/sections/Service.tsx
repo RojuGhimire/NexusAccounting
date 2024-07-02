@@ -82,8 +82,8 @@ const ServicesComponent: React.FC = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
-          <div className="flex flex-row justify-center items-center">
-            <img src="/ser.png" alt="" className="w-52 h-52" />
+          <div className="flex flex-row  justify-center items-center">
+            <img src="/ser.png" alt="" className="w-52  h-52" />
             <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
           </div>
           <div className="flex flex-col items-center space-y-4">
@@ -93,7 +93,7 @@ const ServicesComponent: React.FC = () => {
                     key={index}
                     className="relative flex items-center justify-center"
                   >
-                    <img src={service.icon} className="w-full lg:w-[375px]" />
+                    <img src={service.icon} className="w-full  lg:w-[375px]" />
                     
                   </div>
                 ))}
