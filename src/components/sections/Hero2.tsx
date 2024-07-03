@@ -109,7 +109,7 @@ export default function Hero2(): JSX.Element {
           </motion.p>
           <motion.p
             variants={childVariants}
-            className="hidden lg:block font-poppins font-medium text-[18px] leading-[27px]"
+            className="md:hidden lg:block font-poppins font-medium text-[18px] leading-[27px]"
           >
             With a team of seasoned professionals, we bring expertise across
             various industries, providing comprehensive support in accounting,
