@@ -68,6 +68,10 @@ const Meeting: React.FC = () => {
           className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
+        <motion.div
+          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+          variants={childVariants}
+        ></motion.div>
       </div>
 
       <div className="flex flex-col lg:flex-row w-full justify-center gap-8 p-4">

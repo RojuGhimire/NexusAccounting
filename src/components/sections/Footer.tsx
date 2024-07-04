@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="max-w-[1440px] h-auto overflow-hidden items-center justify-center mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-zinc-800">
+      <div className="max-w-[1440px]  h-auto overflow-hidden items-center justify-center mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-zinc-800">
         <motion.div className="col-span-1" variants={itemVariants}>
           <img
             src="/logo.png"
