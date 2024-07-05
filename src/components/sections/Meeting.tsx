@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { PopupModal } from "react-calendly";
 import { useLinkInView } from "@/hooks/useLinkInView";
@@ -45,11 +45,39 @@ const Meeting: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { ref } = useLinkInView("Meeting", 1);
 
+  const [currentMonth, setCurrentMonth] = useState<string>("");
+  const [currentYear, setCurrentYear] = useState<number>(0);
+  const [daysOfWeek, setDaysOfWeek] = useState<string[]>([]);
+  const [datesOfWeek, setDatesOfWeek] = useState<number[]>([]);
+
+  useEffect(() => {
+    const date = new Date();
+    const month = date.toLocaleString("default", { month: "long" });
+    const year = date.getFullYear();
+
+    setCurrentMonth(month);
+    setCurrentYear(year);
+
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const daysArray = [];
+    const datesArray = [];
+
+    for (let i = 0; i < 7; i++) {
+      const currentDate = new Date(date);
+      currentDate.setDate(date.getDate() + i);
+      daysArray.push(days[currentDate.getDay()]);
+      datesArray.push(currentDate.getDate());
+    }
+
+    setDaysOfWeek(daysArray);
+    setDatesOfWeek(datesArray);
+  }, []);
+
   return (
     <motion.div
       ref={ref}
       id="appointment"
-      className="flex flex-col overflow-hidden  justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
+      className="flex flex-col overflow-hidden justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -105,25 +133,21 @@ const Meeting: React.FC = () => {
           whileHover={hoverVariants.hover}
         >
           <h3 className="text-zinc-600 font-bold">Calendar</h3>
-          <h2 className="text-2xl font-extrabold text-primary">May, 2024</h2>
+          <h2 className="text-2xl font-extrabold text-primary">
+            {currentMonth}, {currentYear}
+          </h2>
           <div className="flex justify-center items-center my-2">
-            {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
-              <span className="text-zinc-700 mx-1" key={day}>
-                {day}
-              </span>
-            ))}
-          </div>
-          <div className="flex justify-center items-center my-2">
-            {[19, 20, 21, 22, 23, 24, 25].map((date) => (
-              <span className="text-zinc-900 mx-1" key={date}>
-                {date}
-              </span>
+            {daysOfWeek.map((day, index) => (
+              <div key={index} className="flex flex-col items-center mx-1">
+                <span className="text-zinc-700">{day}</span>
+                <span className="text-zinc-900">{datesOfWeek[index]}</span>
+              </div>
             ))}
           </div>
           <button
             onClick={() => setIsOpen(true)}
             type="submit"
-            className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
+            className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#6c2b4c,45%,#F6F5F2,48%,#6c2b4c)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 "
           >
             Book Now
           </button>
