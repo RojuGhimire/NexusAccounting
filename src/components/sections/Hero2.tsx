@@ -24,10 +24,10 @@ export default function Hero2(): JSX.Element {
       animate="visible"
     >
       <motion.div
-        className="basis-[35%] lg:min-h-[480px]  lg:mb-4 md:mb-0 md:mr-8 relative"
+        className="basis-[35%] lg:mt-32 lg:min-h-[480px]  lg:mb-4 md:mb-0 md:mr-8 relative"
         variants={childVariants}
       >
-        <div>
+        <div >
           <motion.img
             src="/wel.png"
             alt="Audit Image"
@@ -85,7 +85,7 @@ export default function Hero2(): JSX.Element {
         variants={childVariants}
       >
         <motion.h1
-          className="text-3xl font-poppins font-bold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
+          className="text-3xl lg:mt-32 font-poppins font-bold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

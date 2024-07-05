@@ -68,7 +68,7 @@ const Software: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center mt-24 mb-20">
+      <div className="text-center lg:mt-24 lg:mb-24">
         <motion.h2
           className="text-3xl  font-bold text-zinc-900"
           variants={childVariants}

@@ -53,7 +53,7 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <motion.h2
-            className="text-3xl  font-bold text-zinc-900"
+            className="text-3xl mt-28  font-bold text-zinc-900"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -71,7 +71,7 @@ export default function About() {
               variants={itemVariants}
             ></motion.div>
           </motion.div>
-          <motion.div className="flex flex-wrap justify-center items-center mt-10 lg:mt-20 gap-8 md:gap-10  lg:gap-[250px] w-full">
+          <motion.div className="flex flex-wrap justify-center items-center mt-10 lg:mt-24 gap-8 md:gap-10  lg:gap-[250px] w-full">
             {teamMembers.map((member, id) => (
               <motion.div
                 key={id}

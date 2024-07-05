@@ -77,12 +77,12 @@ const Meeting: React.FC = () => {
     <motion.div
       ref={ref}
       id="appointment"
-      className="flex flex-col overflow-hidden justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
+      className="flex flex-col overflow-hidden mb-20 justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center">
+      <div className="text-center  lg:mt-28">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
@@ -102,7 +102,7 @@ const Meeting: React.FC = () => {
         ></motion.div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full justify-center gap-8 p-4">
+      <div className="flex flex-col lg:mt-24 lg:flex-row w-full justify-center gap-8 p-4">
         <motion.div
           className="bg-teal-50 p-4 rounded-lg shadow-md flex flex-col md:flex-row items-center w-full lg:w-[30%] h-auto md:h-[219px]"
           variants={itemVariants}

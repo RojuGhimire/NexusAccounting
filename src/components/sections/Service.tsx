@@ -61,7 +61,7 @@ const ServicesComponent: React.FC = () => {
     >
       <div className="container text-center">
         <motion.h2
-          className="text-3xl font-bold text-zinc-900"
+          className="text-3xl lg:mt-16 font-bold text-zinc-900"
           variants={childVariants}
         >
           Our Services
