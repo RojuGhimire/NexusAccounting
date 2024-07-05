@@ -34,7 +34,7 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="w-full h-auto relative overflow-hidden mx-auto  px-12 sm:px-6 lg:px-8"
+      className="w-full h-[800px] relative overflow-hidden mx-auto  px-12 sm:px-6 lg:px-8"
       style={{
         backgroundImage: 'url("/Everest.png")',
         backgroundSize: "cover",
@@ -48,12 +48,12 @@ const HeroSection = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container flex flex-col lg:flex-row items-center lg:items-start gap-12">
+          <div className="container  flex flex-col lg:flex-row mt-10 lg:mt-52  items-center justify-center gap-12">
             <motion.div
               className="w-full lg:w-1/2 space-y-6"
               variants={itemVariants}
             >
-              <div>
+              <div  >
                 <span className="font-poppins font-bold text-2xl">
                   NEXUS YOUR
                 </span>
