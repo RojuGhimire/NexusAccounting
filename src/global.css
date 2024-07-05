@@ -49,3 +49,14 @@ body::-webkit-scrollbar {
 .footer-animation li a:hover::after {
   width: 100%;
 }
+/* Global styles or specific CSS module */
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+.slick-dots li button:before {
+  color: #000;
+}
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
