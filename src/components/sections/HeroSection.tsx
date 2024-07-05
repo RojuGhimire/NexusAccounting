@@ -70,7 +70,7 @@ const HeroSection = () => {
                 Ready to streamline your bookkeeping? Book a consultation today!
               </p>
               <motion.button
-                className="mt-6 bg-primary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-teal-600 transition duration-500"
+                className="mt-6 bg-primary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-[#6c2b4c] transition duration-500"
                 whileHover="hover"
                 variants={buttonVariants}
               >
