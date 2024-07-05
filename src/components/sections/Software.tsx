@@ -68,9 +68,9 @@ const Software: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center mb-20">
+      <div className="text-center mt-24 mb-20">
         <motion.h2
-          className="text-3xl font-bold text-zinc-900"
+          className="text-3xl  font-bold text-zinc-900"
           variants={childVariants}
         >
           Software
@@ -87,55 +87,57 @@ const Software: React.FC = () => {
           variants={childVariants}
         ></motion.div>
       </div>
-      <Slider {...settings}>
-        <div className="text-center ">
-          <motion.img
-            className="mx-auto  h-24 w-24"
-            src="/quick.png"
-            alt="QuickBooks Online"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary">
-            QuickBooks Online
-          </h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600">
-            We are proficient in QuickBooks Online, leveraging its features for
-            efficient bookkeeping.
-          </p>
-        </div>
-        <div className="text-center">
-          <motion.img
-            className="mx-auto h-24 w-24"
-            src="/xero.png"
-            alt="Xero"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600">
-            Our team is skilled in utilizing Xero for seamless financial
-            management.
-          </p>
-        </div>
-        <div className="text-center">
-          <motion.img
-            className="mx-auto h-24 w-24"
-            src="/fb.png"
-            alt="FreshBooks"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary">
-            FreshBooks
-          </h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600">
-            We work with FreshBooks to simplify invoicing and expense tracking
-            for our clients.
-          </p>
-        </div>
-        {/* Add more slides as needed */}
-      </Slider>
+      <div className="mb-10">
+        <Slider {...settings}>
+          <div className="text-center  ">
+            <motion.img
+              className="mx-auto  h-24 w-24"
+              src="/quick.png"
+              alt="QuickBooks Online"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">
+              QuickBooks Online
+            </h3>
+            <p className="mt-6 text-md font-semibold text-zinc-600">
+              We are proficient in QuickBooks Online, leveraging its features
+              for efficient bookkeeping.
+            </p>
+          </div>
+          <div className="text-center">
+            <motion.img
+              className="mx-auto h-24 w-24"
+              src="/xero.png"
+              alt="Xero"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
+            <p className="mt-6 text-md font-semibold text-zinc-600">
+              Our team is skilled in utilizing Xero for seamless financial
+              management.
+            </p>
+          </div>
+          <div className="text-center">
+            <motion.img
+              className="mx-auto h-24 w-24"
+              src="/fb.png"
+              alt="FreshBooks"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">
+              FreshBooks
+            </h3>
+            <p className="mt-6 text-md font-semibold text-zinc-600">
+              We work with FreshBooks to simplify invoicing and expense tracking
+              for our clients.
+            </p>
+          </div>
+          {/* Add more slides as needed */}
+        </Slider>
+      </div>
     </motion.div>
   );
 };
