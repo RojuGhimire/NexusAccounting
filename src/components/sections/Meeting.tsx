@@ -121,7 +121,7 @@ const Meeting: React.FC = () => {
           <div className="ml-2">
             <img
               alt="arrow"
-              src="/Polygon.png" // Replace with correct image path
+              src="/Polygon.png" 
               className="w-[40px] h-[27px]"
             />
           </div>
