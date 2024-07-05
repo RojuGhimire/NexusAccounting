@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Software: React.FC = () => {
@@ -32,18 +35,42 @@ const Software: React.FC = () => {
 
   const { ref } = useLinkInView("Software", 1);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <motion.div
       ref={ref}
       id="software"
-      className="max-w-[1440px] overflow-hidden  h-auto  gap-8 w-full mx-auto px-12 py-16"
+      className="max-w-[1440px] overflow-hidden h-auto gap-8 w-full mx-auto px-12 py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center">
+      <div className="text-center mb-20">
         <motion.h2
-          className="text-3xl font-bold text-zinc-900 "
+          className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
         >
           Software
@@ -60,27 +87,24 @@ const Software: React.FC = () => {
           variants={childVariants}
         ></motion.div>
       </div>
-      <motion.div
-        className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-20"
-        variants={containerVariants}
-      >
-        <motion.div className="text-center" variants={childVariants}>
+      <Slider {...settings}>
+        <div className="text-center ">
           <motion.img
-            className="mx-auto h-24 w-24"
+            className="mx-auto  h-24 w-24"
             src="/quick.png"
             alt="QuickBooks Online"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">
             QuickBooks Online
           </h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600 ">
+          <p className="mt-6 text-md font-semibold text-zinc-600">
             We are proficient in QuickBooks Online, leveraging its features for
             efficient bookkeeping.
           </p>
-        </motion.div>
-        <motion.div className="text-center" variants={childVariants}>
+        </div>
+        <div className="text-center">
           <motion.img
             className="mx-auto h-24 w-24"
             src="/xero.png"
@@ -88,13 +112,13 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary ">Xero</h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600 ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
+          <p className="mt-6 text-md font-semibold text-zinc-600">
             Our team is skilled in utilizing Xero for seamless financial
             management.
           </p>
-        </motion.div>
-        <motion.div className="text-center" variants={childVariants}>
+        </div>
+        <div className="text-center">
           <motion.img
             className="mx-auto h-24 w-24"
             src="/fb.png"
@@ -102,15 +126,16 @@ const Software: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           />
-          <h3 className="mt-8 text-2xl font-extrabold text-primary ">
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">
             FreshBooks
           </h3>
-          <p className="mt-6 text-md font-semibold text-zinc-600 ">
+          <p className="mt-6 text-md font-semibold text-zinc-600">
             We work with FreshBooks to simplify invoicing and expense tracking
             for our clients.
           </p>
-        </motion.div>
-      </motion.div>
+        </div>
+        {/* Add more slides as needed */}
+      </Slider>
     </motion.div>
   );
 };
