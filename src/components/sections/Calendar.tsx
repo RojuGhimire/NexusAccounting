@@ -57,16 +57,13 @@ const Meeting: React.FC = () => {
     setCurrentMonth(month);
     setCurrentYear(year);
 
-    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const days = [ "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const daysArray = [];
     const datesArray = [];
 
-    const startOfWeek = new Date(date);
-    startOfWeek.setDate(date.getDate() - date.getDay());
-
     for (let i = 0; i < 7; i++) {
-      const currentDate = new Date(startOfWeek);
-      currentDate.setDate(startOfWeek.getDate() + i);
+      const currentDate = new Date(date);
+      currentDate.setDate(date.getDate() + i);
       daysArray.push(days[currentDate.getDay()]);
       datesArray.push(currentDate.getDate());
     }
