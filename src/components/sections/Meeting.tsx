@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { PopupModal } from "react-calendly";
 import { useLinkInView } from "@/hooks/useLinkInView";
 
 const Meeting: React.FC = () => {
@@ -16,6 +17,7 @@ const Meeting: React.FC = () => {
       },
     },
   };
+
   const childVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -41,6 +43,7 @@ const Meeting: React.FC = () => {
     },
   };
 
+  const [isOpen, setIsOpen] = useState(false);
   const { ref } = useLinkInView("Meeting", 1);
 
   const [currentMonth, setCurrentMonth] = useState<string>("");
@@ -61,12 +64,9 @@ const Meeting: React.FC = () => {
     const daysArray = [];
     const datesArray = [];
 
-    const startOfWeek = new Date(date);
-    startOfWeek.setDate(date.getDate() - date.getDay());
-
     for (let i = 0; i < 7; i++) {
-      const currentDate = new Date(startOfWeek);
-      currentDate.setDate(startOfWeek.getDate() + i);
+      const currentDate = new Date(date);
+      currentDate.setDate(date.getDate() + i);
       daysArray.push(days[currentDate.getDay()]);
       datesArray.push(currentDate.getDate());
     }
@@ -98,18 +98,6 @@ const Meeting: React.FC = () => {
   };
 
   const calendar = generateCalendar();
-
-  const generateGoogleCalendarLink = () => {
-    const baseUrl = "https://calendar.google.com/calendar/r/eventedit";
-    const params = new URLSearchParams({
-      text: "Consultation with Expert",
-      dates: "20230707T090000Z/20230707T100000Z", // Example dates in the format YYYYMMDDTHHMMSSZ
-      details: "Schedule a consultation with one of our experts",
-      location: "Zoom",
-    });
-
-    return `${baseUrl}?${params.toString()}`;
-  };
 
   return (
     <motion.div
@@ -181,14 +169,13 @@ const Meeting: React.FC = () => {
               </React.Fragment>
             ))}
           </div>
-          <a
-            href={generateGoogleCalendarLink()}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setIsOpen(true)}
+            type="submit"
             className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#6c2b4c,45%,#F6F5F2,48%,#6c2b4c)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Book Now
-          </a>
+          </button>
         </motion.div>
 
         <motion.div
@@ -210,6 +197,12 @@ const Meeting: React.FC = () => {
           </div>
         </motion.div>
       </div>
+      <PopupModal
+        url="https://calendly.com/ghimireroju"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.getElementById("root")!}
+      />
     </motion.div>
   );
 };
