@@ -49,7 +49,6 @@ const Meeting: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState<string>("");
   const [currentYear, setCurrentYear] = useState<number>(0);
   const [daysOfWeek, setDaysOfWeek] = useState<string[]>([]);
-  const [, setDatesOfWeek] = useState<number[]>([]);
   const [today] = useState<number>(new Date().getDate());
 
   useEffect(() => {
@@ -61,18 +60,7 @@ const Meeting: React.FC = () => {
     setCurrentYear(year);
 
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    const daysArray = [];
-    const datesArray = [];
-
-    for (let i = 0; i < 7; i++) {
-      const currentDate = new Date(date);
-      currentDate.setDate(date.getDate() + i);
-      daysArray.push(days[currentDate.getDay()]);
-      datesArray.push(currentDate.getDate());
-    }
-
-    setDaysOfWeek(daysArray);
-    setDatesOfWeek(datesArray);
+    setDaysOfWeek(days);
   }, []);
 
   const generateCalendar = () => {
@@ -81,16 +69,18 @@ const Meeting: React.FC = () => {
     const startDay = date.getDay();
     const daysInMonth = new Date(currentYear, new Date().getMonth() + 1, 0).getDate();
 
-    let day = 1 - startDay;
+    let day = 1;
     for (let i = 0; i < 6; i++) {
       const week = [];
       for (let j = 0; j < 7; j++) {
-        if (day > 0 && day <= daysInMonth) {
-          week.push(day);
-        } else {
+        if (i === 0 && j < startDay) {
           week.push(null);
+        } else if (day > daysInMonth) {
+          week.push(null);
+        } else {
+          week.push(day);
+          day++;
         }
-        day++;
       }
       weeks.push(week);
     }
@@ -160,10 +150,10 @@ const Meeting: React.FC = () => {
                   <div
                     key={dayIndex}
                     className={`text-center p-1 border border-gray-300 rounded ${
-                      day === today ? "bg-[#4d99ae]" : ""
+                      day === today ? "bg-[#4d99ae] text-white" : "text-zinc-700"
                     }`}
                   >
-                    {day}
+                    {day || ""}
                   </div>
                 ))}
               </React.Fragment>
