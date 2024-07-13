@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { PopupModal } from "react-calendly";
 import { useLinkInView } from "@/hooks/useLinkInView";
+import { useInView } from "react-intersection-observer";
 
 const Meeting: React.FC = () => {
   const containerVariants = {
@@ -50,6 +51,11 @@ const Meeting: React.FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(0);
   const [daysOfWeek, setDaysOfWeek] = useState<string[]>([]);
   const [today] = useState<number>(new Date().getDate());
+
+  const { ref: calendarRef, inView: calendarInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     const date = new Date();
@@ -130,8 +136,11 @@ const Meeting: React.FC = () => {
         </motion.div>
 
         <motion.div
+          ref={calendarRef}
+          initial="hidden"
+          animate={calendarInView ? "visible" : "hidden"}
+          variants={containerVariants}
           className="bg-white p-4 rounded shadow-md flex flex-col items-center w-full lg:w-[30%] h-auto md:h-[450px] text-center"
-          variants={itemVariants}
           whileHover={hoverVariants.hover}
         >
           <h3 className="text-zinc-600 font-bold">Calendar</h3>
