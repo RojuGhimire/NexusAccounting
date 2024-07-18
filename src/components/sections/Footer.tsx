@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PiPhoneFill } from "react-icons/pi";
 import { IoLocationSharp, IoMail } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const containerVariants = {
@@ -72,7 +73,7 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-primary mb-4">Support</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#terms">Terms of service</a>
+              <Link to="/terms">Terms of service</Link>
             </li>
             <li>
               <a href="#legal">Legal</a>
