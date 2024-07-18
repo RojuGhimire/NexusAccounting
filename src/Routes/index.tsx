@@ -7,6 +7,7 @@ const AppRoutes = () => {
   return (
     <div>
       <Routes>
+        
         <Route path="/" element={<Homepage />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/terms" element={<TermsAndConditions />} />
