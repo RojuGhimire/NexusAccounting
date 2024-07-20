@@ -1,5 +1,5 @@
 import Header from '@/components/Header'; 
-import Footer from '@/components/sections/Footer';
+import Footer2 from '@/components/sections/Footer2';
 import React from 'react';
 
 const TermsAndConditions: React.FC = () => {
@@ -65,7 +65,7 @@ const TermsAndConditions: React.FC = () => {
         Address: Kathmandu, Nepal
       </p>
     </div>
-    <Footer />
+    <Footer2 />
     </>
   );
 };

@@ -13,7 +13,6 @@ import {
   FaSearch,
   FaBars,
 } from "react-icons/fa";
-import { Link } from 'react-router-dom'; 
 
 export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
@@ -70,6 +69,7 @@ export default function Header() {
             <a
               href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
               target="_blank"
+              rel="noopener noreferrer"
             >
               nexus@gmail.com
             </a>
@@ -89,9 +89,7 @@ export default function Header() {
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/">
-              <img src="logo.png" alt="Logo" className="w-auto object-contain cursor-pointer" />
-            </Link>
+            <img src="logo.png" alt="Logo" className="w-auto object-contain" />
 
             {/* Navigation Links */}
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
@@ -106,8 +104,8 @@ export default function Header() {
                   variants={linkVariants}
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
-                  <Link
-                    to={link.path}
+                  <a
+                    href={link.path}
                     className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
                     onClick={() => {
                       setActiveLink(link.name);
@@ -116,7 +114,7 @@ export default function Header() {
                     }}
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </motion.li>
               ))}
             </ul>
@@ -159,8 +157,8 @@ export default function Header() {
                     variants={linkVariants}
                     transition={{ duration: 0.3, delay: 0.1 }}
                   >
-                    <Link
-                      to={link.path}
+                    <a
+                      href={link.path}
                       onClick={() => {
                         setActiveLink(link.name);
                         setTimeOfLastClick(Date.now());
@@ -168,7 +166,7 @@ export default function Header() {
                       }}
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </motion.li>
                 ))}
               </ul>
