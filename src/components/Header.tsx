@@ -13,6 +13,7 @@ import {
   FaSearch,
   FaBars,
 } from "react-icons/fa";
+import { Link } from 'react-router-dom'; 
 
 export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
@@ -44,10 +45,10 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 fixed top-0  left-0  w-full ">
-      <div className="hidden  bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
+    <header className="z-50 fixed top-0 left-0 w-full ">
+      <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
         {/* Contact Info */}
-        <div className="flex  items-center space-x-4">
+        <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-1">
             <FaMapMarkerAlt />
             <span>Pepsicola, Kathmandu, Nepal</span>
@@ -88,7 +89,9 @@ export default function Header() {
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <img src="logo.png" alt="Logo" className="w-auto object-contain" />
+            <Link to="/">
+              <img src="logo.png" alt="Logo" className="w-auto object-contain cursor-pointer" />
+            </Link>
 
             {/* Navigation Links */}
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
@@ -103,8 +106,8 @@ export default function Header() {
                   variants={linkVariants}
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
                     onClick={() => {
                       setActiveLink(link.name);
@@ -113,13 +116,13 @@ export default function Header() {
                     }}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
 
             {/* Hamburger Menu Icon */}
-            <div className="lg:hidden flex  items-end justify-end md:justify-end">
+            <div className="lg:hidden flex items-end justify-end md:justify-end">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="text-black focus:outline-none"
@@ -156,8 +159,8 @@ export default function Header() {
                     variants={linkVariants}
                     transition={{ duration: 0.3, delay: 0.1 }}
                   >
-                    <a
-                      href={link.path}
+                    <Link
+                      to={link.path}
                       onClick={() => {
                         setActiveLink(link.name);
                         setTimeOfLastClick(Date.now());
@@ -165,7 +168,7 @@ export default function Header() {
                       }}
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
