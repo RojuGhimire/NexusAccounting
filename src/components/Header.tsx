@@ -89,7 +89,9 @@ export default function Header() {
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <img src="logo.png" alt="Logo" className="w-auto object-contain" />
+            <a href="/" onClick={() => { setActiveLink("Home"); setTimeOfLastClick(Date.now()); }}>
+              <img src="logo.png" alt="Logo" className="w-auto object-contain" />
+            </a>
 
             {/* Navigation Links */}
             <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
