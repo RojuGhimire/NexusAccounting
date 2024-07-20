@@ -1,12 +1,12 @@
-// import Header from '@/components/Header';
+import Header from '@/components/Header'; 
 import Footer from '@/components/sections/Footer';
 import React from 'react';
 
 const TermsAndConditions: React.FC = () => {
   return (
     <>
-    {/* <Header /> */}
-    <div className="container mx-auto p-8">
+    <Header />
+    <div className="container mt-28 mx-auto p-8">
       <h1 className="text-3xl font-bold mb-4">Terms and Conditions</h1>
       <p className="mb-4">
         Welcome to our application. If you continue to browse and use this application, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Nexus’s relationship with you in relation to this application.
