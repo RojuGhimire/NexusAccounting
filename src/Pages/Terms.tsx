@@ -11,9 +11,9 @@ const TermsAndConditions: React.FC = () => {
       <p className="mb-4">
         Welcome to our application. If you continue to browse and use this application, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Nexus’s relationship with you in relation to this application.
       </p>
-      <p className="mb-4">
+      {/* <p className="mb-4">
         If you disagree with any part of these terms and conditions, please do not use our application.
-      </p>
+      </p> */}
 
       <h2 className="text-2xl font-semibold mb-2">Use of the Application</h2>
       <p className="mb-4">
