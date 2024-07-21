@@ -3,14 +3,11 @@ import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
 
 const services = [
-  { icon: "/1.png" },
+  { icon: "/1.png " },
   { icon: "/2.png" },
   { icon: "/3.png" },
   { icon: "/4.png" },
-
-  {
-    icon: "/5.png",
-  },
+  { icon: "/5.png" },
 ];
 
 const benefits = [
@@ -86,18 +83,16 @@ const ServicesComponent: React.FC = () => {
             <img src="/ser.png" alt="" className="w-52  h-52" />
             <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
           </div>
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex  flex-col items-center space-y-4">
             <div className="space-y-6 ">
-                {services.map((service, index) => (
-                  <div
-                    key={index}
-                    className="relative flex items-center justify-center"
-                  >
-                    <img src={service.icon} className="w-full  lg:w-[375px]" />
-                    
-                  </div>
-                ))}
-              
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="relative flex items-center justify-center"
+                >
+                  <img src={service.icon} className="w-full  lg:w-[375px]" />
+                </div>
+              ))}
             </div>
           </div>
           <div className="flex flex-col justify-center items-center p-4 bg-[#DFF0EE] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
