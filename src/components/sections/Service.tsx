@@ -1,9 +1,9 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
 
 const services = [
-  { icon: "/1.png " },
+  { icon: "/1.png" },
   { icon: "/2.png" },
   { icon: "/3.png" },
   { icon: "/4.png" },
@@ -46,12 +46,21 @@ const ServicesComponent: React.FC = () => {
   };
 
   const { ref } = useLinkInView("Our Services", 1);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start(i => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.3, type: "spring", stiffness: 100, damping: 10 },
+    }));
+  }, [controls]);
 
   return (
     <motion.div
       ref={ref}
       id="services"
-      className="py-16 w-full overflow-hidden  max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
+      className="py-16 w-full overflow-hidden max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -79,19 +88,22 @@ const ServicesComponent: React.FC = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
-          <div className="flex flex-row  justify-center items-center">
-            <img src="/ser.png" alt="" className="w-52  h-52" />
+          <div className="flex flex-row justify-center items-center">
+            <img src="/ser.png" alt="" className="w-52 h-52" />
             <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
           </div>
-          <div className="flex  flex-col items-center space-y-4">
-            <div className="space-y-6 ">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="space-y-6">
               {services.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="relative flex items-center justify-center"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={controls}
+                  custom={index}
                 >
-                  <img src={service.icon} className="w-full  lg:w-[375px]" />
-                </div>
+                  <img src={service.icon} className="w-full lg:w-[375px]" />
+                </motion.div>
               ))}
             </div>
           </div>
