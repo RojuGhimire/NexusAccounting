@@ -63,11 +63,11 @@ export default function About() {
             Meet Our Professional Team
           </motion.p>
           <motion.div
-            className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
+            className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
             variants={itemVariants}
           >
             <motion.div
-              className="border-b-2 border-zinc-300 w-16 mx-auto my-4"
+              className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
               variants={itemVariants}
             ></motion.div>
           </motion.div>

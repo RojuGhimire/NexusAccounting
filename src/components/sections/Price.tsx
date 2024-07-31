@@ -26,16 +26,11 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <motion.div
       ref={ref}
-      className="bg-card   p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
+      className="bg-card  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >
-      {/* <motion.img
-        src={imgSrc}
-        alt="business-rhino"
-        className="mx-auto h-[119px] w-[119px]"
-        variants={hoverVariants}
-      /> */}
+      
       <button className="bg-[#16AF9D] text-white h-[39px] py-2 px-4 rounded mb-2 mx-auto block">
         {buttonText}
       </button>
@@ -96,7 +91,7 @@ const Price: React.FC = () => {
   return (
     <motion.div
       id="pricing"
-      className="max-w-[1440px]  h-auto overflow-hidden  mx-auto px-4 lg:py-16"
+      className="max-w-[1440px]   h-auto overflow-hidden  mx-auto px-4 lg:py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
