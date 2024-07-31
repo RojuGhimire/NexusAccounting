@@ -20,14 +20,13 @@ const Homepage: React.FC = () => {
         <Hero2 />
         <About />
         <Service />
-        <Banner /> 
+        <Banner />
         <Software />
         <Price />
         <Meeting />
         <Contact />
         <Banner2 />
         <Footer />
-        <Footer2 />
         <Footer2 />
       </div>
     </RootLayout>
