@@ -28,6 +28,7 @@ const Homepage: React.FC = () => {
         <Banner2 />
         <Footer />
         <Footer2 />
+        <Footer2 />
       </div>
     </RootLayout>
   );
