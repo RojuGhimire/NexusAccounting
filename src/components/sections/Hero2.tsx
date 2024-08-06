@@ -18,7 +18,7 @@ const childVariants = {
 export default function Hero2(): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col overflow-hidden justify-between w-full max-w-[1440px]  min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-12 lg:mx-auto mt-5 "
+      className="flex flex-col font-poppins overflow-hidden justify-between w-full max-w-[1440px]  min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-12 lg:mx-auto mt-5 "
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -85,7 +85,7 @@ export default function Hero2(): JSX.Element {
         variants={childVariants}
       >
         <motion.h1
-          className="text-3xl lg:mt-32 font-poppins font-bold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
+          className="text-3xl lg:mt-32 font-poppins font-extrabold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -93,14 +93,14 @@ export default function Hero2(): JSX.Element {
           Welcome To Nexus
         </motion.h1>
         <motion.div
-          className="leading-7 text-lg lg:text-xl font-semibold text-zinc-700 space-y-6"
+          className="leading-7  text-lg lg:text-xl font-semibold text-zinc-700 space-y-6"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
           <motion.p
             variants={childVariants}
-            className="font-poppins font-medium text-[18px] leading-[27px]"
+            className="font-poppins  text-[18px] leading-[27px]"
           >
             Nexus Accounting Firm was founded with a mission to provide
             businesses with flexible and reliable bookkeeping solutions. Our
@@ -109,7 +109,7 @@ export default function Hero2(): JSX.Element {
           </motion.p>
           <motion.p
             variants={childVariants}
-            className="md:hidden lg:block font-poppins font-medium text-[18px] leading-[27px]"
+            className="md:hidden lg:block font-poppins  text-[18px] leading-[27px]"
           >
             With a team of seasoned professionals, we bring expertise across
             various industries, providing comprehensive support in accounting,

@@ -43,7 +43,7 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="pb-16 w-full max-w-[1440px] mx-auto overflow-hidden px-16"
+      className="pb-16 w-full max-w-[1440px] mx-auto font-primary overflow-hidden px-16"
     >
       <div className="container mx-auto  text-center">
         <motion.div

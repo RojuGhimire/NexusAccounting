@@ -89,8 +89,7 @@ const ServicesComponent: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
           <div className="flex flex-row justify-center items-center">
-            <img src="/ser.png" alt="" className="w-52 h-52" />
-            <img src="DOT.png" alt="" className="w-32 lg:w-32 lg:h-64" />
+            <img src="/finalser.png" alt="" className="w-[331.07px] h-[401px]" />
           </div>
           <div className="flex flex-col items-center space-y-4">
             <div className="space-y-6">
@@ -107,7 +106,7 @@ const ServicesComponent: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center p-4 bg-[#DFF0EE] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
+          <div className="flex flex-col font-poppins justify-center items-center p-4 bg-[#DFF0EE] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}

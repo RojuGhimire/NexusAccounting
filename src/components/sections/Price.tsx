@@ -91,7 +91,7 @@ const Price: React.FC = () => {
   return (
     <motion.div
       id="pricing"
-      className="max-w-[1440px]   h-auto overflow-hidden  mx-auto px-4 lg:py-16"
+      className="max-w-[1440px] font-poppins  h-auto overflow-hidden  mx-auto px-4 lg:py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

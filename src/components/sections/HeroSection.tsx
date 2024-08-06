@@ -48,7 +48,7 @@ const HeroSection = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container  flex flex-col lg:flex-row mt-10 lg:mt-52  items-center justify-center gap-12">
+          <div className="container font-poppins  flex flex-col lg:flex-row mt-10 lg:mt-52  items-center justify-center gap-12">
             <motion.div
               className="w-full lg:w-1/2 space-y-6"
               variants={itemVariants}

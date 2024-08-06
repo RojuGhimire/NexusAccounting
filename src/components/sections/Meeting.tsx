@@ -99,7 +99,7 @@ const Meeting: React.FC = () => {
     <motion.div
       ref={ref}
       id="appointment"
-      className="flex flex-col overflow-hidden mb-20 justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
+      className="flex flex-col font-poppins overflow-hidden mb-20 justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

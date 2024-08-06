@@ -101,7 +101,7 @@ export default function Contact() {
     <section
       ref={ref}
       id="contact"
-      className="max-w-[1440px] overflow-hidden  py-7 px-12 w-full mx-auto  pb-12"
+      className="max-w-[1440px] font-poppins overflow-hidden  py-7 px-12 w-full mx-auto  pb-12"
     >
       <div className="text-center lg:mt-24">
         <motion.h2

@@ -63,7 +63,7 @@ const Software: React.FC = () => {
     <motion.div
       ref={ref}
       id="software"
-      className="max-w-[1440px] overflow-hidden h-auto gap-8 w-full mx-auto px-12 py-16"
+      className="max-w-[1440px] font-poppins overflow-hidden h-auto gap-8 w-full mx-auto px-12 py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
