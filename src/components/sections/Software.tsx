@@ -63,12 +63,12 @@ const Software: React.FC = () => {
     <motion.div
       ref={ref}
       id="software"
-      className="max-w-[1440px] font-poppins overflow-hidden h-auto gap-8 w-full mx-auto px-12 py-16"
+      className="max-w-[1440px] font-poppins overflow-hidden h-auto gap-8 w-full mx-auto px-12 "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center lg:mt-24 lg:mb-24">
+      <div className="text-center lg:mt-24 lg:mb-12">
         <motion.h2
           className="text-3xl  font-bold text-zinc-900"
           variants={childVariants}
@@ -87,7 +87,7 @@ const Software: React.FC = () => {
           variants={childVariants}
         ></motion.div>
       </div>
-      <div className="mb-10">
+      <div className="">
         <Slider {...settings}>
           <div className="text-center  ">
             <motion.img
@@ -100,7 +100,7 @@ const Software: React.FC = () => {
             <h3 className="mt-8 text-2xl font-extrabold text-primary">
               QuickBooks Online
             </h3>
-            <p className="mt-6 text-md font-semibold text-zinc-600">
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
               We are proficient in QuickBooks Online, leveraging its features
               for efficient bookkeeping.
             </p>
@@ -114,7 +114,7 @@ const Software: React.FC = () => {
               whileTap={{ scale: 0.9 }}
             />
             <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
-            <p className="mt-6 text-md font-semibold text-zinc-600">
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
               Our team is skilled in utilizing Xero for seamless financial
               management.
             </p>
@@ -130,9 +130,34 @@ const Software: React.FC = () => {
             <h3 className="mt-8 text-2xl font-extrabold text-primary">
               FreshBooks
             </h3>
-            <p className="mt-6 text-md font-semibold text-zinc-600">
-              We work with FreshBooks to simplify invoicing and expense tracking
-              for our clients.
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
+              We work with FreshBooks to simplify invoicing and expense.
+            </p>
+          </div>
+          <div className="text-center">
+            <motion.img
+              className="mx-auto h-24 w-24"
+              src="/fb.png"
+              alt="FreshBooks"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">Stripe</h3>
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
+              We work with FreshBooks to simplify invoicing and expense.
+            </p>
+          </div>
+          <div className="text-center">
+            <motion.img
+              className="mx-auto h-24 w-24"
+              src="/fb.png"
+              alt="Bill"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">Gusto</h3>
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
+              We work with FreshBooks to simplify invoicing and expense tracking.
             </p>
           </div>
           {/* Add more slides as needed */}

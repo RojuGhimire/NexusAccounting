@@ -87,9 +87,9 @@ const ServicesComponent: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row mt-20 justify-center items-center gap-8 lg:gap-[195px]">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-[195px]">
           <div className="flex flex-row justify-center items-center">
-            <img src="/finalser.png" alt="" className="w-[331.07px] h-[401px]" />
+            <img src="/vice.png" alt="" className="w-[331.07px] h-[401px]  md:w-[410px] lg:h-[401px]" />
           </div>
           <div className="flex flex-col items-center space-y-4">
             <div className="space-y-6">
@@ -106,7 +106,7 @@ const ServicesComponent: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col font-poppins justify-center items-center p-4 bg-[#DFF0EE] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
+          <div className="flex flex-col font-poppins justify-center items-center p-4 bg-[#00326B] rounded-3xl w-full lg:w-[320px] lg:h-[330px] gap-y-[26px]">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -116,10 +116,10 @@ const ServicesComponent: React.FC = () => {
                 animate="visible"
                 transition={{ delay: index * 0.7 }}
               >
-                <div className="text-4xl text-green-600 items-start justify-start">
+                <div className="text-4xl text-white items-start justify-start">
                   {benefit.icon}
                 </div>
-                <span className="w-full text-left text-green-900">
+                <span className="w-full text-left text-white">
                   {benefit.text}
                 </span>
               </motion.div>

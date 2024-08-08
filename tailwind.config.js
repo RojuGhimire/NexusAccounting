@@ -10,6 +10,8 @@ export default {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        lobster: ["Lobster", "sans-serif"],
+        overpass: ["Overpass", "sans-serif"],
       },
       fontWeight: {
         regular: 400,

@@ -34,43 +34,43 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="w-full h-[800px] relative overflow-hidden mx-auto  px-12 sm:px-6 lg:px-8"
+      className="w-full lg:h-[550px] h-[580px] md:h-[750px] md:mt-20 relative left-[1px] p-[81px_0_78px_89px] gap-[25px]  overflow-hidden mx-auto items-center justify-center px-12 sm:px-6 lg:px-8"
       style={{
         backgroundImage: 'url("/Everest.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row mt-28 items-center lg:items-start">
+      <div className="flex flex-col max-w-[1440px] mx-auto h-auto lg:flex-row  items-center lg:items-start">
         <motion.div
           className="text-lg lg:text-3xl font-medium leading-relaxed sm:leading-normal text-center lg:text-left"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container font-poppins  flex flex-col lg:flex-row mt-10 lg:mt-52  items-center justify-center gap-12">
+          <div className="container font-poppins  flex flex-col lg:flex-row   items-center justify-center gap-12">
             <motion.div
               className="w-full lg:w-1/2 space-y-6"
               variants={itemVariants}
             >
               <div  >
-                <span className="font-poppins font-bold text-2xl">
+                <span className="font-poppins text-[38px] font-bold leading-[46.74px] text-left">
                   NEXUS YOUR
                 </span>
                 <br />
-                <span className="text-primary font-poppins text-3xl">
+                <span className="font-poppins text-primary  text-[48px] font-bold leading-[59.04px] text-left">
                   TRUSTED PARTNER IN
                 </span>{" "}
                 <br className="hidden lg:block" />
-                <span className="font-bold font-poppins text-5xl">
+                <span className="font-poppins text-[52px] font-bold leading-[78px] text-left">
                   REMOTE BOOKKEEPING
                 </span>
               </div>
-              <p className="text-base text-secondary font-poppins">
+              <p className="text-base text-[#FFB600] font-poppins">
                 Ready to streamline your bookkeeping? Book a consultation today!
               </p>
               <motion.button
-                className="mt-6 bg-primary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-[#6c2b4c] transition duration-500"
+                className="mt-6 bg-primary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-secondary transition duration-500"
                 whileHover="hover"
                 variants={buttonVariants}
               >
@@ -81,7 +81,7 @@ const HeroSection = () => {
               <motion.img
                 src="/Hero.png"
                 alt="Illustration of remote bookkeeping"
-                className="w-full h-auto max-w-[579px] mx-auto lg:mx-0 object-cover"
+                className="w-full h-[411px]  max-w-[638px]   object-cover"
                 initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}

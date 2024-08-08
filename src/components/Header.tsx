@@ -14,6 +14,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 
+
 export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
     useActiveLinkContext();
@@ -47,7 +48,7 @@ export default function Header() {
     <header className="z-50 fixed top-0 left-0 w-full ">
       <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
         {/* Contact Info */}
-        <div className="flex items-center space-x-4">
+        <div className="flex h items-center space-x-4">
           <div className="flex items-center space-x-1">
             <FaMapMarkerAlt />
             <span>Pepsicola, Kathmandu, Nepal</span>
@@ -104,11 +105,11 @@ export default function Header() {
             </a>
 
             {/* Navigation Links */}
-            <ul className="hidden lg:flex gap-8 items-center flex-grow justify-center">
+            <ul className="hidden lg:flex font-poppins   text-[16px]   leading-[24px] text-left gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
                   className={`font-bold cursor-pointer hover:text-primary ${
-                    activeLink === link.name ? "text-primary" : "text-text"
+                    activeLink === link.name ? "text-secondary" : "text-text"
                   }`}
                   key={link.path}
                   initial="hidden"
