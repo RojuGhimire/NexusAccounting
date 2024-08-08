@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             alt="Nexus Logo"
             className="w-[150px] h-[106px]  left-[273px] pl-[18px] pr-[14px] gap-0 rounded-[97px_0px_0px_0px] "
           />
-          <p className="text-lg hidden top-10 lg:block font-poppins text-[13px] font-bold leading-[19.5px] text-left ">
+          <p className="text-md hidden top-10 lg:block font-poppins text-[13px] font-semibold  leading-[19.5px] text-left ">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content.
