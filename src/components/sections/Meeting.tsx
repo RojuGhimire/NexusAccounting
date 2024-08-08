@@ -117,7 +117,7 @@ const Meeting: React.FC = () => {
 
       <div className="flex flex-col lg:flex-row w-full items-center justify-center gap-8 p-4">
         <motion.div
-          className="bg-teal-50 p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full lg:w-[30%] h-auto md:h-[219px]"
+          className="bg-teal-50  p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full lg:w-[30%] h-auto md:h-[219px]"
           variants={itemVariants}
           whileHover={hoverVariants.hover}
         >

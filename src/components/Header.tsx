@@ -89,8 +89,18 @@ export default function Header() {
         <div className="lg:px-20 mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <a href="/" onClick={() => { setActiveLink("Home"); setTimeOfLastClick(Date.now()); }}>
-              <img src="logo.png" alt="Logo" className="w-auto object-contain" />
+            <a
+              href="/"
+              onClick={() => {
+                setActiveLink("Home");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              <img
+                src="logo.png"
+                alt="Logo"
+                className="w-auto object-contain"
+              />
             </a>
 
             {/* Navigation Links */}
@@ -133,7 +143,9 @@ export default function Header() {
 
             {/* Search Icon */}
             <div className="hidden lg:flex items-center">
-              <FaSearch className="text-white bg-teal-700 h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
+              <FaSearch
+                className="text-white bg-[#BD0000] h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md"
+              />
             </div>
           </div>
         </div>
