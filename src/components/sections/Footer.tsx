@@ -35,21 +35,21 @@ const Footer: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="max-w-[1440px] font-poppins mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-zinc-800">
+      <div className="max-w-[1440px] font-poppins mx-[50px]  grid grid-cols-1 md:grid-cols-4 gap-[100px] text-zinc-800">
         <motion.div className="col-span-1 md:hidden lg:block" variants={itemVariants}>
           <img
             src="/logo.png"
             alt="Nexus Logo"
-            className="w-[185px] h-[83px]"
+            className="w-[150px] h-[106px]  left-[273px] pl-[18px] pr-[14px] gap-0 rounded-[97px_0px_0px_0px] "
           />
-          <p className="text-sm hidden lg:block font-poppins text-[13px] font-bold leading-[19.5px] text-left ">
+          <p className="text-lg hidden top-10 lg:block font-poppins text-[13px] font-bold leading-[19.5px] text-left ">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before final copy is available.
+            typeface without relying on meaningful content.
           </p>
         </motion.div>
-        <div className="col-span-1 md:col-span-3 flex flex-col md:flex-row gap-4">
+
+        <div className="col-span-1  md:col-span-3 flex flex-col md:flex-row gap-4">
           <motion.div className="flex-1" variants={itemVariants}>
             <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
             <ul className="space-y-2">
