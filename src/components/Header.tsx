@@ -48,7 +48,7 @@ export default function Header() {
     <header className="z-50 fixed top-0 left-0 w-full ">
       <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center px-4 py-2 md:px-8 md:py-2 text-sm">
         {/* Contact Info */}
-        <div className="flex h items-center space-x-4">
+        <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-1">
             <FaMapMarkerAlt />
             <span>Pepsicola, Kathmandu, Nepal</span>

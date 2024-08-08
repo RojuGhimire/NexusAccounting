@@ -99,12 +99,12 @@ const Meeting: React.FC = () => {
     <motion.div
       ref={ref}
       id="appointment"
-      className="flex flex-col font-poppins overflow-hidden mb-20 justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
+      className="flex flex-col font-poppins overflow-hidden justify-center items-center gap-8 p-4 max-w-[1440px] w-full mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center lg:mt-28">
+      <div className="text-center  ">
         <motion.h2 className="text-3xl font-bold text-zinc-900" variants={childVariants}>
           Meeting
         </motion.h2>
@@ -112,10 +112,10 @@ const Meeting: React.FC = () => {
           Schedule a consultation with one of our experts
         </motion.p>
         <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={childVariants}></motion.div>
-        <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={childVariants}></motion.div>
+        <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto" variants={childVariants}></motion.div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-center justify-center gap-8 p-4">
+      <div className="flex  flex-col lg:flex-row w-full items-center justify-center gap-8 p-4">
         <motion.div
           className="bg-teal-50  p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full lg:w-[30%] h-auto md:h-[219px]"
           variants={itemVariants}
@@ -171,7 +171,7 @@ const Meeting: React.FC = () => {
           <button
             onClick={() => setIsOpen(true)}
             type="submit"
-            className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#6c2b4c,45%,#F6F5F2,48%,#6c2b4c)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            className="inline-flex w-[130px] h-12 py-2 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#001C3D,45%,#F6F5F2,48%,#001C3D)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Book Now
           </button>

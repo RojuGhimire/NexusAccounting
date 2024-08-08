@@ -101,9 +101,9 @@ export default function Contact() {
     <section
       ref={ref}
       id="contact"
-      className="max-w-[1440px] font-poppins overflow-hidden  py-7 px-12 w-full mx-auto  pb-12"
+      className="max-w-[1440px] font-poppins overflow-hidden  px-12 w-full mx-auto  pb-12"
     >
-      <div className="text-center lg:mt-24">
+      <div className="text-center lg:mt-16">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
@@ -211,7 +211,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex mt-7 w-[120px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#159891,45%,#F6F5F2,48%,#159891)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+              className="inline-flex mt-7 w-[120px] h-12 my-4 gap-1 animate-shimmer items-center justify-center rounded-md bg-[linear-gradient(110deg,#001C3D,45%,#F6F5F2,48%,#001C3D)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
             >
               {isLoading ? (
                 <BiLoaderCircle

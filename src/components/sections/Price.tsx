@@ -26,12 +26,11 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <motion.div
       ref={ref}
-      className="bg-card  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#d1e3de] mx-2 my-4"
+      className="bg-card  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#e4eae8] mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >
-      
-      <button className="bg-[#16AF9D] text-white h-[39px] py-2 px-4 rounded mb-2 mx-auto block">
+      <button className="bg-primary text-white h-[39px] py-2 px-4  mb-2 mx-auto block">
         {buttonText}
       </button>
       {price && (
@@ -40,7 +39,7 @@ const Plan: React.FC<PlanProps> = ({
         </p>
       )}
       <div className="bg-white h-[257px] w-full mt-5 p-3 rounded-lg shadow-inner items-center justify-center">
-        <p className="text-[#16AF9D] mb-2">{additionalInfo || "Including"}</p>
+        <p className="text-primary  mb-2">{additionalInfo || "Including"}</p>
         <ul className="mb-4 h-[60%]">
           {features.map((feature, index) => (
             <li key={index}>✔️ {feature}</li>
@@ -51,7 +50,7 @@ const Plan: React.FC<PlanProps> = ({
             Contact us for a personalized quote.
           </p>
         ) : (
-          <button className="bg-black text-white py-2 px-4 rounded items-center justify-center w-full">
+          <button className="bg-primary text-white py-2 px-4 rounded items-center justify-center w-full">
             Start
           </button>
         )}
@@ -114,6 +113,15 @@ const Price: React.FC = () => {
           className="border-b-2  border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
+      </div>
+      <h1 className="font-poppins text-[18px] italic font-normal leading-[27px] text-center mb-7 h-[27px] items-center justify-center ">Choose the perfect plan for you</h1>
+      <div className="flex gap-[1.7px] items-center justify-center mb-7">
+        <button className="bg-primary text-white   w-[153px] h-[40.66px] p-[10.7px] gap-[10.7px] border-t-[0.53px] border-r-0 border-b-0 border-l-0 ">
+          Monthly
+        </button>
+        <button className="bg-secondary text-white w-[153px] h-[40.66px] p-[10.7px] gap-[10.7px] border-t-[0.53px] border-r-0 border-b-0 border-l-0 ">
+          Yearly
+        </button>
       </div>
 
       <div className="flex flex-wrap justify-center gap-4  lg:gap-8 p-4">

@@ -19,17 +19,17 @@ const Banner2: React.FC = () => {
 
   return (
     <motion.div
-      className="bg-primary font-poppins h-auto md:h-[367px] mb-8 text-white flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
+      className="bg-primary font-poppins h-auto md:h-[367px]  text-white flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="flex flex-col md:flex-row items-center justify-center lg:gap-[228px] w-full text-center md:text-left mb-4 md:mb-0 md:mr-8">
-        <div className="w-full md:w-[503px] leading-[1.25] md:leading-[57px] mb-4 md:mb-0">
-          <p className="text-xl md:text-3xl font-extrabold mb-2 md:mb-4">
+        <div className="w-full md:w-[503px]  leading-[1.25] md:leading-[57px] mb-4 md:mb-0">
+          <p className="font-poppins text-[36px] font-extrabold leading-[57px] tracking-[0.0025em] text-left">
             "Where Every Number
           </p>
-          <p className="text-xl md:text-3xl font-extrabold">
+          <p className="font-poppins text-[36px] font-extrabold leading-[57px] tracking-[0.0025em] text-left">
             Tells A Story Of Growth."
           </p>
         </div>
