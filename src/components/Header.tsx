@@ -105,7 +105,7 @@ export default function Header() {
             </a>
 
             {/* Navigation Links */}
-            <ul className="hidden lg:flex font-poppins   text-[16px]   leading-[24px] text-left gap-8 items-center flex-grow justify-center">
+            <ul className="hidden lg:flex font-poppins h font-extrabold  text-[16px]   leading-[24px] text-left gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
                   className={`font-bold cursor-pointer hover:text-primary ${
