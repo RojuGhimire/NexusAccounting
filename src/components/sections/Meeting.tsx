@@ -104,7 +104,7 @@ const Meeting: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center  ">
+      <div className="text-center mt-10  ">
         <motion.h2 className="text-3xl font-bold text-zinc-900" variants={childVariants}>
           Meeting
         </motion.h2>

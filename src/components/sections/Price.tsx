@@ -90,12 +90,12 @@ const Price: React.FC = () => {
   return (
     <motion.div
       id="pricing"
-      className="max-w-[1440px] font-poppins  h-auto overflow-hidden  mx-auto px-4 lg:py-16"
+      className="max-w-[1440px]  font-poppins  h-auto overflow-hidden  mx-auto px-4 lg:py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center  lg:mt-10">
+      <div className="text-center  mt-16">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}

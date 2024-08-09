@@ -103,7 +103,7 @@ export default function Contact() {
       id="contact"
       className="max-w-[1440px] font-poppins overflow-hidden  px-12 w-full mx-auto  pb-12"
     >
-      <div className="text-center lg:mt-16">
+      <div className="text-center mt-16">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
