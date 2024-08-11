@@ -43,8 +43,67 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="  w-full max-w-[1440px] mx-auto font-primary overflow-hidden px-16"
-    >
+      className="  w-full max-w-[1440px] mx-auto font-primary overflow-hidden px-16">
+      <div className="flex flex-col md:flex-row-reverse mt-12 lg:mt-0 mb-8 ">
+        <div className="relative w-[300px] left-7 h-[400px]">
+          <img
+            src="/ram.png"
+            alt="ram"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-4  bg-primary rounded-xl shadow-lg items-center justify-center  p-4 border-l-4 w-[356px] h-[85px] top-[350px] left-[35px] hover:bg-white  border-secondary">
+            <div className="w-[231.61px] h-[39px] top-[17.59px] left-[25.73px] ">
+              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left text-white hover:text-black">
+                Ramsharan Rijal
+              </h2>
+              <span className="text-secondary font-overpass text-[12.87px] font-semibold leading-[16.29px] text-left">
+                CEO/Founder
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1">
+          <h2 className=" text-secondary mt-8 font-overpass  text-[20px] font-bold leading-[25.32px] text-left">
+            CEO/Founder
+          </h2>
+          <p className="font-overpass text-[36px] font-semibold leading-[45.58px] text-left mt-2 mb-2">
+            Ramsharan Rijal
+          </p>
+          <p className="mt-2 font-overpass text-[16px] font-normal leading-[20.26px] text-justify">
+            Ram Sharan Rijal is a seasoned registered auditor with a background
+            in accounting and finance. With a commitment to integrity and
+            professionalism,he brings extensive experience in auditing and
+            financial management to ensure compliance and accuracy in financial
+            reporting. Known for his attention to detail, analytical skills, and
+            strong communication, Ram Sharan Rijal is dedicated to helping
+            organizations achieve their financial goals while maintaining
+            transparency and accountability. Ram Sharan Rijal is a seasoned
+            registered auditor with a background in accounting and finance. With
+            a commitment to integrity and professionalism,he brings extensive
+            experience in auditing and financial management to ensure Ram Sharan
+            Rijal is a seasoned registered auditor with a background in
+            accounting and finance. With a commitment to integrity and
+            professionalism,he brings extensive experience in auditing and
+            financial management to ensure compliance and accuracy in financial
+            reporting. Known for his attention to detail, analytical skills, and
+            strong communication, <br />
+            <span className="md:hidden lg:block">
+              Ram Sharan Rijal is dedicated to helping organizations achieve
+              their financial goals while maintaining transparency and
+              accountability. Ram Sharan Rijal is a seasoned registered auditor
+              with a background in accounting and finance. With a commitment to
+              integrity and professionalism,he brings extensive experience in
+              auditing and financial management to ensure Ram Sharan Rijal is
+              dedicated to helping organizations achieve their financial goals
+              while maintaining transparency and accountability. Ram Sharan
+              Rijal is a seasoned registered auditor with a background in
+              accounting and finance. With a commitment to integrity and
+              professionalism,he brings extensive experience in auditing and
+              financial management to ensure
+            </span>
+          </p>
+        </div>
+      </div>
       <div className="container mx-auto  text-center">
         <motion.div
           initial="hidden"

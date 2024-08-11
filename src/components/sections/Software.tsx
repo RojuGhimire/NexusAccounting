@@ -105,6 +105,22 @@ const Software: React.FC = () => {
               for efficient bookkeeping.
             </p>
           </div>
+          <div className="text-center  ">
+            <motion.img
+              className="mx-auto  h-24 w-24"
+              src="/quick.png"
+              alt="QuickBooks Online"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">
+              BillBook
+            </h3>
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
+              We are proficient in QuickBooks Online, leveraging its features
+              for efficient bookkeeping.
+            </p>
+          </div>
           <div className="text-center">
             <motion.img
               className="mx-auto h-24 w-24"
@@ -114,6 +130,20 @@ const Software: React.FC = () => {
               whileTap={{ scale: 0.9 }}
             />
             <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
+            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
+              Our team is skilled in utilizing Xero for seamless financial
+              management.
+            </p>
+          </div>
+          <div className="text-center">
+            <motion.img
+              className="mx-auto h-24 w-24"
+              src="/xero.png"
+              alt="Xero"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+            <h3 className="mt-8 text-2xl font-extrabold text-primary">Stripe</h3>
             <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
               Our team is skilled in utilizing Xero for seamless financial
               management.
@@ -134,32 +164,8 @@ const Software: React.FC = () => {
               We work with FreshBooks to simplify invoicing and expense.
             </p>
           </div>
-          <div className="text-center">
-            <motion.img
-              className="mx-auto h-24 w-24"
-              src="/fb.png"
-              alt="FreshBooks"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">Stripe</h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              We work with FreshBooks to simplify invoicing and expense.
-            </p>
-          </div>
-          <div className="text-center">
-            <motion.img
-              className="mx-auto h-24 w-24"
-              src="/fb.png"
-              alt="Bill"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">Gusto</h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              We work with FreshBooks to simplify invoicing and expense tracking.
-            </p>
-          </div>
+          
+        
           {/* Add more slides as needed */}
         </Slider>
       </div>
