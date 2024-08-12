@@ -7,6 +7,9 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,js,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        'shadow': '0px 0px 4px 0px #00000040',
+      },
       fontFamily: {
         primary: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],

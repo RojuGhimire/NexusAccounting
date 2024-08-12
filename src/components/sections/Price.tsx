@@ -1,63 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useLinkInView } from "@/hooks/useLinkInView";
-
-interface PlanProps {
-  imgSrc: string;
-  buttonText: string;
-  price: string;
-  features: string[];
-  additionalInfo?: string;
-}
-
-const Plan: React.FC<PlanProps> = ({
-  buttonText,
-  price,
-  features,
-  additionalInfo,
-}) => {
-  const hoverVariants = {
-    hover: {
-      scale: 1.05,
-      transition: { duration: 0.3 },
-    },
-  };
-  const { ref } = useLinkInView("Pricing", 0.7);
-  return (
-    <motion.div
-      ref={ref}
-      className="bg-card  p-6 rounded-lg shadow-lg w-full md:w-[300px] lg:w-[420px]  h-auto gap-8 bg-[#e4eae8] mx-2 my-4"
-      whileHover="hover"
-      variants={hoverVariants}
-    >
-      <button className="bg-primary text-white h-[39px] py-2 px-4  mb-2 mx-auto block">
-        {buttonText}
-      </button>
-      {price && (
-        <p className="text-[#E20000] text-center mt-4 font-extrabold">
-          {price}
-        </p>
-      )}
-      <div className="bg-white h-[257px] w-full mt-5 p-3 rounded-lg shadow-inner items-center justify-center">
-        <p className="text-primary  mb-2">{additionalInfo || "Including"}</p>
-        <ul className="mb-4 h-[60%]">
-          {features.map((feature, index) => (
-            <li key={index}>✔️ {feature}</li>
-          ))}
-        </ul>
-        {buttonText === "THE BIG NEXUS ADVISOR" ? (
-          <p className="text-[#E20000] mt-16 text-xs font-bold leading-4 text-left">
-            Contact us for a personalized quote.
-          </p>
-        ) : (
-          <button className="bg-primary text-white py-2 px-4 rounded items-center justify-center w-full">
-            Start
-          </button>
-        )}
-      </div>
-    </motion.div>
-  );
-};
+import Plan from "../plan";
 
 const Price: React.FC = () => {
   const containerVariants = {
@@ -87,15 +30,50 @@ const Price: React.FC = () => {
     },
   };
 
+  const plans = [
+    {
+      heading: "Basic Plan",
+      price: "$50/ Month",
+      features: [
+        "Daily 2 hour processing",
+        "Quickbooks Setup",
+        "Monthly Reconcile",
+        "2 meetings a month",
+        "PL and Balance Sheet",
+        "Light A/R & A/P",
+        "Manage only one company",
+      ],
+      buttonText: "Get Started",
+      buttonBgColor: "bg-secondary", // Background color for Basic Plan button
+    },
+    {
+      heading: "Premium Plan",
+      price: "$150/ Month",
+      features: [
+        "Quickbooks Setup",
+        "Daily 6 Hour Processing",
+        "Monthly Reconcile",
+        "1 Meeting a Week",
+        "PL and Balance Sheet",
+        "A/R & A/P",
+        "Dedicated Accountant",
+        "Financial Statement Analysis",
+        "Payroll for up to 25 employees",
+      ],
+      buttonText: "Upgrade Now",
+      buttonBgColor: "bg-primary", // Background color for Premium Plan button
+    },
+  ];
+
   return (
     <motion.div
       id="pricing"
-      className="max-w-[1440px]  font-poppins  h-auto overflow-hidden  mx-auto px-4 lg:py-16"
+      className="max-w-[1440px] font-poppins h-auto overflow-hidden mx-auto px-4 lg:py-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center  mt-16">
+      <div className="text-center mt-16">
         <motion.h2
           className="text-3xl font-bold text-zinc-900"
           variants={childVariants}
@@ -109,66 +87,28 @@ const Price: React.FC = () => {
           className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
-        <motion.div
-          className="border-b-2  border-zinc-600 w-16 mx-auto my-4"
-          variants={childVariants}
-        ></motion.div>
       </div>
-      <h1 className="font-poppins text-[18px] italic font-normal leading-[27px] text-center mb-7 h-[27px] items-center justify-center ">Choose the perfect plan for you</h1>
+      <h1 className="font-poppins text-[18px] italic font-normal leading-[27px] text-center mb-7">
+        Choose the perfect plan for you
+      </h1>
       <div className="flex gap-[1.7px] items-center justify-center mb-7">
-        <button className="bg-primary text-white   w-[153px] h-[40.66px] p-[10.7px] gap-[10.7px] border-t-[0.53px] border-r-0 border-b-0 border-l-0 ">
+        <button className="bg-primary text-white w-[153px] h-[40.66px] p-[10.7px]">
           Monthly
         </button>
-        <button className="bg-secondary text-white w-[153px] h-[40.66px] p-[10.7px] gap-[10.7px] border-t-[0.53px] border-r-0 border-b-0 border-l-0 ">
+        <button className="bg-secondary text-white w-[153px] h-[40.66px] p-[10.7px]">
           Yearly
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4  lg:gap-8 p-4">
-        {[
-          {
-            // imgSrc: '/rhinoo.png',
-            buttonText: "BASIC",
-            price: "$300/ Month",
-            features: [
-              "Once a week processing",
-              "Quickbooks Setup",
-              "Monthly Transaction Review",
-              "Direct Text Line",
-              "Bookkeeping Concierge “Rhino”",
-            ],
-          },
-          {
-            // imgSrc: '/rhinoo.png',
-            buttonText: "PREMIUM",
-            price: "$600/ Month",
-            features: [
-              "Twice a week processing",
-              "W2 management",
-              "Light A/R & A/P",
-              "+ Year-End Processing",
-            ],
-            additionalInfo: "Save Membership",
-          },
-          {
-            buttonText: "CUSTOM",
-            price: "$1,200/ Month",
-            features: [
-              "Large-Scale Monthly Bookkeeping",
-              "4 times a week processing",
-              "A/R & A/P",
-              "+ Year-End Processing",
-            ],
-            additionalInfo: "Save Membership",
-          },
-        ].map((plan, index) => (
+      <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8 p-4">
+        {plans.map((plan, index) => (
           <Plan
             key={index}
-            buttonText={plan.buttonText}
+            heading={plan.heading}
             price={plan.price}
             features={plan.features}
-            additionalInfo={plan.additionalInfo}
-            imgSrc={""}
+            buttonText={plan.buttonText}
+            buttonBgColor={plan.buttonBgColor} // Pass the buttonBgColor prop here
           />
         ))}
       </div>
