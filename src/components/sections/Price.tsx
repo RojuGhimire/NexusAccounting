@@ -108,7 +108,7 @@ const Price: React.FC = () => {
             price={plan.price}
             features={plan.features}
             buttonText={plan.buttonText}
-            buttonBgColor={plan.buttonBgColor} // Pass the buttonBgColor prop here
+            buttonBgColor={plan.buttonBgColor}
           />
         ))}
       </div>

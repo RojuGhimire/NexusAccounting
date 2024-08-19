@@ -14,7 +14,7 @@ import Contact from "../sections/Contact";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
-      <div className="flex flex-col mx-auto w-full  space-y-25 ">
+      <div className="flex flex-col bg-slate-50  w-full   space-y-25 ">
         <HeroSection />
         <Hero2 />
         <About />

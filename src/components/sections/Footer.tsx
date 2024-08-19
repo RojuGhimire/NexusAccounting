@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
 
   return (
     <motion.div
-      className="bg-white py-8 px-4"
+      className="bg-slate-50 py-8 px-4"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -44,8 +44,6 @@ const Footer: React.FC = () => {
           /> */}
           <p className="text-md  top-10 lg:block font-poppins text-[13px] font-semibold  leading-[19.5px] text-left ">
             In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content.In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content.
           </p>

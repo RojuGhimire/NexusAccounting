@@ -46,13 +46,13 @@ const Plan: React.FC<PlanProps> = ({
       )}
       <div className="items-center justify-center">
         <div className="bg-white h-[320px] w-full mt-12 p-3 rounded-lg shadow-inner flex flex-col items-center justify-between">
-          <ul className="mb-2 h-[100%]">
+          <ul className="mb-2 h-[100%] ">
             {features.map((feature, index) => (
-              <li key={index}>✔️ {feature}</li>
+              <li key={index} >✔️ {feature}</li>
             ))}
           </ul>
           <button
-            className={`text-white py-2 px-4 rounded w-full ${buttonBgColor}`} // Use the buttonBgColor prop here
+            className={`text-white py-2 px-4 rounded  w-full ${buttonBgColor}`} // Use the buttonBgColor prop here
           >
             {buttonText}
           </button>

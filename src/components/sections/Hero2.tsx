@@ -100,7 +100,7 @@ export default function Hero2(): JSX.Element {
         >
           <motion.p
             variants={childVariants}
-            className="font-overpass text-[16px] font-normal leading-[20.26px] text-justify"
+            className="font-overpass text-[22px] font-normal leading-[28.26px] text-justify"
           >
             Nexus Accounting Firm was founded with a mission to provide
             businesses with flexible and reliable bookkeeping solutions. Our
@@ -110,17 +110,7 @@ export default function Hero2(): JSX.Element {
             in accounting, bookkeeping, payroll, taxation, and financial
             advisory services. Whether you're a startup navigating rapid growth
             or an established enterprise seeking optimization, we offer scalable
-            solutions to drive your success. Lorem ipsum dolor sit amet
-            consectetur. Quis molestie lorem bibendum diam feugiat morbi
-            volutpat. Sed bibendum proin felis in tristique aliquam sit aliquet.
-            Et fringilla ut euismod potenti integer turpis. Consequat morbi leo
-            mi adipiscing sapien ut Quis molestie lorem bibendum diam feugiat morbi
-            volutpat. Sed bibendum proin felis in tristique aliquam sit aliquet.
-            Et fringilla ut euismod potenti integer turpis. Consequat morbi leo
-            mi adipiscing sapien ut Quis molestie lorem bibendum diam feugiat morbi
-            volutpat. Sed bibendum proin felis in tristique aliquam sit aliquet.
-            Et fringilla ut euismod potenti integer turpis. Consequat morbi leo
-            mi adipiscing sapien ut
+            solutions to drive your success.
           </motion.p>
         </motion.div>
       </motion.div>
