@@ -67,19 +67,7 @@ export default function Hero2(): JSX.Element {
           alt="Who Are We"
           className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[543px] object-cover"
         />
-        <motion.div
-        className="-mt-8 sm:-mt-16 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
-        whileHover={{ scale: 1.05 }}
-      > 
-         <div className="w-full">
-          <h2 className="font-overpass text-[16px] sm:text-[18.17px] font-semibold leading-[22px] sm:leading-[23px] text-left">
-            We Build for your comfort
-          </h2>
-          <p className="font-overpass font-bold text-base sm:text-lg">
-            Call: +61 450 545 073
-          </p>
-        </div> 
-        </motion.div>
+       
       </motion.div>
     </div>
   </section>

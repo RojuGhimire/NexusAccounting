@@ -4,7 +4,7 @@ const Banner: React.FC = () => {
   return (
     <div className="relative lg:mt-12 py-16">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-60"
+        className="absolute inset-0 bg-cover bg-center opacity-90"
         style={{ backgroundImage: "url('/laptop.jpeg')" }}
       ></div>
       <div className="relative w-full max-w-[1440px] overflow-hidden h-auto py-16 px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center justify-between">

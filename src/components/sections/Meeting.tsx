@@ -115,9 +115,10 @@ const Meeting: React.FC = () => {
         <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto" variants={childVariants}></motion.div>
       </div>
 
-      <div className="flex  flex-col lg:flex-row w-full items-center justify-center gap-8 p-4">
+      <div className="flex  flex-col lg:flex-row w-full  items-center justify-center gap-8 p-4">
+        <div className=" flex  flex-col gap-10 ">
         <motion.div
-          className="bg-teal-50  p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full lg:w-[30%] h-auto md:h-[219px]"
+          className="bg-teal-50  p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full  h-auto md:h-[219px]"
           variants={itemVariants}
           whileHover={hoverVariants.hover}
         >
@@ -134,20 +135,41 @@ const Meeting: React.FC = () => {
             <img alt="arrow" src="/Polygon.png" className="w-[40px] h-[27px]" />
           </div>
         </motion.div>
+        <div>
+        <motion.div
+          className="bg-teal-50  p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full  h-auto md:h-[219px]"
+          variants={itemVariants}
+          whileHover={hoverVariants.hover}
+        >
+          <div className="flex items-center mb-2 md:mb-0 md:mr-4">
+            <div className="w-[22px] h-[14px] bg-primary rounded-full mr-5"></div>
+            <h2 className="text-lg font-bold">New Client</h2>
+          </div>
+          <div className="flex-grow">
+            <p className="text-zinc-700 font-bold text-center md:text-left">
+              We are doing all virtual meetings through Zoom. Please join with us over Zoom.
+            </p>
+          </div>
+          <div className="ml-2  md:ml-5">
+            <img alt="arrow" src="/Polygon2.png" className="w-[40px] h-[27px]" />
+          </div>
+        </motion.div>
+        </div>
+        </div>
 
         <motion.div
           ref={calendarRef}
           initial="hidden"
           animate={calendarInView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="bg-white p-4 rounded shadow-md flex flex-col items-center w-full lg:w-[30%] h-auto md:h-[450px] text-center"
+          className="bg-white  p-4 flex flex-col items-center w-full lg:w-[70%]  h-auto  text-center"
           whileHover={hoverVariants.hover}
         >
           <h3 className="text-zinc-600 font-bold">Calendar</h3>
-          <h2 className="text-2xl font-extrabold text-primary">
+          <h2 className="text-2xl font-extrabold text-secondary">
             {currentMonth}, {currentYear}
           </h2>
-          <div className="grid grid-cols-7 gap-2 my-2">
+          <div className="grid grid-cols-7  gap-4 my-2 w-[80%] h-auto ">
             {daysOfWeek.map((day, index) => (
               <div key={index} className="text-center font-semibold text-zinc-700">
                 {day}
@@ -159,7 +181,7 @@ const Meeting: React.FC = () => {
                   <div
                     key={dayIndex}
                     className={`text-center p-1 border border-gray-300 rounded ${
-                      day === today ? "bg-[#4d99ae] text-white" : "text-zinc-700"
+                      day === today ? "bg-[#14124e] text-white" : "text-zinc-700"
                     }`}
                   >
                     {day || ""}
@@ -177,24 +199,7 @@ const Meeting: React.FC = () => {
           </button>
         </motion.div>
 
-        <motion.div
-          className="bg-teal-50 p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-center items-center w-full lg:w-[30%] h-auto md:h-[219px]"
-          variants={itemVariants}
-          whileHover={hoverVariants.hover}
-        >
-          <div className="flex items-center mb-2 md:mb-0 md:mr-4">
-            <div className="w-[22px] h-[14px] bg-primary rounded-full mr-5"></div>
-            <h2 className="text-lg font-bold">New Client</h2>
-          </div>
-          <div className="flex-grow">
-            <p className="text-zinc-700 font-bold text-center md:text-left">
-              We are doing all virtual meetings through Zoom. Please join with us over Zoom.
-            </p>
-          </div>
-          <div className="ml-2 md:ml-5">
-            <img alt="arrow" src="/Polygon2.png" className="w-[40px] h-[27px]" />
-          </div>
-        </motion.div>
+       
       </div>
       <PopupModal
         url="https://calendly.com/ghimireroju"
