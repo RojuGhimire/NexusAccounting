@@ -34,16 +34,16 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="relative w-full h-[600px] md:h-[750px] lg:h-[550px] overflow-hidden flex items-center justify-center p-8 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-[25px] mx-auto"
+      className="relative w-full h-[600px] md:h-[750px] lg:h-[750px] overflow-hidden flex items-center justify-center p-8 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-[25px] mx-auto"
       style={{
         backgroundImage: 'url("/mount.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-        opacity: "100%"
+        opacity: "100%",
       }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-20 z-0"></div>
+      <div className="absolute inset-0 bg-gray-50 opacity-20 z-0"></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row max-w-[1440px] w-full mx-auto items-center lg:items-start">
         <motion.div

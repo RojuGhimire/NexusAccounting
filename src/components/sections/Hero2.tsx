@@ -1,119 +1,88 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
 
-const childVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
 
 export default function Hero2(): JSX.Element {
+  const { ref: leftContentRef, inView: leftContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: rightContentRef, inView: rightContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
-    <motion.div
-      className="flex flex-col font-poppins overflow-hidden justify-between w-full max-w-[1440px]  min-h-[398px] md:flex-row items-center md:items-start px-4 md:px-12 lg:mx-auto mt-5 "
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <section className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
+    <div className="flex flex-col lg:flex-row lg:-mt-8">
+      {/* Left Content */}
       <motion.div
-        className="basis-[35%]  lg:mt-8 lg:min-h-[480px]  lg:mb-4 md:mb-0 md:mr-8 relative"
-        variants={childVariants}
+        className="lg:w-1/2 space-y-4 sm:space-y-6"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{
+          opacity: leftContentInView ? 1 : 0,
+          x: leftContentInView ? 0 : -50,
+        }}
+        transition={{ duration: 3 }}
+        ref={leftContentRef}
       >
-        <div>
-          <motion.img
-            src="/wel.png"
-            alt="Audit Image"
-            className="hidden lg:flex w-full md:w-[250px] lg:w-[250px] object-cover"
-            initial={{ opacity: 0.9 }} // Initial opacity
-            whileHover={{ opacity: 0.6 }} // Lower opacity on hover
-            transition={{ duration: 0.3 }}
-          />
-          <motion.img
-            src="/nex1.png"
-            alt="Audit Image"
-            className="hidden lg:flex w-full md:w-[250px] lg:w-[250px] object-cover"
-            initial={{ opacity: 5 }} // Initial opacity
-            whileHover={{ opacity: 0.8 }} // Lower opacity on hover
-            transition={{ duration: 0.3 }}
-          />
+        <div className="w-full  h-auto lg:h-[80px] lg:mt-20 gap-[8px]">
+          <h2 className="text-secondary leading-[22px]   w-full text-lg sm:text-4xl font-bold">
+          Welcome to Nexus
+          </h2>
+          
         </div>
-        <div className="absolute top-[25%] right-[5%]">
-          <motion.img
-            src="/join.png"
-            alt="Audit Image"
-            className="hidden lg:flex w-full md:w-[250px] lg:w-[250px] h-auto object-cover"
-            initial={{ opacity: 0.9 }} // Initial opacity
-            whileHover={{ opacity: 0.8 }} // Lower opacity on hover
-            transition={{ duration: 0.1 }}
-          />
-          <motion.img
-            src="/cal1.png"
-            alt="Audit Image"
-            className="hidden lg:flex w-full md:w-[300px] lg:w-[300px] object-contain absolute right-[10%] -bottom-[6rem] z-20"
-            initial={{ opacity: 0.9 }} // Initial opacity
-            whileHover={{ opacity: 0.8 }} // Lower opacity on hover
-            transition={{ duration: 0.1 }}
-          />
+        <div className="mx-auto">
+          
+          <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
+          Nexus Accounting Firm was founded with a mission to provide businesses with flexible and reliable bookkeeping solutions. Our team brings years of industry experience and expertise to every client partnership. With a team of seasoned professionals, we bring expertise across various industries, providing comprehensive support in accounting, bookkeeping, payroll, taxation, and financial advisory services. Whether you're a startup navigating rapid growth or an established enterprise seeking optimization, we offer scalable solutions to drive your success. Lorem ipsum dolor sit amet consectetur. Quis molestie lorem bibendum diam feugiat morbi volutpat. Sed bibendum proin felis in tristique aliquam sit aliquet. Et fringilla ut euismod potenti integer turpis. Consequat morbi leo mi adipiscing sapien ut
+          </p>
+          <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left">
+            We understand that each individual's journey is unique. That's
+            why we're committed to providing personalized guidance and
+            support every step of the way. Whether you're aiming to advance
+            in your career or embark on a new educational path, we're here
+            to empower you. Join us on this transformative journey and let
+            Skill Spot Australia be your guide to achieving your
+            aspirations.
+          </p>
         </div>
-        <motion.img
-          src="/ipad.png"
-          alt="Audit Image"
-          className="hidden lg:flex w-full md:w-[250px] lg:w-[250px] object-cover absolute -right-[35%] md:-right-[35%] bottom-[25%] z-40"
-          initial={{ opacity: 2 }} // Initial opacity
-          whileHover={{ opacity: 0.9 }} // Lower opacity on hover
-          transition={{ duration: 0.1 }}
-        />
-        <motion.img
-          src="/Group.png"
-          alt="Audit Image"
-          className="lg:hidden w-full h-[267px] md:h-[300px] md:w-[3000px] object-fit "
-          initial={{ opacity: 0.9 }} // Initial opacity
-          whileHover={{ opacity: 0.6 }} // Lower opacity on hover
-          transition={{ duration: 0.3 }}
-        />
+      
       </motion.div>
+
+      {/* Right Content - Image and Call to Action */}
       <motion.div
-        className="w-full md:w-[834px]  lg:basis-[50%] h-auto  md:mt-0 md:ml-8"
-        variants={childVariants}
+        className="lg:w-1/2 sm:ml-5 flex flex-col items-center lg:items-end mt-12 sm:mt-16 lg:mt-0"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{
+          opacity: rightContentInView ? 1 : 0,
+          x: rightContentInView ? 0 : 100,
+        }}
+        transition={{ duration: 4, delay: 0.5 }}
+        ref={rightContentRef}
       >
-        <motion.h1
-          className="text-3xl lg:mt-12 font-lobster font-extrabold md:text-4xl lg:text-[36px] leading-[54px] text-primary mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Welcome To Nexus
-        </motion.h1>
+        <img
+          src="/Audit.png"
+          alt="Who Are We"
+          className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[543px] object-cover"
+        />
         <motion.div
-          className="leading-7  text-lg lg:text-xl font-semibold text-zinc-700 space-y-6"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <motion.p
-            variants={childVariants}
-            className="font-overpass text-[22px] font-normal leading-[28.26px] text-justify"
-          >
-            Nexus Accounting Firm was founded with a mission to provide
-            businesses with flexible and reliable bookkeeping solutions. Our
-            team brings years of industry experience and expertise to every
-            client partnership. With a team of seasoned professionals, we bring
-            expertise across various industries, providing comprehensive support
-            in accounting, bookkeeping, payroll, taxation, and financial
-            advisory services. Whether you're a startup navigating rapid growth
-            or an established enterprise seeking optimization, we offer scalable
-            solutions to drive your success.
-          </motion.p>
+        className="-mt-8 sm:-mt-16 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
+        whileHover={{ scale: 1.05 }}
+      > 
+         <div className="w-full">
+          <h2 className="font-overpass text-[16px] sm:text-[18.17px] font-semibold leading-[22px] sm:leading-[23px] text-left">
+            We Build for your comfort
+          </h2>
+          <p className="font-overpass font-bold text-base sm:text-lg">
+            Call: +61 450 545 073
+          </p>
+        </div> 
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
+  </section>
+
   );
 }
