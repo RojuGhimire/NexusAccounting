@@ -1,101 +1,92 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { PiPhoneFill } from "react-icons/pi";
-import { IoLocationSharp, IoMail } from "react-icons/io5";
-import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import { PiPhoneFill } from "react-icons/pi";
+import { IoCall, IoMail } from "react-icons/io5";
+// import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10,
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="bg-slate-50 py-8 px-4"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <div className="  justify-between font-poppins mx-[50px]  grid grid-cols-1 md:grid-cols-4 gap-[100px] text-zinc-800">
-        <motion.div className="col-span-1 md:hidden lg:block" variants={itemVariants}>
-          <img
-            src="/logo.png"
-            alt="Nexus Logo"
-            className="w-[150px] h-[106px]  left-[273px] pl-[18px] pr-[14px] gap-0 rounded-[97px_0px_0px_0px] "
-          />
-          <p className="text-md  top-10 lg:block font-poppins text-[13px] font-semibold  leading-[19.5px] text-left ">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content.
-          </p>
-        </motion.div>
-
-        <div className="col-span-1  md:col-span-3 flex flex-col md:flex-row gap-4">
-          <motion.div className="flex-1" variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#about">About us</a></li>
-              <li><a href="#team">Our team</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#software">Software</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </motion.div>
-          <motion.div className="flex-1" variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><Link to="/terms">Terms and Condition</Link></li>
-              <li><a href="#legal">Legal</a></li>
-              <li><a href="#help">Help center</a></li>
-              <li><a href="#privacy">Privacy policy</a></li>
-              <li><a href="#status">Status</a></li>
-            </ul>
-          </motion.div>
-          <motion.div className="flex-1" variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Information</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-x-3">
-                <IoLocationSharp size={20} />
-                <div>Kathmandu, Nepal</div>
-              </li>
-              <li className="flex items-center gap-x-3">
-                <PiPhoneFill size={20} />
-                <a href="tel:+9779860000000">9860000000</a>
-              </li>
-              <li className="flex items-center gap-x-3">
-                <IoMail size={20} />
-                <a
-                  href="mailto:nexus@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  nexus@gmail.com
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-        </div>
+    <div className="font-bold h-auto px-8 py-10 lg:px-20 lg:py-16 grid grid-cols-1 lg:grid-cols-4 gap-8">
+      {/* Logo and Description */}
+      <div className="flex flex-col items-center lg:items-start lg:w-full ">
+        <img src="/logo.png" alt="Nexus" className="w-[112px] h-[105px]" />
+        <p className="text-[#6C757D] text-center lg:text-left text-sm lg:text-base">
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
+          typeface without relying on meaningful content.
+        </p>
       </div>
-    </motion.div>
+
+      {/* Quick Links */}
+      <div className="flex flex-col items-center lg:items-start">
+        <h3 className="text-2xl font-bold font-overpass text-secondary mb-4 text-center lg:text-left">
+          Quick <span className="text-black">Link</span>
+        </h3>
+        <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
+          <li>
+            <a href="#about">About us</a>
+          </li>
+          <li>
+            <a href="#team">Our team</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#software">Software</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Quick Contact */}
+      <div className="flex flex-col items-center lg:items-start">
+        <h3 className="text-2xl font-bold font-overpass text-secondary mb-4 text-center lg:text-left">
+          Quick <span className="text-black">Contact</span>
+        </h3>
+        <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
+          <FaLocationDot className="text-secondary mr-3" /> Jorpati,Kathmandu
+        </p>
+        <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
+          <IoCall className="text-secondary mr-3" /> +977 9840031548
+        </p>
+        <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
+          <IoMail className="text-secondary mr-3" /> nexusacc@gmail.com
+        </p>
+      </div>
+
+      {/* Social Media and QR Code */}
+      <div className="flex flex-col items-center ">
+        <h3 className="text-2xl font-bold font-overpass text-secondary mb-4 text-center lg:text-left">
+          Let's <span className="text-black">Get Social</span>
+        </h3>
+        <div className="flex space-x-4 mb-4 text-2xl">
+          <FaFacebookF className="text-blue-700" />
+          <FaInstagram className="text-orange-700" />
+          <FaLinkedin className="text-blue-700" />
+          <FaTwitter className="text-blue-500" />
+          <FaWhatsapp className="text-green-800" />
+        </div>
+        <img
+          src="/QR.png"
+          alt="QR"
+          className="mb-4 max-w-[100px] lg:max-w-[150px]  "
+        />
+        <button className="w-full max-w-[115px] h-[38px] bg-secondary hover:bg-primary rounded-lg text-white font-overpass text-sm lg:text-base">
+          Call Us Today
+        </button>
+      </div>
+    </div>
   );
 };
 

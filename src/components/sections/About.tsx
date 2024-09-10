@@ -50,8 +50,8 @@ export default function About() {
   });
 
   return (
-    <section ref={ref} id="about" className="">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start px-4 sm:px-8 lg:px-20">
+    <section ref={ref} id="about" className="overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
         <div className="flex flex-col lg:flex-row">
           {/* Right Content - Image and Call to Action */}
           <motion.div
@@ -75,10 +75,10 @@ export default function About() {
             >
               <div className="w-full">
                 <h2 className="font-overpass text-sm sm:text-lg font-semibold">
-                  We Build for your comfort
+                  RamSharan Rijal
                 </h2>
                 <p className="font-overpass font-bold text-base sm:text-lg">
-                  Call: +61 450 545 073
+                  CEO / Founder
                 </p>
               </div>
             </motion.div>
@@ -86,7 +86,7 @@ export default function About() {
 
           {/* Left Content */}
           <motion.div
-            className="lg:w-[75%] mt-8 lg:mt-0 lg:pl-12 space-y-6"
+            className="lg:w-[90%] mt-8 lg:mt-0 lg:pl-12 space-y-6"
             initial={{ opacity: 0, x: 50 }}
             animate={{
               opacity: leftContentInView ? 1 : 0,
@@ -95,15 +95,15 @@ export default function About() {
             transition={{ duration: 1.5 }}
             ref={leftContentRef}
           >
-            <div className="w-full space-y-2 lg:space-y-4">
+            <div className="w-full  space-y-2 lg:space-y-4">
               <h2 className="text-secondary text-lg sm:text-xl font-bold">
                 CEO/Founder
               </h2>
               <p className="font-overpass text-2xl sm:text-3xl font-semibold">
-                Ramsharan Rijal
+                Ramsharan Rijal 
               </p>
             </div>
-            <div className="text-[#6C757D] text-sm sm:text-base leading-6 sm:leading-7 space-y-4">
+            <div className="text-[#6C757D] space-y-5 text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
               <p>
                 Ram Sharan Rijal is a seasoned registered auditor with a
                 background in accounting and finance. With a commitment to
@@ -131,7 +131,7 @@ export default function About() {
       </div>
 
       {/* Team Section */}
-      <div className="mt-12 lg:mt-20">
+      <div className="mt-5">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -149,7 +149,9 @@ export default function About() {
             Meet Our Professional Team
           </motion.p>
           <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={itemVariants}></motion.div>
-          <motion.div className="flex flex-wrap justify-center items-center mt-10 gap-8 w-full">
+          <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto " variants={itemVariants}></motion.div>
+         
+          <motion.div className="flex flex-wrap justify-center gap-5 md:gap-20 lg:justify-between px-4 lg:px-20 items-center  mt-10  lg:w-[1163px]">
             {teamMembers.map((member, id) => (
               <motion.div
                 key={id}
