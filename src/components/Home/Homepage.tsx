@@ -10,7 +10,7 @@ import Meeting from "../sections/Meeting";
 import Banner2 from "../sections/Banner2";
 import Footer from "../sections/Footer";
 import Footer2 from "../sections/Footer2";
-import Contact from "../sections/Contact";
+// import Contact from "../sections/Contact";
 import ContactSection from "../sections/Contact2";
 const Homepage: React.FC = () => {
   return (
@@ -24,8 +24,8 @@ const Homepage: React.FC = () => {
         <Software />
         <Price />
         <Meeting />
-        <Contact />
-      <ContactSection />
+        {/* <Contact /> */}
+        <ContactSection />
         <Banner2 />
         <Footer />
         <Footer2 />

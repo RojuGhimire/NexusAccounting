@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
 import { fadeInAnimationVariants } from "@/constants";
+import { useInView } from "react-intersection-observer";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -38,51 +39,99 @@ const teamMembers: TeamMemberProps[] = [
 
 export default function About() {
   const { ref } = useLinkInView("Our Team", 0.95);
+  const { ref: leftContentRef, inView: leftContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: rightContentRef, inView: rightContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
-    <section
-      ref={ref}
-      id="about"
-      className="  w-full max-w-[1440px] mx-auto font-primary overflow-hidden px-10 ">
-      <div className="flex flex-col md:flex-row-reverse  mt-12 lg:mt-0 mb-8 ">
-        <div className="relative w-[360px] lg:w-[380px] lg:left-7 h-[400px] mb-10 ">
-          <img
-            src="/ram.png"
-            alt="ram"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute  bottom-4  bg-primary rounded-xl shadow-lg items-center justify-center  p-4 border-l-4 w-[300px] lg:w-[356px] h-[85px] top-[350px] left-[35px] hover:bg-white  border-secondary">
-            <div className="w-[231.61px] h-[39px] top-[17.59px] left-[25.73px] ">
-              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left text-white hover:text-black">
-                Ramsharan Rijal
-              </h2>
-              <span className="text-secondary font-overpass text-[12.87px] font-semibold leading-[16.29px] text-left">
+    <section ref={ref} id="about" className="">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start px-4 sm:px-8 lg:px-20">
+        <div className="flex flex-col lg:flex-row">
+          {/* Right Content - Image and Call to Action */}
+          <motion.div
+            className="lg:w-[35%]  flex flex-col items-center lg:items-start mt-12 sm:mt-16 lg:mt-0"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{
+              opacity: rightContentInView ? 1 : 0,
+              x: rightContentInView ? 0 : -100,
+            }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            ref={rightContentRef}
+          >
+            <img
+              src="/ram.png"
+              alt="Who Are We"
+              className="w-full lg:w-auto sm:h-[350px] lg:h-[450px] object-cover"
+            />
+            <motion.div
+              className="-mt-8 sm:-mt-16 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-full">
+                <h2 className="font-overpass text-sm sm:text-lg font-semibold">
+                  We Build for your comfort
+                </h2>
+                <p className="font-overpass font-bold text-base sm:text-lg">
+                  Call: +61 450 545 073
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Left Content */}
+          <motion.div
+            className="lg:w-[75%] mt-8 lg:mt-0 lg:pl-12 space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{
+              opacity: leftContentInView ? 1 : 0,
+              x: leftContentInView ? 0 : 50,
+            }}
+            transition={{ duration: 1.5 }}
+            ref={leftContentRef}
+          >
+            <div className="w-full space-y-2 lg:space-y-4">
+              <h2 className="text-secondary text-lg sm:text-xl font-bold">
                 CEO/Founder
-              </span>
+              </h2>
+              <p className="font-overpass text-2xl sm:text-3xl font-semibold">
+                Ramsharan Rijal
+              </p>
             </div>
-          </div>
-        </div>
-        <div className="flex-1">
-          <h2 className=" text-secondary mt-8 font-overpass  text-[20px] font-bold leading-[25.32px] text-left">
-            CEO/Founder
-          </h2>
-          <p className="font-overpass text-[36px] font-semibold leading-[45.58px] text-left mt-2 mb-2">
-            Ramsharan Rijal
-          </p>
-          <p className="mt-2 font-overpass text-[18px] font-normal leading-[28.26px] text-justify">
-            Ram Sharan Rijal is a seasoned registered auditor with a background
-            in accounting and finance. With a commitment to integrity and
-            professionalism,he brings extensive experience in auditing and
-            financial management to ensure compliance and accuracy in financial
-            reporting. Known for his attention to detail, analytical skills, and
-            strong communication, Ram Sharan Rijal is dedicated to helping
-            organizations achieve their financial goals while maintaining
-            transparency and accountability. 
-           
-          </p>
+            <div className="text-[#6C757D] text-sm sm:text-base leading-6 sm:leading-7 space-y-4">
+              <p>
+                Ram Sharan Rijal is a seasoned registered auditor with a
+                background in accounting and finance. With a commitment to
+                integrity and professionalism, he brings extensive experience in
+                auditing and financial management to ensure compliance and
+                accuracy in financial reporting.
+              </p>
+              <p>
+                In addition to his core auditing expertise, Ram Sharan Rijal has
+                a strong background in financial advisory services, helping
+                clients navigate complex financial landscapes. His strategic
+                insight and proficiency in risk management make him a trusted
+                advisor.
+              </p>
+              <p>
+                Beyond his technical capabilities, Ram Sharan Rijal is committed
+                to continuous professional development, staying updated on the
+                latest auditing standards. His dedication to excellence and
+                client-first approach have earned him a strong reputation in the
+                industry.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
-      <div className="container mx-auto  text-center">
+
+      {/* Team Section */}
+      <div className="mt-12 lg:mt-20">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -90,7 +139,7 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <motion.h2
-            className="text-3xl mt-16  font-bold text-zinc-900"
+            className="text-3xl font-bold text-zinc-900"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -99,31 +148,20 @@ export default function About() {
           <motion.p className="text-zinc-600 mt-2" variants={itemVariants}>
             Meet Our Professional Team
           </motion.p>
-          <motion.div
-            className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
-            variants={itemVariants}
-          >
-            <motion.div
-              className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
-              variants={itemVariants}
-            ></motion.div>
-          </motion.div>
-          <motion.div className="flex flex-wrap justify-center items-center mt-10  gap-8 md:gap-10  lg:gap-[250px] w-full">
+          <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={itemVariants}></motion.div>
+          <motion.div className="flex flex-wrap justify-center items-center mt-10 gap-8 w-full">
             {teamMembers.map((member, id) => (
               <motion.div
                 key={id}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center w-[48%] sm:w-[30%] md:w-[22%] lg:w-auto"
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
                 custom={id}
               >
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <div className="rounded-full overflow-hidden w-48 h-48 md:w-60 md:h-60">
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <div className="rounded-full overflow-hidden w-36 h-36 sm:w-48 sm:h-48">
                     <motion.img
                       src={member.imageSrc}
                       alt={member.name}
@@ -135,10 +173,7 @@ export default function About() {
                     />
                   </div>
                 </motion.div>
-                <motion.h3
-                  className="text-primary mt-4  text-lg font-semibold"
-                  variants={itemVariants}
-                >
+                <motion.h3 className="text-primary mt-4 text-base sm:text-lg font-semibold" variants={itemVariants}>
                   {member.name}
                 </motion.h3>
                 <motion.p className="text-zinc-600" variants={itemVariants}>
