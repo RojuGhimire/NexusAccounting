@@ -13,7 +13,7 @@ const Meeting: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10,
+        damping: 100,
         staggerChildren: 0.3,
       },
     },
@@ -23,24 +23,24 @@ const Meeting: React.FC = () => {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      y: 0,
+      y: 1,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10,
+        damping: 100,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 80 },
     visible: { opacity: 1, y: 0 },
   };
 
   const hoverVariants = {
     hover: {
-      scale: 1.05,
-      transition: { duration: 0.3 },
+      scale: 2.05,
+      transition: { duration: 5.3 },
     },
   };
 
