@@ -39,8 +39,8 @@ const Meeting: React.FC = () => {
 
   const hoverVariants = {
     hover: {
-      scale: 2.05,
-      transition: { duration: 5.3 },
+      scale: 1.1,
+      transition: { duration: 0.3 },
     },
   };
 

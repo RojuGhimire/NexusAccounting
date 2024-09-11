@@ -65,7 +65,7 @@ export default function Hero2(): JSX.Element {
         <img
           src="/Audit.png"
           alt="Who Are We"
-          className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[543px] object-cover"
+          className="hidden md:flex w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[543px] object-cover"
         />
        
       </motion.div>

@@ -80,10 +80,9 @@ const ContactSection: React.FC = () => {
           <h2 className="text-2xl lg:text-3xl font-semibold font-overpass mb-2">
             Get In Touch
           </h2>
-          <p className="mb-4">Advance Your Career with us.</p>
 
           {/* Form Inputs */}
-          <form className="w-full"
+          <form className="w-full space-y-3 "
             onSubmit={postData}
           >
           <Input

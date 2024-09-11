@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useLinkInView } from "@/hooks/useLinkInView";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const services = [
   { icon: "/1.png" },
@@ -27,7 +26,7 @@ const ServicesComponent: React.FC = () => {
         type: "spring",
         stiffness: 100,
         damping: 10,
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
   };
@@ -45,24 +44,25 @@ const ServicesComponent: React.FC = () => {
     },
   };
 
-  const { ref } = useLinkInView("Our Services", 1);
+  const ref = useRef(null);  // Create a ref
   const controls = useAnimation();
+  const inView = useInView(ref, { once: false });
 
   useEffect(() => {
-    controls.start(i => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.3, type: "spring", stiffness: 100, damping: 10 },
-    }));
-  }, [controls]);
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
   return (
     <motion.div
-      ref={ref}
+      ref={ref}  // Pass the ref here
       id="services"
       className="py-16 w-full overflow-hidden max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
-      animate="visible"
+      animate={controls}
       variants={containerVariants}
     >
       <div className="container text-center">
@@ -82,14 +82,16 @@ const ServicesComponent: React.FC = () => {
           <motion.div
             className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
             variants={childVariants}
-          >
-            {" "}
-          </motion.div>
+          />
         </motion.div>
 
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-[195px]">
           <div className="flex flex-row justify-center items-center">
-            <img src="/vice.png" alt="" className="w-[331.07px] h-[401px]  md:w-[410px] lg:h-[401px]" />
+            <img
+              src="/vice.png"
+              alt=""
+              className="w-[331.07px] h-[401px]  md:w-[410px] lg:h-[401px]"
+            />
           </div>
           <div className="flex flex-col items-center space-y-4">
             <div className="space-y-6">
@@ -97,9 +99,7 @@ const ServicesComponent: React.FC = () => {
                 <motion.div
                   key={index}
                   className="relative flex items-center justify-center"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={controls}
-                  custom={index}
+                  variants={childVariants}
                 >
                   <img src={service.icon} className="w-full lg:w-[375px]" />
                 </motion.div>
@@ -113,8 +113,7 @@ const ServicesComponent: React.FC = () => {
                 className="flex items-center gap-10 w-full"
                 variants={childVariants}
                 initial="hidden"
-                animate="visible"
-                transition={{ delay: index * 0.7 }}
+                animate={controls}
               >
                 <div className="text-4xl text-white items-start justify-start">
                   {benefit.icon}
