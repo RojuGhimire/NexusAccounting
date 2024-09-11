@@ -5,7 +5,7 @@ const HeroSection = () => {
   const { ref } = useLinkInView("Home", 0.3);
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -17,16 +17,28 @@ const HeroSection = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } },
   };
 
   const buttonVariants = {
     hover: {
       scale: 1.1,
+      backgroundColor: "#001C3D",
+      boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
       transition: {
         yoyo: Infinity,
+        duration: 0.4,
       },
+    },
+  };
+
+  const imgVariants = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 1.2, ease: "easeInOut" },
     },
   };
 
@@ -42,8 +54,13 @@ const HeroSection = () => {
         opacity: "100%",
       }}
     >
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gray-50 opacity-20 z-0"></div>
+      {/* Background Overlay with Animation */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent opacity-30 z-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.3 }}
+        transition={{ duration: 1.5 }}
+      />
 
       <div className="relative z-10 flex flex-col lg:flex-row max-w-[1440px] w-full mx-auto items-center lg:items-start">
         <motion.div
@@ -52,25 +69,37 @@ const HeroSection = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container  lg:mt-16 font-poppins flex flex-col lg:flex-row items-center justify-center gap-12">
+          <div className="container lg:mt-16 font-poppins flex flex-col lg:flex-row items-center justify-center gap-12">
             <motion.div
               className="w-full lg:w-1/2 space-y-6 text-white"
               variants={itemVariants}
             >
-              <div>
-                <span className="block font-poppins text-[36px] md:text-[38px] lg:text-[40px] font-bold leading-tight">
+              <motion.div>
+                <motion.span
+                  className="block font-poppins text-[36px] md:text-[38px] lg:text-[40px] font-bold leading-tight"
+                  variants={itemVariants}
+                >
                   NEXUS YOUR
-                </span>
-                <span className="block font-poppins text-[#FFB600] text-[40px] md:text-[48px] lg:text-[50px] font-bold leading-tight">
+                </motion.span>
+                <motion.span
+                  className="block font-poppins text-[#FFB600] text-[40px] md:text-[48px] lg:text-[50px] font-bold leading-tight"
+                  variants={itemVariants}
+                >
                   TRUSTED PARTNER IN
-                </span>
-                <span className="block font-poppins text-[42px] md:text-[52px] lg:text-[54px] font-bold leading-tight">
+                </motion.span>
+                <motion.span
+                  className="block font-poppins text-[42px] md:text-[52px] lg:text-[54px] font-bold leading-tight"
+                  variants={itemVariants}
+                >
                   REMOTE BOOKKEEPING
-                </span>
-              </div>
-              <p className="text-base md:text-lg text-teal-400 font-poppins">
+                </motion.span>
+              </motion.div>
+              <motion.p
+                className="text-base md:text-lg text-teal-400 font-poppins"
+                variants={itemVariants}
+              >
                 Ready to streamline your bookkeeping? Book a consultation today!
-              </p>
+              </motion.p>
               <motion.button
                 className="mt-6 bg-secondary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-primary transition duration-500"
                 whileHover="hover"
@@ -79,14 +108,15 @@ const HeroSection = () => {
                 <a href="#appointment">Book Now</a>
               </motion.button>
             </motion.div>
-            <motion.div className="w-full  lg:w-1/2" variants={itemVariants}>
+            
+            <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
               <motion.img
                 src="/Hero.png"
                 alt="Illustration of remote bookkeeping"
                 className="w-full h-[300px] md:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
+                variants={imgVariants}
+                initial="hidden"
+                animate="visible"
               />
             </motion.div>
           </div>

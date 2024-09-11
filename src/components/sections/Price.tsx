@@ -87,6 +87,8 @@ const Price: React.FC = () => {
           className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
+        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
+
       </div>
       <h1 className="font-poppins text-[18px] italic font-normal leading-[27px] text-center mb-7">
         Choose the perfect plan for you

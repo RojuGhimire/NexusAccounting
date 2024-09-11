@@ -13,6 +13,7 @@ export function useLinkInView(linkName: Linknames, threshold = 0.75) {
 
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
+            
             setActiveLink(linkName);
         }
     }, [inView, setActiveLink, timeOfLastClick, linkName]);

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+// import { useLinkInView } from "@/hooks/useLinkInView";
+
 
 const services = [
   { icon: "/1.png" },
@@ -15,7 +17,6 @@ const benefits = [
   { icon: "⚙️", text: "Efficiency Maximization" },
   { icon: "👨‍💼", text: "Access Expert Talent" },
 ];
-
 const ServicesComponent: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0, y: -50 },

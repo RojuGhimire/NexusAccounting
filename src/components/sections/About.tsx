@@ -38,7 +38,6 @@ const teamMembers: TeamMemberProps[] = [
 ];
 
 export default function About() {
-  const { ref } = useLinkInView("Our Team", 0.95);
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -48,6 +47,8 @@ export default function About() {
     triggerOnce: true,
     threshold: 0.1,
   });
+  const { ref } = useLinkInView("Our Team", 1);
+  
 
   return (
     <section ref={ref} id="about" className="overflow-hidden">
@@ -100,7 +101,7 @@ export default function About() {
                 CEO/Founder
               </h2>
               <p className="font-overpass text-2xl sm:text-3xl font-semibold">
-                Ramsharan Rijal 
+                Ramsharan Rijal
               </p>
             </div>
             <div className="text-[#6C757D] space-y-5 text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
@@ -148,9 +149,15 @@ export default function About() {
           <motion.p className="text-zinc-600 mt-2" variants={itemVariants}>
             Meet Our Professional Team
           </motion.p>
-          <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={itemVariants}></motion.div>
-          <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto " variants={itemVariants}></motion.div>
-         
+          <motion.div
+            className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+            variants={itemVariants}
+          ></motion.div>
+          <motion.div
+            className="border-b-2 border-zinc-600 w-16 mx-auto "
+            variants={itemVariants}
+          ></motion.div>
+
           <motion.div className="flex flex-wrap justify-center gap-5 md:gap-20 lg:justify-between px-4 lg:px-20 items-center  mt-10  lg:w-[1163px]">
             {teamMembers.map((member, id) => (
               <motion.div
@@ -162,7 +169,10 @@ export default function About() {
                 viewport={{ once: true }}
                 custom={id}
               >
-                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <div className="rounded-full overflow-hidden w-36 h-36 sm:w-48 sm:h-48">
                     <motion.img
                       src={member.imageSrc}
@@ -175,7 +185,10 @@ export default function About() {
                     />
                   </div>
                 </motion.div>
-                <motion.h3 className="text-primary mt-4 text-base sm:text-lg font-semibold" variants={itemVariants}>
+                <motion.h3
+                  className="text-primary mt-4 text-base sm:text-lg font-semibold"
+                  variants={itemVariants}
+                >
                   {member.name}
                 </motion.h3>
                 <motion.p className="text-zinc-600" variants={itemVariants}>
