@@ -113,7 +113,7 @@ const HeroSection = () => {
               <motion.img
                 src="/Hero.png"
                 alt="Illustration of remote bookkeeping"
-                className="w-full h-[300px] md:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
+                className=" hidden md:flex w-full  h-[300px] md:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
                 variants={imgVariants}
                 initial="hidden"
                 animate="visible"
