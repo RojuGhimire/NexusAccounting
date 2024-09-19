@@ -13,6 +13,7 @@ import Footer2 from "../sections/Footer2";
 // import Contact from "../sections/Contact";
 import ContactSection from "../sections/Contact2";
 import FAQ from "../sections/Faq";
+import AccountingStats from "../sections/AccountingStat";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -24,6 +25,7 @@ const Homepage: React.FC = () => {
         <Banner />
         <Software />
         <Price />
+        <AccountingStats />
         <Meeting />
         <FAQ />
         {/* <Contact /> */}
