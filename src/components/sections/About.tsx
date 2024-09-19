@@ -1,29 +1,29 @@
 import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
-import { fadeInAnimationVariants } from "@/constants";
+// import { fadeInAnimationVariants } from "@/constants";
 import { useInView } from "react-intersection-observer";
 
-const containerVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
+// const containerVariants = {
+//   hidden: { opacity: 0, y: 100 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delayChildren: 0.3,
+//       staggerChildren: 0.2,
+//     },
+//   },
+// };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0 },
-};
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 100 },
+//   visible: { opacity: 1, y: 0 },
+// };
 
-const imageVariants = {
-  hidden: { scale: 0.9 },
-  visible: { scale: 1 },
-};
+// const imageVariants = {
+//   hidden: { scale: 0.9 },
+//   visible: { scale: 1 },
+// };
 
 interface TeamMemberProps {
   name: string;
@@ -32,12 +32,12 @@ interface TeamMemberProps {
 }
 
 
-const teamMembers: TeamMemberProps[] = [
-  { name: "Ramsharan Rijal", role: "CEO/ Founder", imageSrc: "/sital.png" },
-  { name: "Sital Rijal", role: "Operation Manager", imageSrc: "/sital.png" },
-  { name: "Nabin Budhathoki", role: "HR Manager", imageSrc: "/sital.png" },
-  { name: "Roju Ghimire", role: "HR Manager", imageSrc: "/sital.png" },
-];
+// const teamMembers: TeamMemberProps[] = [
+//   { name: "Ramsharan Rijal", role: "CEO/ Founder", imageSrc: "/sital.png" },
+//   { name: "Sital Rijal", role: "Operation Manager", imageSrc: "/sital.png" },
+//   { name: "Nabin Budhathoki", role: "HR Manager", imageSrc: "/sital.png" },
+//   { name: "Roju Ghimire", role: "HR Manager", imageSrc: "/sital.png" },
+// ];
 
 export default function About() {
   const { ref } = useLinkInView("Our Team", 1);
@@ -56,7 +56,7 @@ export default function About() {
 
   return (
     <section ref={ref} id="about" className="overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start p-6 lg:px-20 lg:h-auto ">
         <div className="flex flex-col lg:flex-row">
           {/* Right Content - Image and Call to Action */}
           <motion.div
@@ -136,7 +136,7 @@ export default function About() {
       </div>
 
       {/* Team Section */}
-      <div className="mt-5">
+      {/* <div className="mt-5">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -162,7 +162,7 @@ export default function About() {
             variants={itemVariants}
           ></motion.div>
 
-          <motion.div className="flex flex-wrap justify-center  gap-8 md:gap-40  px-4 lg:px-20 items-center  mt-10  lg:w-full">
+          {/* <motion.div className="flex flex-wrap justify-center  gap-8 md:gap-40  px-4 lg:px-20 items-center  mt-10  lg:w-full">
             {teamMembers.map((member, id) => (
               <motion.div
                 key={id}
@@ -200,9 +200,9 @@ export default function About() {
                 </motion.p>
               </motion.div>
             ))}
-          </motion.div>
-        </motion.div>
-      </div>
+          </motion.div> */}
+        {/* </motion.div> */}
+      {/* </div> */}
     </section>
   );
 }
