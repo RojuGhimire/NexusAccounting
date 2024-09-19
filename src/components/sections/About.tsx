@@ -25,11 +25,11 @@ import { useInView } from "react-intersection-observer";
 //   visible: { scale: 1 },
 // };
 
-interface TeamMemberProps {
-  name: string;
-  role: string;
-  imageSrc: string;
-}
+// interface TeamMemberProps {
+//   name: string;
+//   role: string;
+//   imageSrc: string;
+// }
 
 
 // const teamMembers: TeamMemberProps[] = [
