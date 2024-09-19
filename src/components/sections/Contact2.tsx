@@ -33,7 +33,7 @@ const ContactSection: React.FC = () => {
 
   const { ref: formRef, inView: formInView } = useInView({
     threshold: 0.2,
-    triggerOnce: false, // Auto animates every time it comes into view
+    triggerOnce: true, // Auto animates every time it comes into view
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -81,7 +81,7 @@ const ContactSection: React.FC = () => {
     <div
       ref={ref}
       id="contact"
-      className="bg-[#FDF7F7] lg:h-[857px] justify-center items-center p-6 w-full"
+      className="bg-[#FDF7F7]  lg:h-[857px] justify-center items-center p-6 w-full"
     >
       <div className="text-center">
         <h2 className="text-3xl font-bold text-zinc-900">Send Your Message</h2>

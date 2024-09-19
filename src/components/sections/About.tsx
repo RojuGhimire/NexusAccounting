@@ -31,6 +31,7 @@ interface TeamMemberProps {
   imageSrc: string;
 }
 
+
 const teamMembers: TeamMemberProps[] = [
   { name: "Ramsharan Rijal", role: "CEO/ Founder", imageSrc: "/sital.png" },
   { name: "Sital Rijal", role: "Operation Manager", imageSrc: "/sital.png" },
@@ -38,16 +39,18 @@ const teamMembers: TeamMemberProps[] = [
 ];
 
 export default function About() {
+  const { ref } = useLinkInView("Our Team", 1);
+
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+
   const { ref: rightContentRef, inView: rightContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  const { ref } = useLinkInView("Our Team", 1);
   
 
   return (

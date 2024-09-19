@@ -14,7 +14,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
-    <div className="font-bold h-auto px-8 py-10 lg:px-20 lg:py-16 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <div className="font-bold h-auto px-8 py-10 lg:px-20 lg:py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
       {/* Logo and Description */}
       <div className="flex flex-col items-center lg:items-start lg:w-full ">
         <img src="/logo.png" alt="Nexus" className="w-[112px] h-[105px]" />
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Quick Links */}
-      <div className="flex flex-col items-center lg:items-start">
+      <div className="flex flex-col items-center ">
         <h3 className="text-2xl font-bold font-overpass text-secondary mb-4 text-center lg:text-left">
           Quick <span className="text-black">Link</span>
         </h3>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Quick Contact */}
-      <div className="flex flex-col items-center lg:items-start">
+      <div className="flex flex-col items-center ">
         <h3 className="text-2xl font-bold font-overpass text-secondary mb-4 text-center lg:text-left">
           Quick <span className="text-black">Contact</span>
         </h3>

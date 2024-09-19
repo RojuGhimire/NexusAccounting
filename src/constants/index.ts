@@ -25,6 +25,10 @@ export const NAVLINKS = [
     path: "#appointment",
   },
   {
+    name: "FAQ",
+    path: "#faq",
+  },
+  {
     name: "Contact",
     path: "#contact",
   },

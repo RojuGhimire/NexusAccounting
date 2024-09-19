@@ -12,6 +12,7 @@ import Footer from "../sections/Footer";
 import Footer2 from "../sections/Footer2";
 // import Contact from "../sections/Contact";
 import ContactSection from "../sections/Contact2";
+import FAQ from "../sections/Faq";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -24,6 +25,7 @@ const Homepage: React.FC = () => {
         <Software />
         <Price />
         <Meeting />
+        <FAQ />
         {/* <Contact /> */}
         <ContactSection />
         <Banner2 />
