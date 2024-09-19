@@ -67,11 +67,7 @@ export default function Header() {
           </li>
           <li className="flex items-center space-x-1 cursor-pointer">
             <FaEnvelope />
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrsvxLBQrkrBThQGDrpgbpJgpFHrJGJfZjxVwDMcRJzCtbFcqxrxWhBzTsgWBkddRhCXB"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a>
               nexus@gmail.com
             </a>
           </li>
@@ -108,9 +104,8 @@ export default function Header() {
             <ul className="hidden lg:flex font-poppins font-extrabold  text-[16px]   leading-[24px] text-left gap-8 items-center flex-grow justify-center">
               {NAVLINKS.map((link) => (
                 <motion.li
-                  className={`font-bold cursor-pointer hover:text-primary ${
-                    activeLink === link.name ? "text-secondary" : "text-text"
-                  }`}
+                  className={`font-bold cursor-pointer hover:text-primary ${activeLink === link.name ? "text-secondary" : "text-text"
+                    }`}
                   key={link.path}
                   initial="hidden"
                   animate="visible"

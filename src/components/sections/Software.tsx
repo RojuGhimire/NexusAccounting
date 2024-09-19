@@ -36,7 +36,7 @@ const Software: React.FC = () => {
   const { ref } = useLinkInView("Software", 1);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -51,7 +51,7 @@ const Software: React.FC = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
         },
@@ -63,112 +63,91 @@ const Software: React.FC = () => {
     <motion.div
       ref={ref}
       id="software"
-      className="max-w-[1440px] font-poppins overflow-hidden h-auto gap-8 w-full mx-auto px-12 "
+      className="max-w-[1440px] font-poppins overflow-hidden w-full mx-auto px-4 lg:px-12 mt-16"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="text-center mt-24 lg:mb-12">
+      <div className="text-center mb-12">
         <motion.h2
-          className="text-3xl  font-bold text-zinc-900"
+          className="text-4xl font-bold text-gray-900"
           variants={childVariants}
         >
-          Software
+          Our Software Expertise
         </motion.h2>
-        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
-          These are the software that we work with:
+        <motion.p className="text-gray-600 mt-4" variants={childVariants}>
+          We are proficient in various bookkeeping tools:
         </motion.p>
         <motion.div
-          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
-          variants={childVariants}
-        ></motion.div>
-        <motion.div
-          className="border-b-2 border-zinc-600 w-16 mx-auto my-4"
+          className="border-b-2 border-primary w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
       </div>
-      <div className="">
-        <Slider {...settings}>
-          <div className="text-center  ">
-            <motion.img
-              className="mx-auto  h-24 w-24"
-              src="/quick.png"
-              alt="QuickBooks Online"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">
-              QuickBooks Online
-            </h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              We are proficient in QuickBooks Online, leveraging its features
-              for efficient bookkeeping.
-            </p>
-          </div>
-          <div className="text-center  ">
-            <motion.img
-              className="mx-auto  h-24 w-24"
-              src="/quick.png"
-              alt="QuickBooks Online"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">
-              BillBook
-            </h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              We are proficient in QuickBooks Online, leveraging its features
-              for efficient bookkeeping.
-            </p>
-          </div>
-          <div className="text-center">
-            <motion.img
-              className="mx-auto h-24 w-24"
-              src="/xero.png"
-              alt="Xero"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              Our team is skilled in utilizing Xero for seamless financial
-              management.
-            </p>
-          </div>
-          <div className="text-center">
-            <motion.img
-              className="mx-auto h-24 w-24"
-              src="/xero.png"
-              alt="Xero"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">Stripe</h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              Our team is skilled in utilizing Xero for seamless financial
-              management.
-            </p>
-          </div>
-          <div className="text-center">
-            <motion.img
-              className="mx-auto h-24 w-24"
-              src="/fb.png"
-              alt="FreshBooks"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
-            <h3 className="mt-8 text-2xl font-extrabold text-primary">
-              FreshBooks
-            </h3>
-            <p className="mt-7 font-poppins text-[12.89px] font-bold leading-[15.73px] text-center">
-              We work with FreshBooks to simplify invoicing and expense.
-            </p>
-          </div>
-          
-        
-          {/* Add more slides as needed */}
-        </Slider>
-      </div>
+      <Slider {...settings}>
+        {/* Slide 1 */}
+        <div className="flex flex-col items-center justify-center text-center px-6">
+          <motion.img
+            className="mx-auto h-24 w-24"
+            src="/quick.png"
+            alt="QuickBooks Online"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">
+            QuickBooks Online
+          </h3>
+          <p className="mt-4 text-sm text-gray-600">
+            Efficient bookkeeping with QuickBooks Online.
+          </p>
+        </div>
+
+        {/* Slide 2 */}
+        <div className="flex flex-col items-center justify-center text-center px-6">
+          <motion.img
+            className="mx-auto h-24 w-24"
+            src="/xero.png"
+            alt="Xero"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">Xero</h3>
+          <p className="mt-4 text-sm text-gray-600">
+            Seamless financial management with Xero.
+          </p>
+        </div>
+
+        {/* Slide 3 */}
+        <div className="flex flex-col items-center justify-center text-center px-6">
+          <motion.img
+            className="mx-auto h-24 w-24"
+            src="/fb.png"
+            alt="FreshBooks"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">
+            FreshBooks
+          </h3>
+          <p className="mt-4 text-sm text-gray-600">
+            Simplified invoicing and expense tracking with FreshBooks.
+          </p>
+        </div>
+
+        {/* Slide 4 */}
+        <div className="flex flex-col items-center justify-center text-center px-6">
+          <motion.img
+            className="mx-auto h-24 w-24"
+            src="/fb.png"
+            alt="Stripe"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <h3 className="mt-8 text-2xl font-extrabold text-primary">Stripe</h3>
+          <p className="mt-4 text-sm text-gray-600">
+            Secure payment processing with Stripe.
+          </p>
+        </div>
+      </Slider>
     </motion.div>
   );
 };

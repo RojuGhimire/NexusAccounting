@@ -36,6 +36,7 @@ const teamMembers: TeamMemberProps[] = [
   { name: "Ramsharan Rijal", role: "CEO/ Founder", imageSrc: "/sital.png" },
   { name: "Sital Rijal", role: "Operation Manager", imageSrc: "/sital.png" },
   { name: "Nabin Budhathoki", role: "HR Manager", imageSrc: "/sital.png" },
+  { name: "Roju Ghimire", role: "HR Manager", imageSrc: "/sital.png" },
 ];
 
 export default function About() {
@@ -161,11 +162,11 @@ export default function About() {
             variants={itemVariants}
           ></motion.div>
 
-          <motion.div className="flex flex-wrap justify-center gap-5 md:gap-20 lg:justify-between px-4 lg:px-20 items-center  mt-10  lg:w-[1163px]">
+          <motion.div className="flex flex-wrap justify-center  gap-8 md:gap-40  px-4 lg:px-20 items-center  mt-10  lg:w-full">
             {teamMembers.map((member, id) => (
               <motion.div
                 key={id}
-                className="flex flex-col items-center w-[48%] sm:w-[30%] md:w-[22%] lg:w-auto"
+                className="flex flex-col items-center w-[58%] sm:w-[30%] md:w-[19%] lg:w-auto"
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"
@@ -180,7 +181,7 @@ export default function About() {
                     <motion.img
                       src={member.imageSrc}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full  object-cover"
                       initial="hidden"
                       animate="visible"
                       variants={imageVariants}
@@ -189,12 +190,12 @@ export default function About() {
                   </div>
                 </motion.div>
                 <motion.h3
-                  className="text-primary mt-4 text-base sm:text-lg font-semibold"
+                  className="text-primary mt-4  text-base sm:text-xl font-extrabold "
                   variants={itemVariants}
                 >
                   {member.name}
                 </motion.h3>
-                <motion.p className="text-zinc-600" variants={itemVariants}>
+                <motion.p className="text-zinc-600 text-lg font-semibold " variants={itemVariants}>
                   {member.role}
                 </motion.p>
               </motion.div>
