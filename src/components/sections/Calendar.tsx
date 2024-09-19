@@ -118,7 +118,7 @@ const Meeting: React.FC = () => {
       variants={containerVariants}
     >
       <div className="text-center lg:mt-28">
-        <motion.h2 className="text-3xl font-bold text-zinc-900" variants={childVariants}>
+        <motion.h2 className="text-4xl font-bold text-gray-900" variants={childVariants}>
           Meeting
         </motion.h2>
         <motion.p className="text-zinc-600 mt-2" variants={childVariants}>

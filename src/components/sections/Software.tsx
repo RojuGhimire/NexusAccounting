@@ -82,6 +82,10 @@ const Software: React.FC = () => {
           className="border-b-2 border-primary w-16 mx-auto my-4"
           variants={childVariants}
         ></motion.div>
+        <motion.div
+          className="border-b-2 border-primary w-16 mx-auto my-4"
+          variants={childVariants}
+        ></motion.div>
       </div>
       <Slider {...settings}>
         {/* Slide 1 */}

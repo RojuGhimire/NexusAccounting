@@ -144,13 +144,13 @@ export default function About() {
           className="flex flex-col items-center"
         >
           <motion.h2
-            className="text-3xl font-bold text-zinc-900"
+            className="text-4xl font-bold text-gray-900"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
             Our Team
           </motion.h2>
-          <motion.p className="text-zinc-600 mt-2" variants={itemVariants}>
+          <motion.p className="font-poppins text-center text-gray-500  mt-2" variants={itemVariants}>
             Meet Our Professional Team
           </motion.p>
           <motion.div

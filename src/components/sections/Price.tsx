@@ -75,12 +75,12 @@ const Price: React.FC = () => {
     >
       <div className="text-center mt-16">
         <motion.h2
-          className="text-3xl font-bold text-zinc-900"
+          className="text-4xl font-bold text-zinc-900"
           variants={childVariants}
         >
           Pricing
         </motion.h2>
-        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
+        <motion.p className="font-poppins text-center text-gray-500  mt-2" variants={childVariants}>
           Our pricing is tailored to your business size and specific needs:
         </motion.p>
         <motion.div

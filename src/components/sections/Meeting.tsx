@@ -105,10 +105,10 @@ const Meeting: React.FC = () => {
       variants={containerVariants}
     >
       <div className="text-center mt-10  ">
-        <motion.h2 className="text-3xl font-bold text-zinc-900" variants={childVariants}>
+        <motion.h2 className="text-4xl font-bold text-zinc-900" variants={childVariants}>
           Meeting
         </motion.h2>
-        <motion.p className="text-zinc-600 mt-2" variants={childVariants}>
+        <motion.p className="font-poppins text-center text-gray-500  mt-2" variants={childVariants}>
           Schedule a consultation with one of our experts
         </motion.p>
         <motion.div className="border-b-2 border-zinc-600 w-16 mx-auto my-4" variants={childVariants}></motion.div>

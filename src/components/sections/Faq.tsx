@@ -43,8 +43,8 @@ const FAQ: React.FC = () => {
     <section ref={ref}
     id="faq"
     className="container mx-auto font-overpass lg:mt-8 p-6">
-      <h2 className="text-2xl md:text-3xl text-center font-semibold mb-2">Frequently Asked Questions</h2>
-      <h3 className="font-poppins text-center text-[#B5B5B5] mb-10">
+      <h2 className="text-4xl font-bold text-gray-900 text-center mb-2">Frequently Asked Questions</h2>
+      <h3 className="font-poppins text-center text-gray-500 mb-10">
         Our pricing is <span className="font-semibold">tailored</span> to your <span className="font-semibold">business</span> size and specific needs:
       </h3>
       

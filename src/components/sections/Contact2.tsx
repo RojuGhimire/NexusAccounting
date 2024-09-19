@@ -84,14 +84,15 @@ const ContactSection: React.FC = () => {
       className="bg-[#FDF7F7]  lg:h-[857px] justify-center items-center p-6 w-full"
     >
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-zinc-900">Send Your Message</h2>
-        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
-        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
+        <h2 className="text-4xl font-bold text-gray-900">Send Your Message</h2>
+       
 
-        <p className="text-zinc-600 mt-2">
+        <p className="font-poppins text-center text-gray-500  mt-2">
           Don’t hesitate to ask us something. Our customer support team <br />{" "}
           is always ready to help you, 24/7.
         </p>
+        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
+        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center items-center p-6 lg:p-10">
