@@ -35,16 +35,19 @@ const Footer: React.FC = () => {
             <a href="#about">About us</a>
           </li>
           <li>
-            <a href="#team">Our team</a>
-          </li>
-          <li>
             <a href="#services">Services</a>
           </li>
           <li>
             <a href="#software">Software</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#pricing">Pricing</a>
+          </li>
+          <li>
+            <a href="#appointment">Meeting</a>
+          </li>
+          <li>
+            <a href="#faq">FAQ</a>
           </li>
         </ul>
       </div>

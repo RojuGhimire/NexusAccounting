@@ -46,7 +46,7 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="relative w-full h-[600px] md:h-[750px] lg:h-[750px] overflow-hidden flex items-center justify-center p-8 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-[25px] mx-auto"
+      className="relative w-full h-[600px] md:h-[750px] lg:h-[750px] overflow-hidden flex items-center justify-center p-6 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-12 mx-auto"
       style={{
         backgroundImage: 'url("/mount.png")',
         backgroundSize: "cover",
@@ -69,51 +69,51 @@ const HeroSection = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container lg:mt-16 font-poppins flex flex-col lg:flex-row items-center justify-center gap-12">
+          <div className="container lg:mt-16 font-poppins flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12">
             <motion.div
-              className="w-full lg:w-1/2 space-y-6 text-white"
+              className="w-full lg:w-1/2 space-y-6 text-white px-4 lg:px-0"
               variants={itemVariants}
             >
               <motion.div>
                 <motion.span
-                  className="block font-poppins text-[36px] md:text-[38px] lg:text-[40px] font-bold leading-tight"
+                  className="block font-poppins text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight"
                   variants={itemVariants}
                 >
                   NEXUS YOUR
                 </motion.span>
                 <motion.span
-                  className="block font-poppins text-[#FFB600] text-[40px] md:text-[48px] lg:text-[50px] font-bold leading-tight"
+                  className="block font-poppins text-[#FFB600] text-[30px] md:text-[40px] lg:text-[48px] font-bold leading-tight"
                   variants={itemVariants}
                 >
                   TRUSTED PARTNER IN
                 </motion.span>
                 <motion.span
-                  className="block font-poppins text-[42px] md:text-[52px] lg:text-[54px] font-bold leading-tight"
+                  className="block font-poppins text-[34px] md:text-[48px] lg:text-[54px] font-bold leading-tight"
                   variants={itemVariants}
                 >
                   REMOTE BOOKKEEPING
                 </motion.span>
               </motion.div>
               <motion.p
-                className="text-base md:text-lg text-teal-400 font-poppins"
+                className="text-base md:text-lg text-teal-400 font-poppins px-2 lg:px-0"
                 variants={itemVariants}
               >
                 Ready to streamline your bookkeeping? Book a consultation today!
               </motion.p>
               <motion.button
-                className="mt-6 bg-secondary text-white font-poppins font-semibold py-1.5 px-6 rounded text-[18px] hover:bg-primary transition duration-500"
+                className="mt-4 bg-secondary text-white font-poppins font-semibold py-2 px-4 md:py-2.5 md:px-6 rounded text-[16px] md:text-[18px] hover:bg-primary transition duration-500"
                 whileHover="hover"
                 variants={buttonVariants}
               >
                 <a href="#appointment">Book Now</a>
               </motion.button>
             </motion.div>
-            
+
             <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
               <motion.img
                 src="/Hero.png"
                 alt="Illustration of remote bookkeeping"
-                className=" hidden md:flex w-full  h-[300px] md:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
+                className="hidden lg:flex w-full h-[250px] md:h-[350px] lg:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
                 variants={imgVariants}
                 initial="hidden"
                 animate="visible"
