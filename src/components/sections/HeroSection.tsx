@@ -120,11 +120,11 @@ const HeroSection = () => {
         open={isOpen}
         rootElement={document.getElementById("root")!}
       />
-            <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
+            <motion.div className="w-full lg:w-1/2 mt-60" variants={itemVariants}>
               <motion.img
                 src="/Hero.png"
                 alt="Illustration of remote bookkeeping"
-                className="hidden lg:flex w-full h-[250px] md:h-[350px] lg:h-[411px] max-w-[500px] lg:max-w-[638px] object-cover"
+                className="hidden lg:flex  w-full h-[250px] md:h-[350px] lg:h-[511px] max-w-[500px] lg:max-w-[638px] object-cover"
                 variants={imgVariants}
                 initial="hidden"
                 animate="visible"
