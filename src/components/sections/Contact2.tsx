@@ -47,7 +47,7 @@ const ContactSection: React.FC = () => {
     <div
       ref={ref}
       id="contact"
-      className="bg-[#FDF7F7]  lg:h-[857px] justify-center items-center p-6 w-full"
+      className="bg-slate-100 lg:h-[857px] justify-center items-center p-6 w-full"
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold text-gray-900">Send Your Message</h2>

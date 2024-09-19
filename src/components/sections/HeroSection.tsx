@@ -72,7 +72,7 @@ const HeroSection = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <div className="container lg:mt-16 font-poppins flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12">
+          <div className="container lg:mt-16 mt-60 font-poppins flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12">
             <motion.div
               className="w-full lg:w-1/2 space-y-6 text-white px-4 lg:px-0"
               variants={itemVariants}
