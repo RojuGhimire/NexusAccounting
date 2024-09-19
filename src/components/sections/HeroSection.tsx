@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useLinkInView } from "@/hooks/useLinkInView";
+import { useState } from "react";
+import { PopupModal } from "react-calendly";
 
 const HeroSection = () => {
   const { ref } = useLinkInView("Home", 0.3);
@@ -15,6 +17,7 @@ const HeroSection = () => {
       },
     },
   };
+  const [isOpen, setIsOpen] = useState(false);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -101,14 +104,22 @@ const HeroSection = () => {
                 Ready to streamline your bookkeeping? Book a consultation today!
               </motion.p>
               <motion.button
+            onClick={() => setIsOpen(true)}
+
                 className="mt-4 bg-secondary text-white font-poppins font-semibold py-2 px-4 md:py-2.5 md:px-6 rounded text-[16px] md:text-[18px] hover:bg-primary transition duration-500"
                 whileHover="hover"
                 variants={buttonVariants}
               >
-                <a href="#appointment">Book Now</a>
+                <a>Book Now</a>
               </motion.button>
             </motion.div>
-
+            
+            <PopupModal
+        url="https://calendly.com/ghimireroju"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.getElementById("root")!}
+      />
             <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
               <motion.img
                 src="/Hero.png"
