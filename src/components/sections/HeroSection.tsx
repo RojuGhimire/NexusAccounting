@@ -46,7 +46,7 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="home"
-      className="relative w-full h-[600px] md:h-[750px] lg:h-[750px] overflow-hidden flex items-center justify-center p-6 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-12 mx-auto"
+      className="relative w-full h-[600px] md:h-[750px] lg:h-[850px] overflow-hidden flex items-center justify-center p-6 md:p-12 lg:p-[81px_0_78px_89px] gap-6 lg:gap-12 mx-auto"
       style={{
         backgroundImage: 'url("/mount.png")',
         backgroundSize: "cover",

@@ -30,7 +30,7 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <motion.div
       ref={ref}
-      className="bg-card p-6 lg:h-[550px] items-center justify-center rounded-lg shadow w-[280px] md:w-[300px] lg:w-[420px] h-auto gap-8 bg-[#e9e7e7] mx-2 my-4"
+      className="bg-card p-6 lg:h-[550px] items-center justify-center rounded-lg shadow-2xl  w-[280px] md:w-[300px] lg:w-[420px] h-auto gap-8 border border-gray-200 mx-2 my-4"
       whileHover="hover"
       variants={hoverVariants}
     >

@@ -1,9 +1,7 @@
-import toast from "react-hot-toast";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { useState } from "react";
 import { IoIosSend } from "react-icons/io";
 import { BiLoaderCircle } from "react-icons/bi";
 import { useLinkInView } from "@/hooks/useLinkInView";
-
 import { useViewport } from "@/hooks/userViewPort";
 import {
   FaFacebookF,
@@ -20,7 +18,7 @@ import { useInView } from "react-intersection-observer";
 
 const ContactSection: React.FC = () => {
   const { ref } = useLinkInView("Contact", 0.8);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
   const initialState = {
     firstName: "",
     lastName: "",
@@ -33,40 +31,8 @@ const ContactSection: React.FC = () => {
 
   const { ref: formRef, inView: formInView } = useInView({
     threshold: 0.2,
-    triggerOnce: true, // Auto animates every time it comes into view
+    triggerOnce: true, 
   });
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputValue: string = e.target.value;
-    let filteredValue: string = inputValue.replace(/\D/g, "");
-    filteredValue = filteredValue.slice(0, 10);
-    setContactForm({ ...contactForm, mobile: filteredValue });
-  };
-
-  const postData = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    try {
-      const res = await fetch(
-        "https://nextnexus.vercel.app/api/users/contacts",
-        {
-          method: "POST",
-          body: JSON.stringify(contactForm),
-        }
-      );
-      const data = await res.json();
-      res.status === 400
-        ? toast.error(data.message)
-        : toast.success(data.message);
-      if (res.status === 201) {
-        setContactForm(initialState);
-      }
-    } catch (err) {
-      toast.error("Something went wrong");
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const fadeInVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -85,7 +51,7 @@ const ContactSection: React.FC = () => {
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold text-gray-900">Send Your Message</h2>
-       
+
 
         <p className="font-poppins text-center text-gray-500  mt-2">
           Don’t hesitate to ask us something. Our customer support team <br />{" "}
@@ -109,7 +75,7 @@ const ContactSection: React.FC = () => {
             Get In Touch
           </h2>
 
-          <form className="w-full space-y-3" onSubmit={postData}>
+          <form className="w-full space-y-3" >
             <Input
               label="First Name"
               required
@@ -134,16 +100,13 @@ const ContactSection: React.FC = () => {
               required
               placeholder="Enter your email"
               value={contactForm.email}
-              onChange={(e) =>
-                setContactForm({ ...contactForm, email: e.target.value })
-              }
             />
             <Input
               label="Mobile"
               required
               placeholder="Enter your mobile"
               value={contactForm.mobile}
-              onChange={handleChange}
+
             />
           </form>
 

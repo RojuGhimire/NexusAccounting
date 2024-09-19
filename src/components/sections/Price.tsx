@@ -102,7 +102,7 @@ const Price: React.FC = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8 p-4">
+      <div className="flex flex-wrap items-center  justify-center gap-4 lg:gap-8 p-4">
         {plans.map((plan, index) => (
           <Plan
             key={index}
