@@ -61,7 +61,7 @@ const ServicesComponent: React.FC = () => {
     <motion.div
       ref={ref}  // Pass the ref here
       id="services"
-      className="py-16 w-full overflow-hidden max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
+      className="w-full overflow-hidden max-w-[1440px] mx-auto px-12 sm:px-6 lg:px-8"
       initial="hidden"
       animate={controls}
       variants={containerVariants}

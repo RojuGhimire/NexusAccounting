@@ -56,7 +56,7 @@ export default function About() {
 
   return (
     <section ref={ref} id="about" className="overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start p-6 lg:px-20 lg:h-auto ">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:px-20 lg:h-auto ">
         <div className="flex flex-col lg:flex-row">
           {/* Right Content - Image and Call to Action */}
           <motion.div

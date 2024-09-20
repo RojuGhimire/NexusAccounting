@@ -3,7 +3,7 @@ import { FaMoneyBillWave, FaChartLine, FaUserTie, FaBalanceScale } from "react-i
 
 const AccountingStats: React.FC = () => {
   return (
-    <div className="w-full flex items-center justify-center bg-slate-100 py-10 lg:py-20 font-overpass">
+    <div className="w-full flex items-center justify-center bg-[#F4ECE6] py-10 lg:py-20 font-overpass">
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
         {/* Stat 1: Total Revenue */}
         <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg">
