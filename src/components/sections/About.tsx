@@ -72,7 +72,7 @@ export default function About() {
             <img
               src="/ram.png"
               alt="Who Are We"
-              className="w-full lg:w-auto sm:h-[350px] lg:h-[450px] object-cover"
+              className="w-full  px-2 lg:w-auto sm:h-[350px] lg:h-[450px] object-cover"
             />
             <motion.div
               className="-mt-8 sm:-mt-16 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
@@ -100,7 +100,7 @@ export default function About() {
             transition={{ duration: 1.5 }}
             ref={leftContentRef}
           >
-            <div className="w-full  space-y-2 lg:space-y-4">
+            <div className="w-full px-4 space-y-2 lg:space-y-4">
               <h2 className="text-secondary text-lg sm:text-xl font-bold">
                 CEO/Founder
               </h2>
@@ -108,7 +108,7 @@ export default function About() {
                 Ramsharan Rijal
               </p>
             </div>
-            <div className="text-[#6C757D] space-y-5 text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
+            <div className="text-[#6C757D] px-4 space-y-5 text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
               <p>
                 Ram Sharan Rijal is a seasoned registered auditor with a
                 background in accounting and finance. With a commitment to
