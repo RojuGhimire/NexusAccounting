@@ -104,7 +104,7 @@ const HeroSection = () => {
                 Ready to streamline your bookkeeping? Book a consultation today!
               </motion.p>
               <motion.button
-            onClick={() => setIsOpen(true)}
+                onClick={() => setIsOpen(true)}
 
                 className="mt-4 bg-secondary text-white font-poppins font-semibold py-2 px-4 md:py-2.5 md:px-6 rounded text-[16px] md:text-[18px] hover:bg-primary transition duration-500"
                 whileHover="hover"
@@ -113,13 +113,13 @@ const HeroSection = () => {
                 <a>Book Now</a>
               </motion.button>
             </motion.div>
-            
+
             <PopupModal
-        url="https://calendly.com/ghimireroju"
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={document.getElementById("root")!}
-      />
+              url="https://calendly.com/ghimireroju"
+              onModalClose={() => setIsOpen(false)}
+              open={isOpen}
+              rootElement={document.getElementById("root")!}
+            />
             <motion.div className="w-full lg:w-1/2 mt-60" variants={itemVariants}>
               <motion.img
                 src="/Hero.png"
