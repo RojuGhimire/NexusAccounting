@@ -57,8 +57,7 @@ const ContactSection: React.FC = () => {
           Don’t hesitate to ask us something. Our customer support team <br />{" "}
           is always ready to help you, 24/7.
         </p>
-        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
-        <div className="border-b-2 border-zinc-600 w-16 mx-auto my-4"></div>
+        
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center items-center p-6 lg:p-10">
